@@ -8,13 +8,17 @@ function init() {
   // スクロールのイベントハンドラを登録　ヘッダーにクラス名 smaller を付与
   window.addEventListener('scroll', function (e) {
     // 変化するポイントまでスクロールしたらクラスを追加
-    if ($(window).scrollTop() > px_change) {
-      $('header').addClass('smaller');
+    if (window.scrollY > px_change) {
+      document.querySelector('header').classList.add('smaller');
 
       // 変化するポイント以前であればクラスを削除
-    } else if ($('header').hasClass('smaller')) {
-      $('header').removeClass('smaller');
-      $('#header-nav').removeAttr('checked').prop('checked', false).change();  // topでpull down用のcheckを外す
+    } else {
+      document.querySelector('header').classList.remove('smaller');
+      const headerNav = document.getElementById('header-nav');
+      if (headerNav) {
+        headerNav.checked = false;
+        headerNav.dispatchEvent(new Event('change'));
+      }
     }
   });
 }
@@ -25,15 +29,16 @@ window.onload = init();
 //**************************************************************
 // 4. スクロールしたら メニューを隠す
 //**************************************************************
-var startPos = 0, winScrollTop = 0;
-$(window).on('scroll', function () {
-  winScrollTop = $(this).scrollTop();
+let startPos = 0;
+window.addEventListener('scroll', function () {
+  const winScrollTop = window.scrollY;
+  const siteHeader = document.querySelector('.site-header');
   if (winScrollTop >= startPos) {
-    if (winScrollTop >= 200) {
-      $('.site-header').addClass('hide');
+    if (winScrollTop >= 200 && siteHeader) {
+      siteHeader.classList.add('hide');
     }
   } else {
-    $('.site-header').removeClass('hide');
+    if (siteHeader) siteHeader.classList.remove('hide');
   }
   startPos = winScrollTop;
 });
@@ -42,61 +47,42 @@ $(window).on('scroll', function () {
 //**********************************************************************
 // 5. ハンバーガーメニューの起動
 //**********************************************************************
-$(function () {
-  $('.hamburger').click(function () {
-    $(this).toggleClass('active');
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const menuContents = document.querySelector('.menu-contents');
 
-    if ($(this).hasClass('active')) {
-      $('.menu-contents').addClass('active');
-    }
-    else {
-      $('.menu-contents').removeClass('active');
-    }
-  });
+  if (hamburger && menuContents) {
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('active');
+
+      if (hamburger.classList.contains('active')) {
+        menuContents.classList.add('active');
+      }
+      else {
+        menuContents.classList.remove('active');
+      }
+    });
+  }
+
+  //**********************************************************************
+  // 6. ハンバーガーメニューのメニュークリック後に 閉じる
+  //**********************************************************************
+  const modalClose = document.querySelector('.modal-close');
+  if (modalClose) {
+    modalClose.addEventListener('click', function (event) {
+      if (menuContents) menuContents.classList.remove('active');
+      if (hamburger) hamburger.classList.remove('active');
+    });
+  }
+
+  const humClose = document.querySelector('.hum-close');
+  if (humClose) {
+    humClose.addEventListener('click', function (event) {
+      if (hamburger) hamburger.classList.remove('active');
+    });
+  }
 });
 
 
-//**********************************************************************
-// 6. ハンバーガーメニューのメニュークリック後に 閉じる
-//**********************************************************************
-$(function () {
-  $('.modal-close').on('click', function (event) {
-    $('.menu-contents').removeClass('active');
-    $('.hamburger').removeClass('active');
-  });
-});
-
-$(function () {
-  $('.hum-close').on('click', function (event) {
-    $('.hamburger').removeClass('active');
-  });
-});
-
-//**********************************************************************
-// 7. アコーディオン PODCAST
-//**********************************************************************
-
-
-// //**********************************************************************
-// // FADE IN ANIMATION（画面遷移）
-// //**********************************************************************
-// $(window).on('load', function(){
-//   $('body').removeClass('fadeout');
-// });
-
-// $(function() {
-//   // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
-//   $('a:not([href^="#"]):not([target])').on('click', function(e){
-//     e.preventDefault(); // ナビゲートをキャンセル
-//     url = $(this).attr('href'); // 遷移先のURLを取得
-//     if (url !== '') {
-//       $('body').addClass('fadeout');  // bodyに class="fadeout"を挿入
-//       setTimeout(function(){
-//         window.location = url;  // 0.8秒後に取得したURLに遷移
-//       }, 800);
-//     }
-//     return false;
-//   });
-// });
 
 

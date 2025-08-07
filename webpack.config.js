@@ -9,9 +9,9 @@ module.exports = {
     './src/styles.scss'
   ],
   output: {
-    path: path.resolve(__dirname, 'themes/unicra.net/assets/js'),
+    path: path.resolve(__dirname, 'themes/tanzo-jp.com/assets/js'),
     filename: 'animation.js',
-    publicPath: '/themes/unicra.net/assets/js/'
+    publicPath: '/themes/tanzo-jp.com/assets/js/'
   },
   devtool: 'eval-source-map', // より高速なソースマップ
   module: {
@@ -44,7 +44,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
-          publicPath: '/themes/unicra.net/assets/images',
+          publicPath: '/themes/tanzo-jp.com/assets/images',
           emit: false // 画像ファイルを生成しない
         }
       }
