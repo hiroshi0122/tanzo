@@ -7,9 +7,9 @@ const bundler = webpack(webpackConfig);
 browserSync.init({
     proxy: 'http://localhost:8080',  // WordPressインスタンスをプロキシ
     files: [
-        'themes/unicra.net/assets/css/*.css',
-        'themes/unicra.net/assets/js/*.js',
-        'themes/unicra.net/**/*.php'
+        'themes/tanzo-jp.com/assets/css/*.css',
+        'themes/tanzo-jp.com/assets/js/*.js',
+        'themes/tanzo-jp.com/**/*.php'
     ],
     middleware: [
         webpackDevMiddleware(bundler, {
