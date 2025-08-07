@@ -1,0 +1,144 @@
+//**************************************************************
+// Structure
+//**************************************************************
+/* ## HTML
+***********************************************/
+html {
+	height: 100%;
+	width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* ## BODY
+***********************************************/
+body {
+	background-color: $main-bg-color;
+	height: 100%;
+}
+
+/* ## MAIN
+***********************************************/
+main {
+
+}
+
+/* ## SECTION
+***********************************************/
+section {
+	position: relative;
+	padding: 10rem 0rem;
+
+	&.bg-gray {
+		background-color: $bg-gray;
+	}
+
+	&.fixed-page {
+		.main-title-template {
+			margin: 0 auto 4rem;
+		}
+	}
+
+	/* ### MOBILE =====================================*/
+	@media #{$smallScreen} {
+		padding: 5rem 0rem;
+	}
+}
+
+
+
+/* ## FIRST SECTION
+***********************************************/
+.first-sec {
+	padding-top: 70px;
+
+	/* ### MOBILE =====================================*/
+	@media #{$smallScreen} {
+		padding-top: 50px;
+	}
+}
+
+
+/* ## CONTAINER
+***********************************************/
+/* ### CONTAINER
+=====================================*/
+.container {
+    @media #{$smallScreen} {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ### SMALL CONTAINER
+=====================================*/
+.s-container {
+	@media #{$smallScreen} {
+        max-width: 540px;
+    }
+	@media (min-width: 768px) {
+        max-width: 720px;
+    }
+	@media (min-width: 992px) {
+    	max-width: 960px;
+	}
+}
+
+/* ### XS CONTAINER
+=====================================*/
+.xs-container {
+    @media (min-width: 768px) {
+        max-width: 760px;
+    }
+    @media (min-width: 992px) {
+        max-width: 760px;
+    }
+}
+
+/* ### XXS CONTAINER
+=====================================*/
+.xxs-container {
+    @media (min-width: 768px) {
+        max-width: 540px;
+    }
+    @media (min-width: 992px) {
+        max-width: 540px;
+    }
+}
+
+
+//**************************************************************
+// General screen control
+//**************************************************************
+//Print
+@media print {
+	.hidePrint,
+	.beforeOrderBtn,
+	.beforeOrderBnr {
+		display: none;
+	}
+	.listInline {
+		&.sns {
+			display: none;
+		}
+	}
+	a:not([href*="#"]) {
+		display: none !important;
+	}
+}
+
+
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+--------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

@@ -1,0 +1,114 @@
+//**************************************************************
+// #typography
+//**************************************************************
+// remを 1rem=10px にしてわかりやすくするためのcss
+html {
+    font-size: 62.5%;
+}
+
+// # headline
+//******************************************************
+h1 {
+    font-size: 44px;
+    line-height: 1.5;
+    font-weight: bold;
+    @media #{$smallScreen} {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: bold;
+    @media #{$smallScreen} {
+        font-size: 18px;
+    }
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: bold;
+    @media #{$smallScreen} {
+        font-size: 16px;
+    }
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: bold;
+    @media #{$smallScreen} {
+        font-size: 15px;
+    }
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    @media #{$smallScreen} {
+        font-size: 13px;
+    }
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+p,li {
+    font-size: 15px;
+    line-height: 2;
+    @media #{$smallScreen} {
+        font-size: 14px;
+    }
+}
+
+dl {
+    dt {
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 2;
+    }
+    dd {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    @media #{$smallScreen} { 
+        dt {
+            font-size: 14px;
+        }
+        dd {
+            font-size: 13px;
+        }
+    }
+}
+
+span,small {
+    font-size: 12px;
+    line-height: 1.5;
+    display: inline-block;
+    @media #{$smallScreen} {
+        font-size: 11px;
+    }
+}
+
+/* ## Coming soon msg
+***********************************************/
+.coming-soon-msg {
+  padding-top: 4rem;
+}
+
+
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+--------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

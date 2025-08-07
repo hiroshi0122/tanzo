@@ -1,0 +1,138 @@
+//**************************************************************
+// #footer
+//**************************************************************
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    /* ### FOOTER LOGO
+    -------------------------------------*/
+    .footer-logo {
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 4rem;
+
+        span {
+            color: $white;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 90px;
+        }
+    }
+
+    /* ### FOOTER NAV
+    -------------------------------------*/
+    .footer-nav {
+        .navigation {
+            max-width: 1080px;
+            margin: 0 auto 2rem;
+        }
+
+        .menu-link {
+            span {
+                color: $font-gray;
+            }
+            p {
+                font-weight: bold;
+                line-height: 1.5;
+                color: $white;
+            }
+        }
+    }
+
+    /* ### NAVIGATION BOTTOM
+    -------------------------------------*/
+    .navigation-bottom {
+        max-width: 720px;
+        margin: 0 auto 4rem;
+
+        .menu-link {
+            font-size: 13px;
+            font-weight: medium;
+            color: $white;
+        }
+        .border-box {
+            border-right: solid 1px $white;
+        }
+    }
+
+    .copyright {
+        display: block;
+        text-align: end;
+        font-size: 12px;
+        padding-bottom: 2rem;
+        padding-right: 2rem;
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        padding-top: 5rem;
+        background-image: url("#{$image-path}/footer/footer_bg_sp.svg");
+
+        /* ### FOOTER LOGO
+        -------------------------------------*/
+        .footer-logo {
+            margin-bottom: 3rem;
+
+            span {
+                margin-bottom: 1rem;
+                font-size: 10px;
+            }
+
+            img {
+                width: 70px;
+            }
+        }
+
+        /* ### FOOTER NAV
+        -------------------------------------*/
+        .footer-nav {
+            .menu-link {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        /* ### NAVIGATION BOTTOM
+        -------------------------------------*/
+        .navigation-bottom {
+            margin: 0 auto 4rem;
+
+            li {
+                padding-left: 8px;
+            }
+
+            .menu-link {
+                font-size: 12px;
+            }
+
+            .border-box {
+                border-right: none;
+            }
+        }
+
+        .copyright {
+            font-size: 12px;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+
+// ## MOBILE // *************************************************>
+
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+-------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

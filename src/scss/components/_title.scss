@@ -1,0 +1,93 @@
+//**************************************************************
+// TITLE
+//**************************************************************
+.main-title {
+    position: relative;
+    margin-bottom: 5rem;
+
+    /* ### Span
+    --------------------------------------*/
+    span {
+        font-size: clamp(18px,3vw,34px);
+        font-weight: 900;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $black;
+        color: $white;
+        
+        &.yellow {
+            color: $yellow;
+        }
+        &.pink {
+            color: $pink;
+        }
+    }
+
+    /* ### h2
+    --------------------------------------*/
+    h2 {
+        font-weight: bold;
+        font-size: clamp(40px,6vw,90px);
+        line-height: 1;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $black;
+        color: $white;
+
+        &.yellow {
+            color: $yellow;
+        }
+        &.pink {
+            color: $pink;
+        }
+    }
+
+    &.center {
+        text-align: center;
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        margin-bottom: 2rem;
+
+        &.center {
+            margin-bottom: 5rem;
+        }
+
+        /* ### Span
+        --------------------------------------*/
+        span {
+            -webkit-text-stroke-width: 1px;
+        }
+    }
+}
+
+
+/* ## ハイライトタイトル
+***********************************************/
+.highlight-text {
+    span {
+        @extend h4;
+        background-color: $highlight;
+        margin-bottom: .5rem;
+        font-weight: 500;
+    }
+
+    @media #{$smallScreen} {
+        span {
+            font-size: 20px;
+            margin-bottom: .8rem;
+        }
+    }
+}
+
+
+
+
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+--------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

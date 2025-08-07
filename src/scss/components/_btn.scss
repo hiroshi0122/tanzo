@@ -1,0 +1,148 @@
+//**************************************************************
+// # button
+//**************************************************************
+
+/* ## ボタン共通の css
+***********************************************/
+.btn {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s;
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        font-size: 14px;
+    }
+}
+
+/* ### BTN AREA
+--------------------------------------------*/
+.btn-area {
+    .btn-view-more {
+        margin-top: 2rem;
+    }
+
+    .btn-roof {
+        margin-top: 3rem;
+    }
+
+    .btn-radius {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        .btn-roof {
+            margin-top: 1rem;
+        }    
+    }
+}
+
+
+/* ### BTN VIEW MORE（詳しく見る）
+--------------------------------------------*/
+.btn-view-more {
+    @extend .btn;
+    display: flex;
+    align-items: center;
+
+    p {
+        font-size: 18px;
+        border-bottom: solid 1px $black;
+        margin-right: 10px;
+    }
+
+    i {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: $white;
+        background-color: $black;
+        display: grid;
+        place-content: center;
+        transition: 0.2s;
+    }
+
+    &:hover {
+        i {
+            transition: 0.2s;
+            transform: scale(1.3) rotate(360deg);
+
+        }
+    }
+}
+
+/* ### BTN ROOF（屋根ボタン）
+--------------------------------------------*/
+.btn-roof {
+    @extend .btn;
+    width: 360px;
+    padding-top: 3rem;
+    text-align: center;
+    background-image: url('#{$image-path}/btn/btn-roof.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+    span {
+        font-size: 10px;
+        color: $font-gray;
+        display: block;
+        line-height: 1.3;
+        font-weight: medium;
+    }
+
+    p {
+        font-size: 22px;
+        color: $white;
+        line-height: 1.2;
+        padding-bottom: 9px;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        transition: .2s;
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        width: 300px;
+
+        p {
+            font-size: 18px
+        }
+    }
+}
+
+
+/* ### BTN RADIUS（角丸ボタン）
+--------------------------------------------*/
+.btn-radius {
+    @extend .btn;
+    border-radius: 40px;
+    background-color: $black;
+    text-align: center;
+    color: $white;
+    border: solid 2px $black;
+    padding: .5rem 2rem;
+
+    &:hover {
+        border: solid 2px $black;
+    }
+}
+
+
+
+
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+--------------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

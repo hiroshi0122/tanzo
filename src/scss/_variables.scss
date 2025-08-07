@@ -1,0 +1,77 @@
+//**********************************************************************
+// Variables
+//**********************************************************************
+
+/* color
+***********************************************/
+// 基本 カラーリング
+$main-bg-color: #ffffff;
+$font-gray: #B5B5B5;
+$text-stroke: #F5F5F5;
+$bg-gray: #F5F5F5;
+
+$highlight: #E6DDD166;
+
+$orange: #FCD25B;
+$light-blue: #5CFFFF;
+$yellow: #FFFF00;
+$blue: #0000FF;
+$pink: #FFAEAB;
+
+
+
+
+$white: #fff;
+$white-rgb: 255;
+$gray-e: #eee;
+$gray-c: #ccc;
+$gray-a: #aaa;
+$gray-8: #888;
+$gray-7: #777;
+$gray-5: #555;
+$gray-4: #34495E;
+$gray-3: #30393B;
+$black: #000000;
+
+$twitter: #55acee;
+$facebook: #3b5998;
+$google: #D34836;
+
+
+
+/*************** text ***************/
+$nav-color: #fff;
+$nav-color-hover: #2fa378;
+$nav-color-recruit: #333;
+$text-base-color: #000000;
+$text-link-color: #447bd3;
+$text-link-color-hover: invert($text-link-color);
+
+
+/*************** screen bootstrap 対応済 ***************/
+$smallScreen: "only screen and (max-width: 767px)"; // 768 SmartPhone
+$smallScreen-above: "only screen and (min-width: 768px)"; // 768 PC(スマホ以外)
+$middleScreen: "only screen and (max-width: 991px)"; // Tablet
+$largeScreen: "only screen and (min-width: 977px)"; // PC
+$xlargeScreen: "only screen and (min-width: 1385px)"; // PC（ bootstrap container の最大値）
+$landscapeScreen: "screen and (orientation: landscape)";
+$portraitScreen: "screen and (orientation: portrait)";
+
+
+/*************** path ***************/
+// $image-path: "http://localhost:8002/wp-content/themes/name/assets/image";
+$image-path: "/wp-content/themes/to-and.jp/assets/images";
+$font-path: "assets/fonts/" !default;
+
+
+/*************** size ***************/
+$screen-width: 1080px;
+$header-height: 108px;  // 固定ヘッダー調整用
+$sp-header-height: 48px; //固定ヘッダーモバイル調整用
+$header-height-small: 90px;
+
+
+/* fonts
+***********************************************/
+$base-font: "LINE Seed JP", sans-serif;
+$en-font : "游ゴシック", "游ゴシック体", "Yu Gothic", "sans-serif";

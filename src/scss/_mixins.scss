@@ -1,0 +1,169 @@
+//**********************************************************************
+// Mixin
+//**********************************************************************
+
+// prefix
+// $set-prefix: '' , -moz- , -webkit-, -ms-, -o-;
+$set-prefix: '' , -moz- , -webkit-, -ms-;
+// IE, modem
+$support-ie6: false;
+$support-ie7: false;
+$support-ie8: true;
+$support-ie9: true;
+$support-mozilla: true;
+$support-webkit : true;
+$support-opera  : true;
+
+// @include prefix
+@mixin prefix($property, $value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+@mixin prefixValue($property, $value) {
+  @each $prefix in $set-prefix {
+    #{$property}: #{$prefix}#{$value};
+  }
+}
+
+@mixin clearfix {
+  @if $support-ie6 or $support-ie7 {
+    *zoom: 1;
+  }
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@function get_vw($size, $viewport:320){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+@mixin fz_vw($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+/* style
+***********************************************/
+@mixin shadow ($shadow_trans: 0.3) {
+  // @include prefix(box-shadow, 2px 2px 8px 2px rgba(0,0,0,$shadow_trans));
+  box-shadow: 2px 2px 8px 2px rgba(0,0,0,$shadow_trans);
+}
+
+@mixin inset_shadow ($shadow_trans: 0.2) {
+  // @include prefix(box-shadow, 0 1px 1px rgba(0,0,0,$shadow_trans) inset);
+  box-shadow: 0 1px 1px rgba(0,0,0,$shadow_trans) inset;
+}
+
+@mixin shadow-layer01 () {
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+@mixin shadow_text ($shadow_color: #000) {
+  text-shadow: 1px 1px 3px $shadow_color;
+}
+
+@mixin inset_shadow_text ($shadow_color: #000) {
+  text-shadow: -1px -1px 3px $shadow_color;
+}
+
+@mixin text_outline ($outline_color: #000) {
+  text-shadow:
+    -1px -1px 0 $outline_color,
+    1px -1px 0 $outline_color,
+    -1px 1px 0 $outline_color,
+    1px 1px 0 $outline_color;
+}
+
+@mixin box01() {
+  @include prefixValue(display, box);
+  @include prefix(box-sizing, border-box);
+}
+@mixin box_flex($flex: 1) {
+  @include prefix(box-flex, $flex);
+}
+@mixin blur($px: 4px) {
+  @include prefixValue(filter, blur($px));
+}
+
+/* placeholder color */
+@mixin placeholderColor($color) {
+    &:placeholder-shown {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+/* animation
+***********************************************/
+
+
+
+/* background image
+--------------------------------------------*/
+@mixin bg-image($height: 100%) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: $height;
+}
+
+/* max screen size
+--------------------------------------------*/
+@mixin screen-width() {
+  max-width: $screen-width;
+  margin: 0 auto;
+}
+
+/* get font vw
+--------------------------------------------*/
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport:320){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+/* accordion action　対応しているcssの最後の数値を入れる
+--------------------------------------------*/
+@mixin accordion($num) {
+  .accordion-contents-#{$num} {
+    overflow: hidden;
+    max-height: 0;
+    @include transform01(0.5s);
+  }
+  .accordion-check-#{$num}:checked {
+    ~ .accordion-contents-#{$num} {
+      max-height: 9999px; // 最大まで広げる範囲
+      transition: max-height 1s ease-in;
+    }
+    ~ .accordion-btn .accordion-icon-#{$num}:before {
+      @include prefix(transform, rotate(180deg)); // 回転
+    }
+  }
+}
+

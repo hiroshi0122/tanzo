@@ -1,0 +1,614 @@
+//*******************************************************************
+// # HOME
+//*******************************************************************
+/* ## FIRST SECTION（ファーストセクション）
+********************************************************************/
+#first-view-sec {
+    overflow: hidden;
+
+    /* ### CLOUD
+    --------------------------------------*/
+    .cloud {
+        position: absolute;
+
+        &.pink {
+            width: 10%;
+            top: 4%;
+            left: -3%;
+        }
+        &.gray {
+            width: 25%;
+            top: 20%;
+            left: 15%;
+            z-index: -1;
+        }
+        &.blue {
+            width: 12%;
+            top: 61%;
+            left: 40%;
+            z-index: 10;
+        }
+        &.yellow {
+            width: 10%;
+            top: 24%;
+            right: -1%;
+            z-index: 1;
+        }
+    }
+
+    /* ### TITLE SIDE
+    --------------------------------------*/
+    .title-side {
+        padding: 4% 0 4% 4%;
+    }
+
+    .container-fluid {
+        max-width: 1480px;
+    }
+
+    /* ### SPLIDE
+    --------------------------------------*/
+    .splide__list {
+        .splide__slide {
+            overflow: hidden;
+            border-radius: 450px 0 0 450px;
+        }
+    }
+
+    /* ### SCROLLING MESSGAE
+    --------------------------------------*/
+    .scrolling-msg {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .scrolling-msg-inner {
+        display: flex;
+        width: max-content;
+    
+        span {
+            font-size: clamp(56px,10vw,120px);
+            font-weight: 600;
+            display: block;
+            color: $white;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: $text-stroke;
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### CLOUD
+        --------------------------------------*/
+        .cloud {
+            position: absolute;
+
+            &.pink {
+                width: 20%;
+                top: 3%;
+                left: -1%;
+            }
+            &.gray {
+                width: 30%;
+                top: 51%;
+                left: 5%;
+            }
+            &.blue {
+                width: 16%;
+                top: 52%;
+                left: 79%;
+            }
+            &.yellow {
+                width: 10%;
+                top: 24%;
+                right: -1%;
+                z-index: 1;
+            }
+        }
+
+        /* ### TITLE SIDE
+        --------------------------------------*/
+        .title-side {
+            padding: 4%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .slider-side {
+            padding-left: 5%;
+        }
+
+        /* ### SPLIDE
+        --------------------------------------*/
+        .splide__list {
+            .splide__slide {
+                overflow: hidden;
+                border-radius: 450px 0 0 450px;
+            }
+        }
+
+        /* ### SCROLLING MESSGAE
+        --------------------------------------*/
+        .scrolling-msg-inner {
+        
+            span {
+                -webkit-text-stroke-width: 2px;
+            }
+        }
+    }
+}
+
+
+
+/* ## ABOUT SECTION（To/&co.について）
+******************************************************************/
+.radius-box {
+    background-color: $bg-gray;
+    border-radius: 120px;
+    padding: 5%;
+    position: relative;
+}
+
+.about-sec {
+    
+    /* ### CLOUD
+    --------------------------------------*/
+    .cloud {
+        position: absolute;
+
+        &.pink {
+            width: 17%;
+            top: 8%;
+            left: -5%;
+        }
+        &.tatsu-daruma {
+            width: 13%;
+        top: -6%;
+        left: -3%;
+        }
+        &.light-blue {
+            width: 12%;
+            top: 6%;
+            left: 90%;
+        }
+        &.blue {
+            width: 14%;
+            bottom: -2%;
+            left: -2%;
+            z-index: 10;
+        }
+        &.yellow {
+            width: 15%;
+            bottom: -7%;
+            right: 2%;
+        }
+        &.tora-daruma {
+            width: 12%;
+            bottom: -5%;
+            right: 3%;
+        }
+    }
+
+    /* ### LEAD TEXT
+    --------------------------------------------*/
+    .lead-text {
+        p {
+            display: table;
+            margin: 0 auto;
+        }
+        span {
+            font-size: 18px;
+            display: inline-block;
+            background: $white;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    }
+
+    /* ### QUESTION
+    --------------------------------------------*/
+    .question {
+        position: relative;
+        border: solid 1px $black;
+        border-radius: 20px;
+        background-color: $white;
+        max-width: 700px;
+        width: 100%;
+        margin: -2rem auto 0;
+        padding: 1rem 4rem 2rem;
+        text-align: left;
+
+        dt {
+            font-size: 24px;
+            color: $blue;
+            &::before {
+                font-size: 30px;
+                font-family: "Font Awesome 6 Free"; // フォント指定
+                content: "\f059"; // アイコンのUnicode
+                font-weight: 100; // Solid系アイコンなら 900（Regularなら 400）
+                margin-right: 8px; // アイコンとテキストの間に余白
+                color: $blue; // アイコンの色
+            }
+        }
+
+        dd {
+            font-size: 14px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -11px;
+            left: 48px;
+            width: 20px;
+            height: 20px;
+            background: $white;
+            border-left: 1px solid $black;
+            border-top: 1px solid $black;
+            transform: rotate(45deg);
+            border-radius: 2px;
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        .radius-box {
+            border-radius: 60px;
+            padding: 8%;
+        }
+
+        /* ### CLOUD
+        --------------------------------------*/
+        .cloud {
+            &.pink {
+                width: 17%;
+                top: 8%;
+                left: -4%;
+            }
+            &.tatsu-daruma {
+                width: 16%;
+                top: -1%;
+                left: -3%;
+            }
+            &.light-blue {
+                width: 18%;
+                top: 6%;
+                left: 85%;
+            }
+            &.blue {
+                width: 14%;
+                bottom: 6%;
+            }
+            &.yellow {
+                width: 15%;
+                bottom: -7%;
+                right: 2%;
+            }
+            &.tora-daruma {
+                width: 12%;
+                bottom: -5%;
+                right: 3%;
+            }
+        }
+
+        /* ### LEAD TEXT
+        --------------------------------------------*/
+        .lead-text {
+            span {
+                font-size: 14px;
+            }
+        }
+
+        /* ### QUESTION
+        --------------------------------------------*/
+        .question {
+            position: relative;
+            padding: 1rem 2.5rem 2rem;
+
+            dt {
+                font-size: 18px;
+                color: $blue;
+                &::before {
+                    font-size: 24px;
+                }
+            }
+
+            dd {
+                font-size: 13px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -11px;
+                left: 48px;
+                width: 20px;
+                height: 20px;
+                background: $white;
+                border-left: 1px solid $black;
+                border-top: 1px solid $black;
+                transform: rotate(45deg);
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+/* ## MOTTO SECTION（ファーストセクション）
+********************************************************************/
+.motto-sec {
+
+    /* ### CLOUD
+    --------------------------------------------*/
+    .cloud {
+        position: absolute;
+
+        &.gray {
+            width: 25%;
+            top: 26%;
+            left: -2%;
+            z-index: -1;
+        }
+    }
+
+    /* ### RADIUS BOX
+    --------------------------------------------*/
+    .radius-box {
+        position: absolute;
+        z-index: -1;
+        background-color: $bg-gray;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 150px 0 0 150px;
+    }
+
+    /* ### MOTTO LIST
+    --------------------------------------------*/
+    .motto-list {
+        li {
+            padding: 2rem 2rem 2rem 7rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+            background-color: $white;
+
+            .number {
+                position: absolute;
+                top: -30px;
+                left: -10%;
+                width: clamp(30px,30%,120px);
+            }
+
+            &.pink {
+                border: solid 2px $pink;
+                h3 {
+                    color: $pink;
+                }
+            }
+            &.light-blue {
+                border: solid 2px $light-blue;
+                h3 {
+                    color: #30CBCB;
+                }
+            }
+            &.blue {
+                border: solid 2px $blue;
+                h3 {
+                    color: $blue;
+                }
+            }
+            &.yellow {
+                border: solid 2px #C7C700;
+                h3 {
+                    color: #C7C700;
+                }
+            }
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### CLOUD
+        --------------------------------------------*/
+        .cloud {
+            &.gray {
+                width: 40%;
+                top: 5%;
+                left: -2%;
+            }
+        }
+
+        /* ### RADIUS BOX
+        --------------------------------------------*/
+        .radius-box {
+            top: 30%;
+            width: 60%;
+            height: 70%;
+            border-radius: 90px 0 0 90px;
+        }
+
+        .title-side {
+            margin-bottom: 3rem;
+        }
+
+        /* ### MOTTO LIST
+        --------------------------------------------*/
+        .motto-list {
+            li {
+                padding: 1.5rem 1.5rem 1.5rem 7rem;
+                margin-bottom: 1.5rem;
+
+                .number {
+                    top: -1%;
+                    left: -5%;
+                    width: 20%;
+                    max-width: 80px;
+                }
+            }
+        }
+    }
+}
+
+
+/* ## OUTLINE SECTION（アウトラインセクション）
+********************************************************************/
+.outline-sec {
+
+    /* ### COMPANY INFO TABLE
+    --------------------------------------------*/
+    .info-table {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 740px;
+        margin-bottom: 4rem;
+
+        th {
+            background-color: $bg-gray;
+            text-align: center;
+            font-weight: 700;
+            color: $blue;
+        }
+        th,
+        td {
+            padding: 2rem 3rem;
+        }
+        tr {
+            border-top: solid 1px $black;
+            &:last-child {
+                border-bottom: solid 1px $black;
+            }
+        }
+    }
+
+    /* ### GOOGLE MAP
+    --------------------------------------------*/
+    .google-map {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 40px;
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        padding-bottom: 8rem;
+
+        /* ### COMPANY INFO TABLE
+        --------------------------------------------*/
+        .info-table {
+            th,
+            td {
+                padding: 1rem 1.5rem;
+                font-size: 13px;
+            }
+            th {
+                width: 30%;
+            }
+        }
+
+        /* ### GOOGLE MAP
+        --------------------------------------------*/
+        .google-map {
+            height: 240px;
+            border-radius: 20px;
+
+            iframe {
+                height: 240px;
+            }
+        }
+    }
+}
+
+
+
+/* ### CONTACT FORM7
+--------------------------------------------*/
+.wpcf7-form {
+    h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: $blue;
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    .wpcf7-form-control-wrap {
+        display: block;
+        margin-bottom: 2rem;
+        
+        .wpcf7-text, .wpcf7-email, .wpcf7-tel {
+            width: 100%;
+            padding: 10px;
+            border: solid 1px $pink;
+            border-radius: 40px;
+        }
+
+        .wpcf7-tel {
+            width: inherit;
+        }
+
+        .wpcf7-radio {
+            input {
+                appearance: auto;
+            }
+
+            .wpcf7-list-item-label {
+                font-size: 14px;
+            }
+        }
+
+        .wpcf7-textarea {
+            width: 100%;
+            padding: 10px;
+            border: solid 1px $pink;
+            border-radius: 20px;
+        }
+    }
+
+    .wpcf7-submit {
+        padding: 1rem 6rem;
+        font-weight: 800;
+        background-color: $yellow;
+        font-size: 20px;
+        border: solid 2px $black;
+        border-radius: 50px;
+        color: $black;
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        h4 {
+            font-size: 15px;
+        }
+    
+        .wpcf7-submit {
+            font-size: 16px;
+        }
+    }
+ }
+
+
+// ## MOBILE // *************************************************>
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+--------------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

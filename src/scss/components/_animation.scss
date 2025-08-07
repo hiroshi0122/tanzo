@@ -1,0 +1,239 @@
+//**************************************************************
+// ANIMATION
+//**************************************************************
+
+/* ## フェード系アニメーション
+***********************************************/
+.fadeIn {
+  // 変化前
+  opacity: 0;
+  // 変化後
+  &.scrollin {
+    opacity: 1;
+    transition: 0.8s;
+  }
+}
+
+.fadeInUp {
+  // 変化前
+  opacity: 0;
+  transform: translateY(40px);
+  // 変化後
+  &.scrollin {
+    opacity: 1;
+    transition: 0.8s;
+    transform: translateY(0px);
+  }
+}
+
+.fadeInRight {
+  opacity: 0;
+  transform: translateX(40px);
+
+  &.scrollin {
+    opacity: 1;
+    transition: 0.8s;
+    transform: translateX(0px);
+  }
+}
+
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+
+  &.scrollin {
+    opacity: 1;
+    transition: 0.8s;
+    transform: translateX(0px);
+  }
+}
+
+
+/* ## ジャンプ、エンジン、点滅など
+***********************************************/
+.jump-15 {
+	animation: jump 1.5s infinite;
+}
+
+.jump-30 {
+	animation: jump 3s infinite;
+}
+
+.fluffy-30 {
+	animation: fluffy1 3s infinite;
+}
+
+.engine-20 {
+	animation: engine 0.2s infinite;
+}
+
+.doorknob-30 {
+	animation: doorKnob 3s infinite;
+}
+
+.boundscale-30 {
+	animation: boundScale 3s infinite;
+}
+
+.shine {
+	animation: letter-shine 1s infinite;
+}
+
+
+/* ### 全体のフェードインアニメーション（画面遷移）
+--------------------------------------------*/
+@keyframes fadeIn {
+	0% {
+        opacity: 0;
+        background-color: $white;
+    }
+	100% {
+        opacity: 1
+    }
+}
+
+
+/* ### ぽよんぽよん
+--------------------------------------------*/
+@keyframes bound {
+    0% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
+}
+
+
+/* ### ぽよっぽよよよん
+--------------------------------------------*/
+@keyframes fluffy1 {
+  0% { transform:translateY(0) }
+  5% { transform:translateY(0) }
+  10% { transform:translateY(0) }
+  20% { transform:translateY(-15px) }
+  25% { transform:translateY(0) }
+  30% { transform:translateY(-15px) }
+  50% { transform:translateY(0) }
+  100% { transform:translateY(0) }
+}
+
+
+/* ### ふわふわ
+--------------------------------------------*/
+@keyframes fuwafuwa {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+/* ### ジャンプ
+--------------------------------------------*/
+@keyframes jump {
+  0%{transform:translate(0,0px);}
+  3%{transform:translate(0,-20px);}
+  5%{transform:translate(0,0px);}
+  6%{transform:translate(0,-5px);}
+  7%{transform:translate(0,0px);}
+  100%{transform:translate(0,0px);}
+}
+@-webkit-keyframes jump{
+  0%{-webkit-transform:translate(0,0px);}
+  3%{-webkit-transform:translate(0,-20px);}
+  5%{-webkit-transform:translate(0,0px);}
+  6%{-webkit-transform:translate(0,-5px);}
+  7%{-webkit-transform:translate(0,0px);}
+  100%{-webkit-transform:translate(0,0px);}
+}
+@-moz-keyframes jump{
+  0%{-moz-transform:translate(0,0px);}
+  3%{-moz-transform:translate(0,-20px);}
+  5%{-moz-transform:translate(0,0px);}
+  6%{-moz-transform:translate(0,-5px);}
+  7%{-moz-transform:translate(0,0px);}
+  100%{-moz-transform:translate(0,0px);}
+}
+
+
+/* ### エンジン
+--------------------------------------------*/
+@keyframes engine{
+  0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  50%  { transform: scale(1.0, 0.98) translate(0%, 1.5%); }
+  100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+@-webkit-keyframes engine{
+  0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+  50%  { -webkit-transform: scale(1.0, 0.98) translate(0%, 1.5%); }
+  100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+@-moz-keyframes engine{
+  0%   { -moz-transform: scale(1.0, 1.0) translate(0%, 0%); }
+  50%  { -moz-transform: scale(1.0, 0.98) translate(0%, 1.5%); }
+  100% { -moz-transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+
+
+/* ### ドアノブ
+--------------------------------------------*/
+@keyframes doorKnob {
+	0% {transform: rotate(0);}
+	5% {transform: rotate(35deg);}
+	10% {transform: rotate(-25deg);}
+	15% {transform: rotate(20deg);}
+	18% {transform: rotate(-10deg);}
+	22% {transform: rotate(0deg);}
+	100% {transform: rotate(0);}
+}
+
+/* ### ズームアウト
+--------------------------------------------*/
+@keyframes zoomOut {
+  0% {
+    -webkit-transform: scale(3) translateY(0);
+            transform: scale(3) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-15px);
+            transform: scale(1) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+
+
+/* ### バウンドスケール
+--------------------------------------------*/
+@keyframes boundScale {
+	0% {transform: scale(1.0);}
+	5% {transform: scale(1.3);}
+	10% {transform: scale(1.0);}
+	20% {transform: scale(1.5);}
+	34% {transform: scale(1.0);}
+	100% {transform: scale(1.0);}
+}
+
+
+/* ### カウントの点滅
+--------------------------------------------*/
+@keyframes letter-shine {
+	0% {opacity: 0;}
+	50% {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+	100% {opacity: 0;}
+}
+
+
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+--------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */
