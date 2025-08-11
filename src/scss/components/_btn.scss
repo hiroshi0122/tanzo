@@ -41,6 +41,7 @@
     text-align: center;
     width: 260px;
     padding: .5rem 0;
+    background-color: $white;
     transition: 0.2s;
 
     &:hover {
@@ -53,24 +54,11 @@
 /* ### BTN AREA
 --------------------------------------------*/
 .btn-area {
-    .btn-view-more {
-        margin-top: 2rem;
-    }
+    display: flex;
+    justify-content: left;
 
-    .btn-roof {
-        margin-top: 3rem;
-    }
-
-    .btn-radius {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    // ## MOBILE // *************************************************>
-    @media #{$smallScreen} {
-        .btn-roof {
-            margin-top: 1rem;
-        }    
+    &.center {
+        justify-content: center;
     }
 }
 

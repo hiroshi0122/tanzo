@@ -11177,7 +11177,7 @@ footer .copyright {
 @media only screen and (max-width: 767px) {
   footer {
     padding-top: 5rem;
-    background-image: url("/wp-content/themes/to-and.jp/assets/images/footer/footer_bg_sp.svg");
+    background-image: url("/wp-content/themes/tanzo-jp.com/assets/images/footer/footer_bg_sp.svg");
     /* ### FOOTER LOGO
     -------------------------------------*/
     /* ### FOOTER NAV
@@ -11257,6 +11257,7 @@ footer .copyright {
   text-align: center;
   width: 260px;
   padding: 0.5rem 0;
+  background-color: #fff;
   transition: 0.2s;
 }
 .btn-view-more:hover {
@@ -11267,20 +11268,12 @@ footer .copyright {
 
 /* ### BTN AREA
 --------------------------------------------*/
-.btn-area .btn-view-more {
-  margin-top: 2rem;
+.btn-area {
+  display: flex;
+  justify-content: left;
 }
-.btn-area .btn-roof {
-  margin-top: 3rem;
-}
-.btn-area .btn-radius {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-@media only screen and (max-width: 767px) {
-  .btn-area .btn-roof {
-    margin-top: 1rem;
-  }
+.btn-area.center {
+  justify-content: center;
 }
 
 /* ## コメント中
@@ -11671,333 +11664,31 @@ footer .copyright {
 --------------------------------------*/
 /**** #### コメント下の下 ****/
 /* ##### コメント軽 */
-/* ## GRID RAYOUT
-***********************************************/
-.grid-rayout {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: clamp(200px, 17vw, 320px);
-  column-gap: 20px;
-  row-gap: 4vw;
-}
-
-.hover-image, .news-contents .news-box .image-area a img:hover, .post-contents .medium-box .image-area .parmalink .wp-post-image:hover, .post-contents .large-box .image-area .wp-post-image:hover {
-  transition: 0.2s;
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
-
-/* ## POST CONTENT
-***********************************************/
-.post-contents {
-  /* ### LARGE BOX
-  --------------------------------------*/
-  /* ### MEDIUM BOX
-  --------------------------------------*/
-  /* ### タグ一覧
-  --------------------------------------*/
-}
-.post-contents .large-box {
-  writing-mode: inherit;
-  margin: 0 auto 8rem;
-  max-width: 1280px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /**** #### テキスト部分 ****/
-  /**** #### 画像部分 ****/
-}
-.post-contents .large-box .text-area {
-  padding-left: 3%;
-}
-.post-contents .large-box .text-area .date {
-  display: block;
-  font-size: 12px;
-  font-weight: medium;
-  color: #989898;
-}
-.post-contents .large-box .text-area .post-title {
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  border-bottom: solid 1px #000000;
-  margin-bottom: 1rem;
-  padding-bottom: 5px;
-  line-height: 1.4;
-}
-.post-contents .large-box .text-area .excerpt {
-  margin-bottom: 2rem;
-  font-size: 14px;
-}
-.post-contents .large-box .text-area .excerpt.small {
-  font-size: 12px;
-}
-.post-contents .large-box .image-area a {
-  display: block;
-  overflow: hidden;
-  border: solid 2px #000000;
-  aspect-ratio: 13/9;
-}
-.post-contents .large-box .image-area .wp-post-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.2s;
-}
-@media only screen and (max-width: 767px) {
-  .post-contents .large-box {
-    margin: 0 auto 5rem;
-    /**** #### テキスト部分 ****/
-    /**** #### 画像部分 ****/
-  }
-  .post-contents .large-box .text-area {
-    padding-left: 3%;
-  }
-  .post-contents .large-box .text-area .date {
-    font-size: 10px;
-  }
-  .post-contents .large-box .text-area .post-title {
-    font-size: 18px;
-    border-bottom: solid 1px #000000;
-  }
-  .post-contents .large-box .text-area .excerpt {
-    font-size: 12px;
-    margin-bottom: 1rem;
-  }
-  .post-contents .large-box .text-area .excerpt.small {
-    font-size: 9px;
-  }
-  .post-contents .large-box .image-area {
-    margin-bottom: 1.5rem;
-  }
-  .post-contents .large-box .image-area a {
-    border: solid 1px #000000;
-  }
-}
-.post-contents .medium-box {
-  height: clamp(230px, 17vw, 340px);
-  margin-bottom: 7rem;
-  /**** #### テキスト部分 ****/
-  /**** #### 画像部分 ****/
-}
-.post-contents .medium-box .text-area {
-  writing-mode: vertical-rl;
-  display: flex;
-  align-items: center;
-}
-.post-contents .medium-box .text-area .date {
-  display: inline-grid;
-  text-align: center;
-  font-size: 10px;
-  word-break: keep-all;
-  border-bottom: solid 1px #000000;
-  writing-mode: rl;
-  margin-bottom: 5px;
-  letter-spacing: 0;
-}
-.post-contents .medium-box .text-area .date::before {
-  content: "";
-  text-align: center;
-  margin: 0 auto;
-  background-image: url("/wp-content/themes/to-and.jp/assets/images/title/roof.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 20px;
-  width: 42px;
-}
-.post-contents .medium-box .text-area .post-title {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-}
-.post-contents .medium-box .image-area {
-  padding-left: 15px;
-}
-.post-contents .medium-box .image-area .parmalink {
-  display: block;
-  height: 100%;
-  border: solid 2px #000000;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-.post-contents .medium-box .image-area .parmalink .wp-post-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.2s;
-}
-.post-contents .medium-box .image-area .excerpt {
-  margin-bottom: 2rem;
-  font-size: 14px;
-}
-.post-contents .medium-box .image-area .excerpt.small {
-  font-size: 13px;
-}
-@media only screen and (max-width: 767px) {
-  .post-contents .medium-box {
-    height: clamp(200px, 15vw, 340px);
-    margin-bottom: 5rem;
-    /**** #### 画像部分 ****/
-  }
-  .post-contents .medium-box .text-area .date {
-    font-size: px;
-  }
-  .post-contents .medium-box .text-area .date::before {
-    display: none;
-  }
-  .post-contents .medium-box .text-area .post-title {
-    font-size: 12px;
-  }
-  .post-contents .medium-box .image-area {
-    padding-left: 10px;
-  }
-  .post-contents .medium-box .image-area .parmalink {
-    border: solid 1px #000000;
-    margin-bottom: 8px;
-  }
-  .post-contents .medium-box .image-area .excerpt {
-    margin-bottom: 3rem;
-    font-size: 12px;
-  }
-  .post-contents .medium-box .image-area .excerpt.small {
-    font-size: 9px;
-    line-height: 1.5;
-  }
-}
-.post-contents .tags a {
-  display: block;
-  font-size: 13px;
-  color: #989898;
-}
-@media only screen and (max-width: 767px) {
-  .post-contents .tags a {
-    font-size: 11px;
-  }
-}
-
 /* ## NEWS CONTENTS
 ***********************************************/
 .news-contents {
-  max-width: 740px;
-  /* ### NEWS BOX
-  --------------------------------------*/
-}
-.news-contents .news-box {
-  background-color: #F5F5F5;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 8px;
-  position: relative;
-  /**** #### IMAGE AREA ****/
+  border-bottom: dashed 1px #000000;
   /**** #### TEXT AREA ****/
 }
-.news-contents .news-box .image-area a {
-  aspect-ratio: 4/3;
-  border-radius: 5px;
-  overflow: hidden;
+.news-contents .text-area {
+  padding: 1.5rem 0;
+}
+.news-contents .text-area .date {
   display: block;
-}
-.news-contents .news-box .image-area a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.news-contents .news-box .text-area {
-  padding-right: 2%;
-}
-.news-contents .news-box .text-area .date {
-  display: block;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: 200;
   color: #989898;
 }
-.news-contents .news-box .text-area .post-title {
-  border-bottom: solid 1px #000000;
-  font-size: clamp(13px, 2vw, 15px);
-  margin-bottom: 6px;
+.news-contents .text-area h4, .news-contents .text-area .highlight-text span, .highlight-text .news-contents .text-area span {
+  font-size: clamp(14px, 1.4vw, 20px);
+  font-weight: 500;
 }
-.news-contents .news-box .text-area .excerpt {
+.news-contents .text-area p {
   font-size: clamp(12px, 1.1vw, 14px);
   color: #989898;
   line-height: 1.5;
+  font-weight: 200;
 }
-@media only screen and (max-width: 767px) {
-  .news-contents {
-    /* ### NEWS BOX
-    --------------------------------------*/
-  }
-  .news-contents .news-box {
-    padding: 7px;
-  }
-}
-
-.all-post .news-contents {
-  max-width: 100%;
-}
-
-/* ## DIGIPAN LIST
-***********************************************/
-.digipan-list {
-  overflow: hidden;
-}
-
-/* ## DIGIPAN BOX
-***********************************************/
-.digipan-box {
-  padding: 0 2%;
-}
-.digipan-box .title-area {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.digipan-box .title-area a {
-  font-size: 18px;
-  font-weight: bold;
-  border-bottom: solid 1px #000000;
-  padding-bottom: 5px;
-}
-.digipan-box .image-area {
-  padding: 0 7% 1rem;
-}
-.digipan-box .image-area img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: solid 2px #000000;
-}
-.digipan-box .text-area .excerpt {
-  font-size: 13px;
-  line-height: 1.5;
-}
-@media only screen and (max-width: 767px) {
-  .digipan-box {
-    padding: 0 1%;
-    margin-bottom: 1rem;
-  }
-  .digipan-box .title-area {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  .digipan-box .title-area a {
-    font-size: 15px;
-    border-bottom: solid 1px #000000;
-  }
-  .digipan-box .image-area {
-    padding: 0 7% 1rem;
-  }
-  .digipan-box .image-area img {
-    border: solid 1px #000000;
-  }
-  .digipan-box .text-area .excerpt {
-    font-size: 10px;
-  }
-}
-.digipan-box.is-active .image-area img {
-  transform: scale(1.05);
-  filter: brightness(1.2);
-  transition: 0.2s;
-}
-
 /* ## PODCAST BOX
 ***********************************************/
 /* ## コメント中
@@ -12182,6 +11873,23 @@ footer .copyright {
   font-size: 30px;
 }
 
+/* ## MAINTENANCE SECTION（メンテナンス・Q&A）
+******************************************************************/
+.maintenance-sec {
+  padding: 10%;
+  /* ### WRAPPER
+  --------------------------------------*/
+}
+.maintenance-sec .maintenance-wrapper {
+  padding: 8% 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/wp-content/themes/tanzo-jp.com/assets/images/home/maintenance_bg.webp");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+/* ## NEWS SECTION（お知らせ）
+******************************************************************/
 /* ### CONTACT FORM7
 --------------------------------------------*/
 .wpcf7-form h4, .wpcf7-form .highlight-text span, .highlight-text .wpcf7-form span {

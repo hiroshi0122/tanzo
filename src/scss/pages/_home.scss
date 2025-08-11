@@ -220,6 +220,32 @@
 }
 
 
+/* ## MAINTENANCE SECTION（メンテナンス・Q&A）
+******************************************************************/
+.maintenance-sec {
+    padding: 10%;
+
+    /* ### WRAPPER
+    --------------------------------------*/
+    .maintenance-wrapper {
+        padding: 8% 0;
+        background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url("#{$image-path}/home/maintenance_bg.webp");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+
+}
+
+
+/* ## NEWS SECTION（お知らせ）
+******************************************************************/
+.news-sec {
+
+
+    
+}
 
 
 /* ### CONTACT FORM7

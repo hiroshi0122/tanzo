@@ -102,7 +102,7 @@ get_header();
 <section class="first-sec" id="first-view-sec">
     <div class="container-fluid">
         <div class="slider-wrapper">
-            <div class="slider-container">
+            <div class="slider-container blur">
                 <?php foreach ($slides as $index => $slide) : ?>
                     <div class="slide <?php echo ($index === 0) ? 'active' : ''; ?>">
                         <img src="<?php echo esc_url($slide['img']); ?>" alt="<?php echo esc_attr($slide['alt']); ?>">
@@ -162,7 +162,7 @@ get_header();
                 </div>
             </div>
             <div class="col-md-6 p-0">
-                <div class="image-side">
+                <div class="image-side blur">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/home/life_image.webp" alt="TANZOのある暮らし">
                 </div>
             </div>
@@ -176,7 +176,7 @@ get_header();
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-6 p-0">
-                <div class="image-side">
+                <div class="image-side blur">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/home/story_image.webp" alt="開発の物語">
                 </div>
             </div>
@@ -235,16 +235,63 @@ get_header();
 </section>
 
 
+<?php // MAINTENAINCE SECTION // *********************************************************** // ?>
+<section class="maintenance-sec blur">
+    <div class="container">
+        <div class="maintenance-wrapper">
+            <div class="main-title center blur">
+                <span>Maintenance/Q&A</span>
+                <h2 class="daily-title">メンテナンス・Q&A</h2>
+            </div>
+            <div class="text-center mb-5">
+                <p>TANZOはシーズニング済み。<br>簡単・楽しくお使いいただけます。</p>
+            </div>
+            <div class="btn-area center">
+                <a class="btn-view-more" href="/maintenance">VIEW MORE >>></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<?php // NEWS SECTION // *********************************************************** // ?>
+<section class="news-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="main-title blur">
+                    <span>NEWS</span>
+                    <h2 class="daily-title">お知らせ</h2>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <?php if ($posts->have_posts()) : ?>
+                    <?php while ($posts->have_posts()) : $posts->the_post(); ?>
+
+                         <?php get_template_part('template-parts/components/news-list'); ?>
+                         
+                    <?php endwhile; ?>
+                <?php endif; ?>
+
+                <div class="btn-area justify-content-end pt-5">
+                    <a class="btn-more" href="/all-news">More >>></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <?php // CONTACT SECTION // *********************************************************** // ?>
-<section class="contact-sec" id="contact">
+<!-- <section class="contact-sec" id="contact">
     <div class="container xs-container">
         <div class="main-title blur">
             <span>お問い合わせ</span>
             <h2 class="yellow">CONTACT</h2>
         </div>
-        <?php echo do_shortcode('[contact-form-7 id="99f3a0e" title="お問い合わせフォーム"]'); ?>
+        <?php // echo do_shortcode('[contact-form-7 id="99f3a0e" title="お問い合わせフォーム"]'); ?>
     </div>
-</section>
+</section> -->
 
 
 
