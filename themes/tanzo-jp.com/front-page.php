@@ -12,6 +12,17 @@
  * Template Name: HOME
  **/
 
+// スライダーの配列処理
+$slides = [
+    [
+        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_1.webp',
+        'alt' => 'スライダー1',
+    ],
+    [
+        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_2.webp',
+        'alt' => 'スライダー1',
+    ],
+];
 
 /* NEWSの投稿取得 */
 $args = array(
@@ -55,40 +66,37 @@ get_header();
 
 <?php // FIRST SECTION // *********************************************************** // ?>
 <section class="first-sec" id="first-view-sec">
-    <div class="container-fluid g-0">
-        <div class="row align-items-center g-0">
-            <div class="col-md-3 order-1 order-md-0 title-side">
-                <img class="blur d-none d-md-block" src="<?php bloginfo('template_url'); ?>/assets/images/home/main_title.svg" alt="一人一人の可能性を発見する就労支援B型施設">
-                <img class="blur d-md-none" src="<?php bloginfo('template_url'); ?>/assets/images/logo/unicra_logo_hr.svg" alt="一人一人の可能性を発見する就労支援B型施設">
-            </div>
-            <div class="col-md-9 order-0 order-md-1 slider-side">
-                <div class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <?php foreach ($slider as $image) : ?>
-                                <li class="splide__slide">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/images/home/<?php echo ($image); ?>.webp" alt="ファーストしライダーイメージ">
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
+    <div class="container-fluid">
+        <div class="slider-side">
+            <div class="slider-container">
+                <?php foreach ($slides as $index => $slide) : ?>
+                    <div class="slide <?php echo ($index === 0) ? 'active' : ''; ?>">
+                        <img src="<?php echo esc_url($slide['img']); ?>" alt="<?php echo esc_attr($slide['alt']); ?>">
                     </div>
+                <?php endforeach; ?>
+
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
                 </div>
+            </div>
+
+            <div class="dots">
+                <?php foreach ($slides as $index => $slide) : ?>
+                    <div class="dot <?php echo ($index === 0) ? 'active' : ''; ?>"></div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 </section>
 
 
-<?php // ABOUT SECTION // *********************************************************** // ?>
+<?php // ABOUT SECTION // *********************************************************** // 
+?>
 <section class="about-sec pt-0" id="about">
     <div class="container text-center">
         <div class="radius-box">
             <img class="cloud blur pink" src="<?php bloginfo('template_url'); ?>/assets/images/common/cloud_pink.svg" alt="雲：ピンク">
-            <img class="cloud blur tatsu-daruma" src="<?php bloginfo('template_url'); ?>/assets/images/home/tatsu_beko_1.webp" alt="辰だるま">
-            <img class="cloud blur light-blue" src="<?php bloginfo('template_url'); ?>/assets/images/common/cloud_light_blue.svg" alt="雲：水色">
-            <img class="cloud blur blue" src="<?php bloginfo('template_url'); ?>/assets/images/common/cloud_blue.svg" alt="雲：ブルー">
-            <img class="cloud blur yellow" src="<?php bloginfo('template_url'); ?>/assets/images/common/cloud_yellow.svg" alt="雲：イエロー">
-            <img class="cloud blur tora-daruma" src="<?php bloginfo('template_url'); ?>/assets/images/home/tora_daruma.webp" alt="とらだるま">
+
             <div class="main-title blur">
                 <span>わたしたちについて</span>
                 <h2 class="yellow">ABOUT US</h2>
@@ -114,7 +122,8 @@ get_header();
     </div>
 </section>
 
-<?php // MOTTO SECTION // *********************************************************** // ?>
+<?php // MOTTO SECTION // *********************************************************** // 
+?>
 <section class="motto-sec" id="motto">
     <img class="cloud blur gray" src="<?php bloginfo('template_url'); ?>/assets/images/common/cloud_gray.svg" alt="雲：グレー">
     <span class="radius-box"></span>
@@ -129,9 +138,9 @@ get_header();
             </div>
             <div class="col-lg-7 motto-side">
                 <ul class="motto-list">
-                    <?php 
-                        $n = 1;
-                        foreach ($motto as $key => $value ) : 
+                    <?php
+                    $n = 1;
+                    foreach ($motto as $key => $value) :
                     ?>
                         <li class="<?php echo htmlspecialchars($key, ENT_QUOTES, 'UTF-8'); ?> fadeInUp">
                             <img class="number" src="<?php bloginfo('template_url'); ?>/assets/images/home/number_<?php echo $n++; ?>.svg" alt="No.">
@@ -145,7 +154,8 @@ get_header();
 </section>
 
 
-<?php // OUTLINE SECTION // *********************************************************** // ?>
+<?php // OUTLINE SECTION // *********************************************************** // 
+?>
 <section class="outline-sec" id="outline">
     <div class="container s-container">
         <div class="main-title blur center">
@@ -165,12 +175,13 @@ get_header();
     </div>
     <div class="container">
         <div class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.9462028441876!2d140.21365503444233!3d37.12787917205818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60203aed8ce8a5dd%3A0x8b528ef3c58da174!2z44CSOTYxLTA5NTEg56aP5bO255yM55m95rKz5biC5Lit55S677yV77yT!5e0!3m2!1sja!2sjp!4v1744765579894!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.9462028441876!2d140.21365503444233!3d37.12787917205818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60203aed8ce8a5dd%3A0x8b528ef3c58da174!2z44CSOTYxLTA5NTEg56aP5bO255yM55m95rKz5biC5Lit55S677yV77yT!5e0!3m2!1sja!2sjp!4v1744765579894!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
 
-<?php // CONTACT SECTION // *********************************************************** // ?>
+<?php // CONTACT SECTION // *********************************************************** // 
+?>
 <section class="contact-sec" id="contact">
     <div class="container xs-container">
         <div class="main-title blur">
@@ -181,20 +192,6 @@ get_header();
     </div>
 </section>
 
-
-
-<script>
-    var splide = new Splide('.splide', {
-        type: 'fade',
-        perPage: 1,
-        autoplay: true,
-        rewind: true,
-        speed: 400,
-        arrows: boolean = false,
-    });
-
-    splide.mount();
-</script>
 
 
 <?php get_footer(); ?>

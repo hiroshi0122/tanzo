@@ -2,24 +2,28 @@
 
 $navigation = [
     [
-        'sub-title' => '私たちについて',
-        'menu' => 'ABOUT',
-        'link' => '#about',
+        'menu' => 'TANZOのある暮らし',
+        'link' => '/daily-life',
     ],
     [
-        'sub-title' => '私たちのモットー',
-        'menu' => 'MOTTO',
-        'link' => '#motto',
+        'menu' => '開発のものがたり',
+        'link' => '/story',
     ],
     [
-        'sub-title' => '施設概要',
-        'menu' => 'OUTLINE',
-        'link' => '#outline',
+        'menu' => '製品ラインアップ',
+        'link' => '/lineup',
     ],
     [
-        'sub-title' => 'お問い合わせ',
-        'menu' => 'CONTACT',
-        'link' => '#contact',
+        'menu' => 'メンテナンス／Q&A',
+        'link' => '/maintenance',
+    ],
+    [
+        'menu' => 'お知らせ',
+        'link' => '/news',
+    ],
+    [
+        'menu' => 'お問い合わせ',
+        'link' => '/contact',
     ],
 ];
 

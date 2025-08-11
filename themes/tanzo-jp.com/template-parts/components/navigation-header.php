@@ -14,7 +14,7 @@ include 'navigation.php';  // 配列を読み込み
     <div class="row align-items-center">
         <div class="col-auto">
             <a class="logo-side" href="/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/unicra_logo.svg" alt="ユニクラのロゴ">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo.svg" alt="tanzoロゴ">
             </a>
         </div>
         <nav class="col d-none d-lg-block">
@@ -23,7 +23,6 @@ include 'navigation.php';  // 配列を読み込み
                     <li class="col-auto">
                         <a class="menu-link js-anchor" href="/<?php echo esc_html($menu['link']); ?>">
                             <p><?php echo esc_html($menu['menu']); ?></p>
-                            <span><?php echo esc_html($menu['sub-title']); ?></span>
                         </a>
                     </li>
                 <?php endforeach; ?>
@@ -40,13 +39,12 @@ include 'navigation.php';  // 配列を読み込み
         <div class="menu-contents d-lg-none">
             <ul class="menu-list">
                 <a class="logo" href="/">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/unicra_logo_white.svg" alt="ロゴ">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo.svg" alt="TANZOロゴ">
                 </a>
                 <?php foreach($navigation as $key => $menu): ?>
                     <li class="menu modal-close">
                         <a href="/<?php echo esc_html($menu['link']); ?>">
                             <p><?php echo esc_html($menu['menu']); ?></p>
-                            <span><?php echo nl2br($menu['sub-title']); ?></span>
                         </a>
                     </li>
                 <?php endforeach; ?>

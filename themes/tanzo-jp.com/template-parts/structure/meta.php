@@ -22,7 +22,7 @@
 <script>
   (function(d) {
     var config = {
-      kitId: 'tvq4nwr',
+      kitId: 'vsg5rcj',
       scriptTimeout: 3000,
       async: true
     },
@@ -30,18 +30,16 @@
   })(document);
 </script>
 
-<?php // LINE SEED FONT // ?>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-seed-jp@0.0.5/line-seed-jp.min.css">
+<?php // GOOGLE FONT // ?>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
 
 <?php // GSAP // ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
 <?php // LENIS // ?>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.19/dist/lenis.min.js" defer></script>
-
-<?php // SPLIDE // ?>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/all.css?ver=<?php echo time(); ?>"></link>
