@@ -32,7 +32,7 @@ main {
 ***********************************************/
 section {
 	position: relative;
-	padding: 10rem 0rem;
+	padding: 12rem 0rem;
 
 	&.bg-gray {
 		background-color: $bg-gray;
@@ -55,7 +55,7 @@ section {
 /* ## FIRST SECTION
 ***********************************************/
 .first-sec {
-	padding-top: 70px;
+	padding-top: 92px;
 
 	/* ### MOBILE =====================================*/
 	@media #{$smallScreen} {

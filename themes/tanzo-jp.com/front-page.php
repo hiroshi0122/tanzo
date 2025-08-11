@@ -20,9 +20,66 @@ $slides = [
     ],
     [
         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_2.webp',
-        'alt' => 'スライダー1',
+        'alt' => 'スライダー2',
+    ],
+    [
+        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_3.webp',
+        'alt' => 'スライダー3',
+    ],
+    [
+        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_4.webp',
+        'alt' => 'スライダー4',
+    ],
+    [
+        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_5.webp',
+        'alt' => 'スライダー5',
+    ],
+    [
+        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_6.webp',
+        'alt' => 'スライダー6',
     ],
 ];
+
+// ラインナップの製品情報
+$products = [
+    [
+        'img' => 'flying_pan_1',
+        'title' => 'TANZO フライパン',
+        'text' => '使いやすいを目指し、デザインや細部までこだわり抜いた、世界的にも珍しい鍛造（たんぞう）フライパン。取手を外してそのまま食卓へ。',
+        'price' => '25,300',
+        'link' => '/products/tanzo-frying-pan',
+    ],
+    [
+        'img' => 'bowl_2',
+        'title' => 'TANZO ボウル',
+        'text' => '使いやすいを目指し、デザインや細部までこだわり抜いた、世界的にも珍しい鍛造（たんぞう）ボウル。浅型鍋として、無水調理や煮込み料理、揚げ物料理にも使いやすい万能ボウル。お鍋としても使えます。',
+        'price' => '29,700',
+        'link' => '/products/tanzo-bowl',
+    ],
+    [
+        'img' => 'glass_lid_hole_2',
+        'title' => 'TANZOフライパン 専用ガラス蓋 蒸気穴付き',
+        'text' => 'フライパン調理をより快適にサポートするガラス蓋。蒸気穴を通じて蒸気が逃げることで、鍋の中の温度や湿度が適切に保たれ、食材が均一に加熱されます。煮物や蒸し料理などで、適切な水分量を保ちながら調理することが可能です。',
+        'price' => '0,000',
+        'link' => '/products/tanzo-frying-pan',
+    ],
+    [
+        'img' => 'glass_lid_2',
+        'title' => 'TANZO TANZOボウル専用 ガラス蓋',
+        'text' => '調理をより快適にサポートするガラス蓋。蒸気穴を通じて蒸気が逃げることで、鍋の中の温度や湿度が適切に保たれ、食材が均一に加熱されます。煮物や蒸し料理などで、適切な水分量を保ちながら調理することが可能です。',
+        'price' => '0,000',
+        'link' => '/products/tanzo-frying-pan',
+    ],
+    [
+        'img' => 'glass_lid_2',
+        'title' => 'TANZO×SKYWOOD 吉野杉ウッドプレート大・中・小',
+        'text' => '熱いTANZOをそのまま食卓に！側面に持ちやすいカットを施していただきました。鍋敷きにつかっても、木製プレートとして使っても、カッティングボードとして使ってもOK。',
+        'price' => '0,000',
+        'link' => '/products/tanzo-frying-pan',
+    ],
+];
+
+
 
 /* NEWSの投稿取得 */
 $args = array(
@@ -34,30 +91,7 @@ $args = array(
 );
 $posts = new WP_Query($args);
 
-// 会社概要の情報
-$company_info = [
-    "施設名" => "就労支援B型事業所 ユニクラ",
-    "作業内容" => "だるまや赤べこなどの民芸品制作、内職作業",
-    "営業時間" => "月曜日～金曜日　10:00～12:00、13:00~15:00
-    ※送迎あり（土・日・祝日休み）",
-    "アクセス" => "福島県白河市中町53"
-];
 
-$slider = [
-    'slide_1',
-    'slide_2',
-    'slide_3',
-    'slide_5',
-    'slide_6',
-    'slide_7',
-];
-
-$motto = [
-    'pink' => '失敗してもいい環境づくり',
-    'light-blue' => 'ポジティブな環境整備',
-    'blue' => '自信と能力を高める',
-    'yellow' => 'やりがいの創出',
-];
 
 
 
@@ -67,7 +101,7 @@ get_header();
 <?php // FIRST SECTION // *********************************************************** // ?>
 <section class="first-sec" id="first-view-sec">
     <div class="container-fluid">
-        <div class="slider-side">
+        <div class="slider-wrapper">
             <div class="slider-container">
                 <?php foreach ($slides as $index => $slide) : ?>
                     <div class="slide <?php echo ($index === 0) ? 'active' : ''; ?>">
@@ -79,109 +113,129 @@ get_header();
                     <div class="progress" id="progress"></div>
                 </div>
             </div>
-
             <div class="dots">
                 <?php foreach ($slides as $index => $slide) : ?>
                     <div class="dot <?php echo ($index === 0) ? 'active' : ''; ?>"></div>
                 <?php endforeach; ?>
             </div>
+             <img class="catch" src="<?php bloginfo('template_url'); ?>/assets/images/home/kc_catch.svg" alt="いつもの料理をもっと美味しく">
         </div>
     </div>
 </section>
 
 
-<?php // ABOUT SECTION // *********************************************************** // 
-?>
-<section class="about-sec pt-0" id="about">
-    <div class="container text-center">
-        <div class="radius-box">
-            <img class="cloud blur pink" src="<?php bloginfo('template_url'); ?>/assets/images/common/cloud_pink.svg" alt="雲：ピンク">
+<?php // DAILY LIFE SECTION // *********************************************************** // ?>
+<section class="daily-life-sec">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="text-side">
+                     <div class="main-title blur">
+                        <span>Life with TANZO</span>
+                        <h2 class="daily-title">TANZOのある暮らし</h2>
+                    </div>
+                    <p class="description">エアースタンプハンマーが生み出す2,000トンの力で、鉄は生まれ変わります。長年培った独自の鍛造技術が、調理する食材一つひとつの隠された旨味を解き放ち、あなたの食卓に感動をお届けします。</p>
 
-            <div class="main-title blur">
-                <span>わたしたちについて</span>
-                <h2 class="yellow">ABOUT US</h2>
-            </div>
-            <div class="lead-text">
-                <p>
-                    <span>だるまランドや、アカベコランドを運営する白河だるま総本舗。</span><br>
-                    <span>その白河だるまの14代目が代表を務める就労継続支援B型施設です。</span><br>
-                    <span>伝統工芸品の担い手不足解消と、</span><br>
-                    <span>障害のある方一人ひとりの可能性を見つけるため、この施設を立ち上げました。</span><br>
-                    <span>ものつくりを通して「達成感・挑戦心」を培い、</span><br>
-                    <span>ひとりひとりが自信を持って生きることができる社会を目指しています。</span>
-                </p>
-            </div>
-        </div>
-        <div class="question">
-            <dl>
-                <dt>就労継続支援B型とは？</dt>
-                <dd>就労継続支援B型とは、障害のある方が一般企業への就職が困難な場合に、雇用契約を結ばず、軽作業などの就労訓練を行う福祉サービスのことです。</dd>
-                <dd>障害や体調に合わせて、自分のペースで働くことができます。ユニクラでは、身体障害や知的障害、発達障害を含む精神障害、または難病を抱えている方を対象としています。</dd>
-            </dl>
-        </div>
-    </div>
-</section>
-
-<?php // MOTTO SECTION // *********************************************************** // 
-?>
-<section class="motto-sec" id="motto">
-    <img class="cloud blur gray" src="<?php bloginfo('template_url'); ?>/assets/images/common/cloud_gray.svg" alt="雲：グレー">
-    <span class="radius-box"></span>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 title-side">
-                <div class="main-title blur">
-                    <span class="yellow">わたしたちのモットー</span>
-                    <h2 class="pink">OUR <br class="d-none d-sm-block">MOTTO</h2>
-                </div>
-                <p>以下の４つを私たちのモットーとして掲げています。</p>
-            </div>
-            <div class="col-lg-7 motto-side">
-                <ul class="motto-list">
-                    <?php
-                    $n = 1;
-                    foreach ($motto as $key => $value) :
-                    ?>
-                        <li class="<?php echo htmlspecialchars($key, ENT_QUOTES, 'UTF-8'); ?> fadeInUp">
-                            <img class="number" src="<?php bloginfo('template_url'); ?>/assets/images/home/number_<?php echo $n++; ?>.svg" alt="No.">
-                            <h3><?php echo nl2br(htmlspecialchars($value, ENT_QUOTES, 'UTF-8')); ?></h3>
+                    <ul class="second-page-menu row">
+                        <li class="col-auto">
+                            <span>01.</span>
+                            <h5>弱火と予熱で旨みを凝縮</h5>
+                            <div class="text-end">
+                                <a href="" class="btn-more">More >>></a>
+                            </div>
                         </li>
-                    <?php endforeach; ?>
-                </ul>
+                        <li class="col-auto">
+                            <span>02.</span>
+                            <h5>TANZOのこだわり</h5>
+                            <div class="text-end">
+                                <a href="" class="btn-more">More >>></a>
+                            </div>
+                        </li>
+                        <li class="col-auto">
+                            <span>03.</span>
+                            <h5>調理からテーブルへ<br>暮らしを彩るTANZO</h5>
+                            <div class="text-end">
+                                <a href="" class="btn-more">More >>></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 p-0">
+                <div class="image-side">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/home/life_image.webp" alt="TANZOのある暮らし">
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 
-<?php // OUTLINE SECTION // *********************************************************** // 
-?>
-<section class="outline-sec" id="outline">
-    <div class="container s-container">
-        <div class="main-title blur center">
-            <span>施設概要</span>
-            <h2 class="yellow">OUTLINE</h2>
-        </div>
-        <table class="info-table">
-            <tbody>
-                <?php foreach ($company_info as $key => $info) : ?>
-                    <tr>
-                        <th><?php echo htmlspecialchars($key, ENT_QUOTES, 'UTF-8'); ?></th>
-                        <td><?php echo nl2br(htmlspecialchars($info, ENT_QUOTES, 'UTF-8')); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="container">
-        <div class="google-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.9462028441876!2d140.21365503444233!3d37.12787917205818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60203aed8ce8a5dd%3A0x8b528ef3c58da174!2z44CSOTYxLTA5NTEg56aP5bO255yM55m95rKz5biC5Lit55S677yV77yT!5e0!3m2!1sja!2sjp!4v1744765579894!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<?php // STORY SECTION // *********************************************************** // ?>
+<section class="story-sec">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6 p-0">
+                <div class="image-side">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/home/story_image.webp" alt="開発の物語">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text-side">
+                     <div class="main-title blur">
+                        <span>The Making of TANZO</span>
+                        <h2 class="daily-title">開発の物語</h2>
+                        <h3 class="sub-catch">簡単なキャッチが入ります。<br>簡単なキャッチが入ります。</h3>
+                    </div>
+                    <p class="description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <div class="btn-area">
+                        <a class="btn-view-more" href="/story">VIEW MORE >>></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<?php // CONTACT SECTION // *********************************************************** // 
-?>
+
+<?php // LINUP SECTION // *********************************************************** // ?>
+<section class="lineup-sec">
+    <div class="container">
+        <div class="main-title center blur">
+            <span>PRODUCT</span>
+            <h2 class="daily-title">商品ラインアップ</h2>
+        </div>
+        <div class="row">
+            <?php $i = 1; // カウンター初期化 ?>
+            <?php foreach ($products as $product): ?>
+                <div class="col-md-6">
+                    <div class="content">
+                        <span class="number"><?php echo str_pad($i, 2, '0', STR_PAD_LEFT); ?>.</span>
+                        <div class="product-image">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/products/<?php echo esc_html($product['img']); ?>.webp" alt="<?php echo esc_html($product['title']); ?>">
+                        </div>
+                        <div class="product-info">
+                            <h3><?php echo esc_html($product['title']); ?></h3>
+                            <p><?php echo esc_html($product['text']); ?></p>
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <div class="price">
+                                    <span class="me-1">¥</span>
+                                    <span><?php echo esc_html($product['price']); ?></span>
+                                    <span>（税込）</span>
+                                </div>
+                                <a class="btn-more" href="<?php echo esc_html($product['link']); ?>" target="_blank" rel="noopener">More >>></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            <?php $i++; ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+
+<?php // CONTACT SECTION // *********************************************************** // ?>
 <section class="contact-sec" id="contact">
     <div class="container xs-container">
         <div class="main-title blur">

@@ -10743,7 +10743,7 @@ h6 {
 }
 
 p, li {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 2;
 }
 @media only screen and (max-width: 767px) {
@@ -10819,7 +10819,7 @@ body {
 ***********************************************/
 section {
   position: relative;
-  padding: 10rem 0rem;
+  padding: 12rem 0rem;
   /* ### MOBILE =====================================*/
 }
 section.bg-gray {
@@ -10837,7 +10837,7 @@ section.fixed-page .main-title-template {
 /* ## FIRST SECTION
 ***********************************************/
 .first-sec {
-  padding-top: 70px;
+  padding-top: 92px;
   /* ### MOBILE =====================================*/
 }
 @media only screen and (max-width: 767px) {
@@ -10922,7 +10922,7 @@ section.fixed-page .main-title-template {
 /* ##### コメント軽 */
 header {
   position: fixed;
-  padding: 2rem;
+  padding: 3rem 2rem;
   left: 0px;
   top: 0px;
   z-index: 20;
@@ -11148,7 +11148,7 @@ footer .footer-nav .navigation {
   margin: 0 auto 2rem;
 }
 footer .footer-nav .menu-link span {
-  color: #B5B5B5;
+  color: #989898;
 }
 footer .footer-nav .menu-link p {
   font-weight: bold;
@@ -11224,7 +11224,7 @@ footer .copyright {
 /* ##### コメント軽 */
 /* ## ボタン共通の css
 ***********************************************/
-.btn, .btn-radius, .btn-roof, .btn-view-more {
+.btn {
   font-size: 18px;
   font-weight: bold;
   display: inline-block;
@@ -11232,9 +11232,37 @@ footer .copyright {
   transition: 0.2s;
 }
 @media only screen and (max-width: 767px) {
-  .btn, .btn-radius, .btn-roof, .btn-view-more {
+  .btn {
     font-size: 14px;
   }
+}
+
+/* ### BTN VIEW MORE（詳しく見る）
+--------------------------------------------*/
+.btn-more {
+  border-bottom: solid 1px #000000;
+  font-size: 13px;
+}
+.btn-more:hover i {
+  transition: 0.2s;
+  transform: scale(1.3) rotate(360deg);
+}
+
+/* ### BTN VIEW MORE（詳しく見る）
+--------------------------------------------*/
+.btn-view-more {
+  display: block;
+  border: solid 1px #000000;
+  font-size: 15px;
+  text-align: center;
+  width: 260px;
+  padding: 0.5rem 0;
+  transition: 0.2s;
+}
+.btn-view-more:hover {
+  background-color: #000000;
+  color: #fff;
+  transition: 0.2s;
 }
 
 /* ### BTN AREA
@@ -11255,83 +11283,6 @@ footer .copyright {
   }
 }
 
-/* ### BTN VIEW MORE（詳しく見る）
---------------------------------------------*/
-.btn-view-more {
-  display: flex;
-  align-items: center;
-}
-.btn-view-more p {
-  font-size: 18px;
-  border-bottom: solid 1px #000000;
-  margin-right: 10px;
-}
-.btn-view-more i {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #fff;
-  background-color: #000000;
-  display: grid;
-  place-content: center;
-  transition: 0.2s;
-}
-.btn-view-more:hover i {
-  transition: 0.2s;
-  transform: scale(1.3) rotate(360deg);
-}
-
-/* ### BTN ROOF（屋根ボタン）
---------------------------------------------*/
-.btn-roof {
-  width: 360px;
-  padding-top: 3rem;
-  text-align: center;
-  background-image: url("/wp-content/themes/to-and.jp/assets/images/btn/btn-roof.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-.btn-roof span {
-  font-size: 10px;
-  color: #B5B5B5;
-  display: block;
-  line-height: 1.3;
-  font-weight: medium;
-}
-.btn-roof p {
-  font-size: 22px;
-  color: #fff;
-  line-height: 1.2;
-  padding-bottom: 9px;
-}
-.btn-roof:hover {
-  transform: translateY(-5px);
-  transition: 0.2s;
-}
-@media only screen and (max-width: 767px) {
-  .btn-roof {
-    width: 300px;
-  }
-  .btn-roof p {
-    font-size: 18px;
-  }
-}
-
-/* ### BTN RADIUS（角丸ボタン）
---------------------------------------------*/
-.btn-radius {
-  border-radius: 40px;
-  background-color: #000000;
-  text-align: center;
-  color: #fff;
-  border: solid 2px #000000;
-  padding: 0.5rem 2rem;
-}
-.btn-radius:hover {
-  border: solid 2px #000000;
-}
-
 /* ## コメント中
 ***********************************************/
 /* ### コメント下
@@ -11339,57 +11290,58 @@ footer .copyright {
 /**** #### コメント下の下 ****/
 /* ##### コメント軽 */
 .main-title {
-  position: relative;
-  margin-bottom: 5rem;
-  /* ### Span
-  --------------------------------------*/
-  /* ### h2
+  margin-bottom: 4rem;
+  /* ### 中央揃えタイトル
   --------------------------------------*/
 }
 .main-title span {
-  font-size: clamp(18px, 3vw, 34px);
-  font-weight: 900;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #000000;
-  color: #fff;
+  display: flex;
+  position: relative;
+  color: #989898;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 2rem;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 5px;
 }
-.main-title span.yellow {
-  color: #FFFF00;
-}
-.main-title span.pink {
-  color: #FFAEAB;
+.main-title span::after {
+  content: "";
+  display: block;
+  margin-left: 5px;
+  border-bottom: 1px solid #989898;
+  width: 20px;
 }
 .main-title h2 {
-  font-weight: bold;
-  font-size: clamp(40px, 6vw, 90px);
-  line-height: 1;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #000000;
-  color: #fff;
+  letter-spacing: 5px;
+  font-size: clamp(2rem, 2.5vw, 3.5rem);
+  padding-left: 2rem;
+  border-left: solid 2px #000000;
 }
-.main-title h2.yellow {
-  color: #FFFF00;
-}
-.main-title h2.pink {
-  color: #FFAEAB;
+.main-title h3 {
+  margin-top: 2rem;
+  letter-spacing: 5px;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 500;
 }
 .main-title.center {
   text-align: center;
 }
-@media only screen and (max-width: 767px) {
-  .main-title {
-    margin-bottom: 2rem;
-    /* ### Span
-    --------------------------------------*/
-  }
-  .main-title.center {
-    margin-bottom: 5rem;
-  }
-  .main-title span {
-    -webkit-text-stroke-width: 1px;
-  }
+.main-title.center span {
+  justify-content: center;
+  text-align: center;
 }
-
+.main-title.center span::before {
+  content: "";
+  display: block;
+  margin-right: 10px;
+  border-bottom: 1px solid #989898;
+  width: 20px;
+}
+.main-title.center h2 {
+  display: inline-block;
+  margin: 0 auto;
+  padding-right: 2rem;
+  border-right: solid 2px #000000;
+}
 /* ## ハイライトタイトル
 ***********************************************/
 .highlight-text span {
@@ -11762,7 +11714,7 @@ footer .copyright {
   display: block;
   font-size: 12px;
   font-weight: medium;
-  color: #B5B5B5;
+  color: #989898;
 }
 .post-contents .large-box .text-area .post-title {
   display: block;
@@ -11915,7 +11867,7 @@ footer .copyright {
 .post-contents .tags a {
   display: block;
   font-size: 13px;
-  color: #B5B5B5;
+  color: #989898;
 }
 @media only screen and (max-width: 767px) {
   .post-contents .tags a {
@@ -11957,7 +11909,7 @@ footer .copyright {
 .news-contents .news-box .text-area .date {
   display: block;
   font-size: 10px;
-  color: #B5B5B5;
+  color: #989898;
 }
 .news-contents .news-box .text-area .post-title {
   border-bottom: solid 1px #000000;
@@ -11966,7 +11918,7 @@ footer .copyright {
 }
 .news-contents .news-box .text-area .excerpt {
   font-size: clamp(12px, 1.1vw, 14px);
-  color: #B5B5B5;
+  color: #989898;
   line-height: 1.5;
 }
 @media only screen and (max-width: 767px) {
@@ -12062,13 +12014,18 @@ footer .copyright {
   /* ### SLIDER CONTAINER
   --------------------------------------*/
   /* #### DOTS --------------------*/
+  /* ### CATCH
+  --------------------------------------*/
 }
 #first-view-sec .container-fluid, #first-view-sec .container-sm, #first-view-sec .container-md, #first-view-sec .container-lg, #first-view-sec .container-xl, #first-view-sec .container-xxl {
-  padding: 0 5%;
+  padding: 0 2%;
+}
+#first-view-sec .slider-wrapper {
+  position: relative;
 }
 #first-view-sec .slider-container {
   position: relative;
-  height: clamp(400px, 37vw, 640px);
+  height: clamp(640px, 40vw, 840px);
   overflow: hidden;
   /* #### SLIDE --------------------*/
   /* #### PROGRESS BAR --------------------*/
@@ -12110,6 +12067,8 @@ footer .copyright {
   position: absolute;
   bottom: -16px;
   left: 0;
+  right: 0;
+  justify-content: center;
   display: flex;
   gap: 5px;
   z-index: 3;
@@ -12124,348 +12083,103 @@ footer .copyright {
 #first-view-sec .dots .dot.active {
   background: #000000;
 }
-
-/* ## ABOUT SECTION（To/&co.について）
+#first-view-sec .catch {
+  position: absolute;
+  top: 15%;
+  right: 7%;
+  width: clamp(120px, 25vw, 340px);
+  z-index: 4;
+}
+/* ## DAILY LIFE SECTION（TANZOのある暮らし）
 ******************************************************************/
-.radius-box {
-  background-color: #F5F5F5;
-  border-radius: 120px;
-  padding: 5%;
-  position: relative;
-}
-
-.about-sec {
-  /* ### CLOUD
+.daily-life-sec {
+  /* ### TEXT SIDE
   --------------------------------------*/
-  /* ### LEAD TEXT
-  --------------------------------------------*/
-  /* ### QUESTION
-  --------------------------------------------*/
+  /* ### SECOND PAGE MENU
+  --------------------------------------*/
+  /* ### IMAGE SIDE
+  --------------------------------------*/
 }
-.about-sec .cloud {
-  position: absolute;
+.daily-life-sec .text-side {
+  padding: 0 5% 0 10%;
 }
-.about-sec .cloud.pink {
-  width: 17%;
-  top: 8%;
-  left: -5%;
-}
-.about-sec .cloud.tatsu-daruma {
-  width: 13%;
-  top: -6%;
-  left: -3%;
-}
-.about-sec .cloud.light-blue {
-  width: 12%;
-  top: 6%;
-  left: 90%;
-}
-.about-sec .cloud.blue {
-  width: 14%;
-  bottom: -2%;
-  left: -2%;
-  z-index: 10;
-}
-.about-sec .cloud.yellow {
-  width: 15%;
-  bottom: -7%;
-  right: 2%;
-}
-.about-sec .cloud.tora-daruma {
-  width: 12%;
-  bottom: -5%;
-  right: 3%;
-}
-.about-sec .lead-text p {
-  display: table;
-  margin: 0 auto;
-}
-.about-sec .lead-text span {
-  font-size: 18px;
-  display: inline-block;
-  background: #fff;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-.about-sec .question {
-  position: relative;
-  border: solid 1px #000000;
-  border-radius: 20px;
-  background-color: #fff;
-  max-width: 700px;
-  width: 100%;
-  margin: -2rem auto 0;
-  padding: 1rem 4rem 2rem;
-  text-align: left;
-}
-.about-sec .question dt {
-  font-size: 24px;
-  color: #0000FF;
-}
-.about-sec .question dt::before {
-  font-size: 30px;
-  font-family: "Font Awesome 6 Free";
-  content: "\f059";
-  font-weight: 100;
-  margin-right: 8px;
-  color: #0000FF;
-}
-.about-sec .question dd {
-  font-size: 14px;
-}
-.about-sec .question::before {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: 48px;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-left: 1px solid #000000;
-  border-top: 1px solid #000000;
-  transform: rotate(45deg);
-  border-radius: 2px;
-}
-@media only screen and (max-width: 767px) {
-  .about-sec {
-    /* ### CLOUD
-    --------------------------------------*/
-    /* ### LEAD TEXT
-    --------------------------------------------*/
-    /* ### QUESTION
-    --------------------------------------------*/
-  }
-  .about-sec .radius-box {
-    border-radius: 60px;
-    padding: 8%;
-  }
-  .about-sec .cloud.pink {
-    width: 17%;
-    top: 8%;
-    left: -4%;
-  }
-  .about-sec .cloud.tatsu-daruma {
-    width: 16%;
-    top: -1%;
-    left: -3%;
-  }
-  .about-sec .cloud.light-blue {
-    width: 18%;
-    top: 6%;
-    left: 85%;
-  }
-  .about-sec .cloud.blue {
-    width: 14%;
-    bottom: 6%;
-  }
-  .about-sec .cloud.yellow {
-    width: 15%;
-    bottom: -7%;
-    right: 2%;
-  }
-  .about-sec .cloud.tora-daruma {
-    width: 12%;
-    bottom: -5%;
-    right: 3%;
-  }
-  .about-sec .lead-text span {
-    font-size: 14px;
-  }
-  .about-sec .question {
-    position: relative;
-    padding: 1rem 2.5rem 2rem;
-  }
-  .about-sec .question dt {
-    font-size: 18px;
-    color: #0000FF;
-  }
-  .about-sec .question dt::before {
-    font-size: 24px;
-  }
-  .about-sec .question dd {
-    font-size: 13px;
-  }
-  .about-sec .question::before {
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: 48px;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-left: 1px solid #000000;
-    border-top: 1px solid #000000;
-    transform: rotate(45deg);
-    border-radius: 2px;
-  }
-}
-
-/* ## MOTTO SECTION（ファーストセクション）
-********************************************************************/
-.motto-sec {
-  /* ### CLOUD
-  --------------------------------------------*/
-  /* ### RADIUS BOX
-  --------------------------------------------*/
-  /* ### MOTTO LIST
-  --------------------------------------------*/
-}
-.motto-sec .cloud {
-  position: absolute;
-}
-.motto-sec .cloud.gray {
-  width: 25%;
-  top: 26%;
-  left: -2%;
-  z-index: -1;
-}
-.motto-sec .radius-box {
-  position: absolute;
-  z-index: -1;
-  background-color: #F5F5F5;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  border-radius: 150px 0 0 150px;
-}
-.motto-sec .motto-list li {
-  padding: 2rem 2rem 2rem 7rem;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
+.daily-life-sec .text-side .description {
   margin-bottom: 3rem;
-  position: relative;
-  background-color: #fff;
 }
-.motto-sec .motto-list li .number {
-  position: absolute;
-  top: -30px;
-  left: -10%;
-  width: clamp(30px, 30%, 120px);
+.daily-life-sec .second-page-menu li {
+  padding-right: 2rem;
+  margin-bottom: 2rem;
 }
-.motto-sec .motto-list li.pink {
-  border: solid 2px #FFAEAB;
+.daily-life-sec .second-page-menu li span {
+  font-size: clamp(12px, 1.5vw, 18px);
+  font-family: "Noto Serif JP", serif;
+  color: #989898;
 }
-.motto-sec .motto-list li.pink h3 {
-  color: #FFAEAB;
-}
-.motto-sec .motto-list li.light-blue {
-  border: solid 2px #5CFFFF;
-}
-.motto-sec .motto-list li.light-blue h3 {
-  color: #30CBCB;
-}
-.motto-sec .motto-list li.blue {
-  border: solid 2px #0000FF;
-}
-.motto-sec .motto-list li.blue h3 {
-  color: #0000FF;
-}
-.motto-sec .motto-list li.yellow {
-  border: solid 2px #C7C700;
-}
-.motto-sec .motto-list li.yellow h3 {
-  color: #C7C700;
-}
-@media only screen and (max-width: 767px) {
-  .motto-sec {
-    /* ### CLOUD
-    --------------------------------------------*/
-    /* ### RADIUS BOX
-    --------------------------------------------*/
-    /* ### MOTTO LIST
-    --------------------------------------------*/
-  }
-  .motto-sec .cloud.gray {
-    width: 40%;
-    top: 5%;
-    left: -2%;
-  }
-  .motto-sec .radius-box {
-    top: 30%;
-    width: 60%;
-    height: 70%;
-    border-radius: 90px 0 0 90px;
-  }
-  .motto-sec .title-side {
-    margin-bottom: 3rem;
-  }
-  .motto-sec .motto-list li {
-    padding: 1.5rem 1.5rem 1.5rem 7rem;
-    margin-bottom: 1.5rem;
-  }
-  .motto-sec .motto-list li .number {
-    top: -1%;
-    left: -5%;
-    width: 20%;
-    max-width: 80px;
-  }
+.daily-life-sec .second-page-menu li h5 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
 }
 
-/* ## OUTLINE SECTION（アウトラインセクション）
-********************************************************************/
-.outline-sec {
-  /* ### COMPANY INFO TABLE
-  --------------------------------------------*/
-  /* ### GOOGLE MAP
-  --------------------------------------------*/
+/* ## STORY SECTION（開発の物語）
+******************************************************************/
+.story-sec {
+  /* ### TEXT SIDE
+  --------------------------------------*/
 }
-.outline-sec .info-table {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 740px;
-  margin-bottom: 4rem;
+.story-sec .text-side {
+  padding: 0 10% 0 7%;
 }
-.outline-sec .info-table th {
-  background-color: #F5F5F5;
-  text-align: center;
-  font-weight: 700;
-  color: #0000FF;
+.story-sec .text-side .description {
+  margin-bottom: 3rem;
 }
-.outline-sec .info-table th,
-.outline-sec .info-table td {
-  padding: 2rem 3rem;
+
+/* ## LINUP SECTION（商品ラインナップ）
+******************************************************************/
+.lineup-sec {
+  /* ### CONTENT
+  --------------------------------------*/
 }
-.outline-sec .info-table tr {
-  border-top: solid 1px #000000;
+.lineup-sec .content {
+  padding: 10%;
+  /**** #### NUMBER ****/
+  /**** #### PRODUCT IMAGE ****/
+  /**** #### PRODUCT INFO ****/
 }
-.outline-sec .info-table tr:last-child {
-  border-bottom: solid 1px #000000;
+.lineup-sec .content .number {
+  font-size: 18px;
+  font-family: "Noto Serif JP", serif;
+  color: #989898;
 }
-.outline-sec .google-map {
-  width: 100%;
-  height: 400px;
+.lineup-sec .content .product-image {
+  aspect-ratio: 5/3;
   overflow: hidden;
-  border-radius: 40px;
+  margin-bottom: 2.5rem;
 }
-.outline-sec .google-map iframe {
+.lineup-sec .content .product-image img {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  object-fit: cover;
 }
-@media only screen and (max-width: 767px) {
-  .outline-sec {
-    padding-bottom: 8rem;
-    /* ### COMPANY INFO TABLE
-    --------------------------------------------*/
-    /* ### GOOGLE MAP
-    --------------------------------------------*/
-  }
-  .outline-sec .info-table th,
-  .outline-sec .info-table td {
-    padding: 1rem 1.5rem;
-    font-size: 13px;
-  }
-  .outline-sec .info-table th {
-    width: 30%;
-  }
-  .outline-sec .google-map {
-    height: 240px;
-    border-radius: 20px;
-  }
-  .outline-sec .google-map iframe {
-    height: 240px;
-  }
+.lineup-sec .content .product-info h3 {
+  font-size: clamp(18px, 1.8vw, 22px);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+.lineup-sec .content .product-info p {
+  margin-bottom: 1rem;
+}
+.lineup-sec .content .product-info .price {
+  display: flex;
+  align-items: baseline;
+}
+.lineup-sec .content .product-info .price span {
+  font-family: "Noto Serif JP", serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+.lineup-sec .content .product-info .price span:nth-child(2) {
+  font-size: 30px;
 }
 
 /* ### CONTACT FORM7
@@ -12522,8 +12236,8 @@ footer .copyright {
 
 /* ## コメント中
 ***********************************************/
-/* ### コメント下
---------------------------------------------*/
+/* ### SLIDER CONTAINER
+--------------------------------------*/
 /**** #### コメント下の下 ****/
 /* ##### コメント軽 */
 /* ## コメント中
