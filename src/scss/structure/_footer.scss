@@ -2,71 +2,75 @@
 // #footer
 //**************************************************************
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
+    padding-bottom: 3rem;
+    max-width: 1680px;
+    margin: 0 auto;
+
+    .footer-wrapper {
+        border-top: solid 1px $black;
+        padding-top: 10rem;
+    }
 
     /* ### FOOTER LOGO
     -------------------------------------*/
     .footer-logo {
-        display: inline-block;
-        text-align: center;
-        margin-bottom: 4rem;
-
-        span {
-            color: $white;
-            display: block;
-            margin-bottom: 1rem;
-        }
+        display: block;
+        width: 50%;
 
         img {
-            width: 90px;
+            width: 100%;
         }
     }
 
     /* ### FOOTER NAV
     -------------------------------------*/
     .footer-nav {
-        .navigation {
-            max-width: 1080px;
-            margin: 0 auto 2rem;
+
+        li {
+            text-align: center;
+            display: block;
+            border-right: solid 1px $black;
+            padding: 0 1rem;
+
+            &:first-child {
+                border-left: solid 1px $black;
+            }
         }
 
         .menu-link {
-            span {
-                color: $font-gray;
-            }
             p {
                 font-weight: bold;
+                letter-spacing: 2px;
                 line-height: 1.5;
-                color: $white;
             }
         }
     }
 
-    /* ### NAVIGATION BOTTOM
+    /* ### SECOND NAV
     -------------------------------------*/
-    .navigation-bottom {
-        max-width: 720px;
-        margin: 0 auto 4rem;
-
-        .menu-link {
-            font-size: 13px;
-            font-weight: medium;
-            color: $white;
-        }
-        .border-box {
-            border-right: solid 1px $white;
-        }
+    .second-nav-area {
+        padding-top: 8rem;
     }
 
+    .footer-second-nav {
+        li {
+            text-align: center;
+            display: block;
+            padding: 0 1rem;
+        }
+
+        .menu-link {
+            p {
+                color: $font-gray;
+                font-size: 14px;
+            }
+        }
+    }
+   
     .copyright {
         display: block;
-        text-align: end;
         font-size: 12px;
-        padding-bottom: 2rem;
-        padding-right: 2rem;
     }
 
     // ## MOBILE // *************************************************>

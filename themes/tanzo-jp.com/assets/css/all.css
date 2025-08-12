@@ -11119,60 +11119,57 @@ header .menu-contents .sns-links i {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  padding-bottom: 3rem;
+  max-width: 1680px;
+  margin: 0 auto;
   /* ### FOOTER LOGO
   -------------------------------------*/
   /* ### FOOTER NAV
   -------------------------------------*/
-  /* ### NAVIGATION BOTTOM
+  /* ### SECOND NAV
   -------------------------------------*/
 }
-footer .footer-logo {
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 4rem;
+footer .footer-wrapper {
+  border-top: solid 1px #000000;
+  padding-top: 10rem;
 }
-footer .footer-logo span {
-  color: #fff;
+footer .footer-logo {
   display: block;
-  margin-bottom: 1rem;
+  width: 50%;
 }
 footer .footer-logo img {
-  width: 90px;
+  width: 100%;
 }
-footer .footer-nav .navigation {
-  max-width: 1080px;
-  margin: 0 auto 2rem;
+footer .footer-nav li {
+  text-align: center;
+  display: block;
+  border-right: solid 1px #000000;
+  padding: 0 1rem;
 }
-footer .footer-nav .menu-link span {
-  color: #989898;
+footer .footer-nav li:first-child {
+  border-left: solid 1px #000000;
 }
 footer .footer-nav .menu-link p {
   font-weight: bold;
+  letter-spacing: 2px;
   line-height: 1.5;
-  color: #fff;
 }
-footer .navigation-bottom {
-  max-width: 720px;
-  margin: 0 auto 4rem;
+footer .second-nav-area {
+  padding-top: 8rem;
 }
-footer .navigation-bottom .menu-link {
-  font-size: 13px;
-  font-weight: medium;
-  color: #fff;
+footer .footer-second-nav li {
+  text-align: center;
+  display: block;
+  padding: 0 1rem;
 }
-footer .navigation-bottom .border-box {
-  border-right: solid 1px #fff;
+footer .footer-second-nav .menu-link p {
+  color: #989898;
+  font-size: 14px;
 }
 footer .copyright {
   display: block;
-  text-align: end;
   font-size: 12px;
-  padding-bottom: 2rem;
-  padding-right: 2rem;
 }
 @media only screen and (max-width: 767px) {
   footer {
@@ -11784,6 +11781,8 @@ footer .copyright {
 /* ## DAILY LIFE SECTION（TANZOのある暮らし）
 ******************************************************************/
 .daily-life-sec {
+  max-width: 1680px;
+  margin: 0 auto;
   /* ### TEXT SIDE
   --------------------------------------*/
   /* ### SECOND PAGE MENU
@@ -11815,6 +11814,8 @@ footer .copyright {
 /* ## STORY SECTION（開発の物語）
 ******************************************************************/
 .story-sec {
+  max-width: 1680px;
+  margin: 0 auto;
   /* ### TEXT SIDE
   --------------------------------------*/
 }
@@ -11847,10 +11848,19 @@ footer .copyright {
   overflow: hidden;
   margin-bottom: 2.5rem;
 }
+.lineup-sec .content .product-image a {
+  overflow: hidden;
+  transition: 0.2s;
+}
+.lineup-sec .content .product-image a:hover img {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
 .lineup-sec .content .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.2s;
 }
 .lineup-sec .content .product-info h3 {
   font-size: clamp(18px, 1.8vw, 22px);
@@ -11876,7 +11886,6 @@ footer .copyright {
 /* ## MAINTENANCE SECTION（メンテナンス・Q&A）
 ******************************************************************/
 .maintenance-sec {
-  padding: 10%;
   /* ### WRAPPER
   --------------------------------------*/
 }

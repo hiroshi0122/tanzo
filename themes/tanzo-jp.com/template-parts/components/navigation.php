@@ -27,7 +27,26 @@ $navigation = [
     ],
 ];
 
-$footer_navigation = [
-
+$second_navigation = [
+    [
+        'menu' => '企業情報',
+        'link' => '/company',
+    ],
+    [
+        'menu' => '特定商取引法に基づく表記',
+        'link' => '/law',
+    ],
+    [
+        'menu' => '利用規約',
+        'link' => '/terms',
+    ],
+    [
+        'menu' => 'プライバシーポリシー',
+        'link' => '/privacy-policy',
+    ],
+    [
+        'menu' => '配送・送料について',
+        'link' => '/shipping',
+    ],
 ];
 ?>

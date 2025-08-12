@@ -3,11 +3,11 @@
 /**
  * Home template file
  *
- * @link Unicra
+ * @link TANZO
  *
- * @package Unicra
- * @since 2025.3.17
- * @version 2.0
+ * @package TANZO
+ * @since 2025.8.11
+ * @version 1.0
  *
  * Template Name: HOME
  **/
@@ -212,7 +212,9 @@ get_header();
                     <div class="content">
                         <span class="number"><?php echo str_pad($i, 2, '0', STR_PAD_LEFT); ?>.</span>
                         <div class="product-image">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/products/<?php echo esc_html($product['img']); ?>.webp" alt="<?php echo esc_html($product['title']); ?>">
+                            <a href="<?php echo esc_html($product['link']); ?>" target="_blank" rel="noopener">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/products/<?php echo esc_html($product['img']); ?>.webp" alt="<?php echo esc_html($product['title']); ?>">
+                            </a>
                         </div>
                         <div class="product-info">
                             <h3><?php echo esc_html($product['title']); ?></h3>

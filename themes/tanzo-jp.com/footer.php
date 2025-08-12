@@ -1,7 +1,8 @@
 <footer>
 	<div class="container-fluid">
-		<?php // get_template_part('template-parts/components/navigation-footer'); ?>
-		<small class="copyright">&copy; <?php echo date("Y"); ?> Unicra Rights Reserved.</small>
+		<div class="footer-wrapper">
+			<?php  get_template_part('template-parts/components/navigation-footer'); ?>
+		</div>
 	</div>
 </footer>
 
