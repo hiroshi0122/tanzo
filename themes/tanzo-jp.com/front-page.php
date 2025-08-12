@@ -134,6 +134,11 @@ get_header();
                         <span>Life with TANZO</span>
                         <h2 class="daily-title">TANZOのある暮らし</h2>
                     </div>
+
+                    <div class="image-side blur d-md-none">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/home/life_image.webp" alt="TANZOのある暮らし">
+                    </div>
+                    
                     <p class="description">エアースタンプハンマーが生み出す2,000トンの力で、鉄は生まれ変わります。長年培った独自の鍛造技術が、調理する食材一つひとつの隠された旨味を解き放ち、あなたの食卓に感動をお届けします。</p>
 
                     <ul class="second-page-menu row">
@@ -161,7 +166,7 @@ get_header();
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 p-0">
+            <div class="col-md-6 p-0 d-none d-md-block">
                 <div class="image-side blur">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/home/life_image.webp" alt="TANZOのある暮らし">
                 </div>
@@ -175,7 +180,7 @@ get_header();
 <section class="story-sec">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-md-6 p-0">
+            <div class="col-md-6 p-0 d-none d-md-block">
                 <div class="image-side blur">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/home/story_image.webp" alt="開発の物語">
                 </div>
@@ -186,6 +191,9 @@ get_header();
                         <span>The Making of TANZO</span>
                         <h2 class="daily-title">開発の物語</h2>
                         <h3 class="sub-catch">簡単なキャッチが入ります。<br>簡単なキャッチが入ります。</h3>
+                    </div>
+                    <div class="image-side blur d-md-none">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/home/story_image.webp" alt="開発の物語">
                     </div>
                     <p class="description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                     <div class="btn-area">

@@ -59,7 +59,7 @@ section {
 
 	/* ### MOBILE =====================================*/
 	@media #{$smallScreen} {
-		padding-top: 50px;
+		padding-top: 72px;
 	}
 }
 
@@ -68,10 +68,10 @@ section {
 ***********************************************/
 /* ### CONTAINER
 =====================================*/
-.container {
+.container, .container-fluid {
     @media #{$smallScreen} {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 }
 

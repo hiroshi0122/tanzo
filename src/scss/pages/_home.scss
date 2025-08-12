@@ -19,7 +19,7 @@
     --------------------------------------*/
     .slider-container {
         position: relative;
-        height: clamp(640px,40vw,840px);
+        height: clamp(640px, 40vw, 840px);
         overflow: hidden;
 
         /* #### SLIDE --------------------*/
@@ -79,7 +79,7 @@
             height: 7px;
             border-radius: 50%;
             cursor: pointer;
-            border: solid 1px $black;   
+            border: solid 1px $black;
 
             &.active {
                 background: $black;
@@ -94,22 +94,51 @@
         top: 15%;
         right: 7%;
         // transform: translateX(-50%);
-        width: clamp(120px,25vw,340px);
+        width: clamp(120px, 25vw, 340px);
         z-index: 4;
+    }
 
-        @media #{$smallScreen} {
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        .container-fluid {
+            padding: 0;
+        }
+
+        /* ### SLIDER CONTAINER
+        --------------------------------------*/
+        .slider-container {
+            height: 100vw;
+
+            /* #### SLIDE --------------------*/
+            .slide {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: brightness(0.8);
+                }
+            }
+        }
+
+        /* ### CATCH
+        --------------------------------------*/
+        .catch {
+            position: absolute;
+            top: 38%;
+            right: 0;
+            left: 0;
+            width: 56%;
+            margin: 0 auto;
         }
     }
 }
-
-
 
 /* ## DAILY LIFE SECTION（TANZOのある暮らし）
 ******************************************************************/
 .daily-life-sec {
     max-width: 1680px;
     margin: 0 auto;
-    
+
     /* ### TEXT SIDE
     --------------------------------------*/
     .text-side {
@@ -128,7 +157,7 @@
             margin-bottom: 2rem;
 
             span {
-                font-size: clamp(12px,1.5vw,18px);
+                font-size: clamp(12px, 1.5vw, 18px);
                 font-family: $en-font;
                 color: $font-gray;
             }
@@ -141,10 +170,30 @@
         }
     }
 
-    /* ### IMAGE SIDE
-    --------------------------------------*/
-}
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
 
+        /* ### TEXT SIDE
+        --------------------------------------*/
+        .text-side {
+            padding: 0;
+        }
+
+        /* ### IMAGE SIDE
+        --------------------------------------*/
+        .image-side {
+            margin-bottom: 3rem;
+        }
+
+        /* ### SECOND PAGE MENU
+        --------------------------------------*/
+        .second-page-menu {
+            li {
+                padding-right: 1.5rem;
+            }
+        }
+    }
+}
 
 /* ## STORY SECTION（開発の物語）
 ******************************************************************/
@@ -161,8 +210,24 @@
             margin-bottom: 3rem;
         }
     }
-}
 
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### TEXT SIDE
+        --------------------------------------*/
+        .text-side {
+            padding: 0;
+        }
+
+        /* ### IMAGE SIDE
+        --------------------------------------*/
+        .image-side {
+            margin-bottom: 3rem;
+        }
+    }
+}
 
 /* ## LINUP SECTION（商品ラインナップ）
 ******************************************************************/
@@ -188,12 +253,12 @@
 
             a {
                 overflow: hidden;
-                transition: .2s;
+                transition: 0.2s;
 
                 &:hover {
                     img {
                         transform: scale(1.1);
-                        transition: .2s;
+                        transition: 0.2s;
                     }
                 }
             }
@@ -202,7 +267,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                transition: .2s;
+                transition: 0.2s;
             }
         }
 
@@ -234,35 +299,54 @@
             }
         }
     }
-}
 
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### CONTENT
+        --------------------------------------*/
+        .content {
+            padding: 5%;
+            margin-bottom: 2rem;
+
+            /**** #### PRODUCT INFO ****/
+            .product-info {
+                h3 {
+                    font-size: clamp(16px, 1.8vw, 22px);
+                    margin-bottom: 1rem;
+                }
+
+                .price {
+                    span {
+                        &:nth-child(2) {
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* ## MAINTENANCE SECTION（メンテナンス・Q&A）
 ******************************************************************/
 .maintenance-sec {
-    
     /* ### WRAPPER
     --------------------------------------*/
     .maintenance-wrapper {
         padding: 8% 0;
-        background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
-        url("#{$image-path}/home/maintenance_bg.webp");
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+            url("#{$image-path}/home/maintenance_bg.webp");
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
     }
-
 }
-
 
 /* ## NEWS SECTION（お知らせ）
 ******************************************************************/
 .news-sec {
-
-
-
 }
-
 
 /* ### CONTACT FORM7
 --------------------------------------------*/
@@ -278,8 +362,10 @@
     .wpcf7-form-control-wrap {
         display: block;
         margin-bottom: 2rem;
-        
-        .wpcf7-text, .wpcf7-email, .wpcf7-tel {
+
+        .wpcf7-text,
+        .wpcf7-email,
+        .wpcf7-tel {
             width: 100%;
             padding: 10px;
             border: solid 1px $pink;
@@ -320,17 +406,15 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-
         h4 {
             font-size: 15px;
         }
-    
+
         .wpcf7-submit {
             font-size: 16px;
         }
     }
- }
-
+}
 
 // ## MOBILE // *************************************************>
 /* ## コメント中

@@ -38,9 +38,9 @@ include 'navigation.php';  // 配列を読み込み
         </div>
         <div class="col order-0 order-md-1">
             <nav class="footer-second-nav">
-                <ul class="navigation row justify-content-end">
+                <ul class="navigation row">
                     <?php foreach ($second_navigation as $key => $menu): ?>
-                        <li class="col-6 col-md-auto g-0">
+                        <li class="col-auto g-0">
                             <a class="menu-link" href="/<?php echo esc_html($menu['link']); ?>">
                                 <p><?php echo esc_html($menu['menu']); ?></p>
                             </a>

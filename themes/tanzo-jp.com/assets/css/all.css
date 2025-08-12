@@ -10748,7 +10748,7 @@ p, li {
 }
 @media only screen and (max-width: 767px) {
   p, li {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -10842,7 +10842,7 @@ section.fixed-page .main-title-template {
 }
 @media only screen and (max-width: 767px) {
   .first-sec {
-    padding-top: 50px;
+    padding-top: 72px;
   }
 }
 
@@ -10851,9 +10851,9 @@ section.fixed-page .main-title-template {
 /* ### CONTAINER
 =====================================*/
 @media only screen and (max-width: 767px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -10961,53 +10961,50 @@ header .hamburger {
   display: block;
   position: absolute;
   z-index: 200;
-  right: -10px;
-  top: -17px;
-  width: 80px;
-  height: 80px;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 72px;
   cursor: pointer;
   text-align: center;
-  background-color: #0000FF;
-  border-radius: 50%;
-  border: solid 2px #fff;
   /* #### 棒の部分 ****/
   /* #### activeクラスが付加した時 ****/
 }
 header .hamburger span {
   display: block;
   position: absolute;
-  width: 36px;
+  width: 32px;
   height: 2px;
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: #fff;
+  background: #000000;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   transition: 0.5s all;
 }
 header .hamburger span:nth-child(1) {
-  top: 28px;
+  top: 21px;
 }
 header .hamburger span:nth-child(2) {
-  top: 37px;
+  top: 30px;
 }
 header .hamburger span:nth-child(3) {
-  top: 46px;
+  top: 39px;
 }
 header .hamburger::after {
   position: absolute;
-  top: 52px;
+  top: 43px;
   left: 0;
   right: 0;
   margin: 0 auto;
   display: inline-block;
-  content: "メニュー";
-  color: #fff;
+  content: "MENU";
+  color: #000000;
   font-size: 8px;
 }
 header .hamburger.active span:nth-child(1) {
-  top: 35px;
+  top: 28px;
   width: 30px;
   -webkit-transform: rotate(-30deg);
   -moz-transform: rotate(-30deg);
@@ -11019,14 +11016,14 @@ header .hamburger.active span:nth-child(2) {
   animation: active-hamburger-bar02 0.8s forwards;
 }
 header .hamburger.active span:nth-child(3) {
-  top: 36px;
+  top: 28px;
   width: 30px;
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   transform: rotate(30deg);
 }
 header .hamburger.active::after {
-  content: "閉じる";
+  content: "CLOSE";
 }
 header .menu-contents {
   position: fixed;
@@ -11039,15 +11036,13 @@ header .menu-contents {
   opacity: 0;
   visibility: hidden;
   padding: 6%;
-  background: rgba(255, 255, 255, 0.5647058824);
+  background: rgba(255, 255, 255, 0.9);
   /* #### ACTIVE
   --------------------------------*/
   /* #### LOGO
   --------------------------------*/
   /* #### MENU LIST
   --------------------------------*/
-  /* ### SNS LINKS
-  =====================================*/
 }
 header .menu-contents.active {
   transition: 0.2s;
@@ -11057,19 +11052,18 @@ header .menu-contents.active {
 header .menu-contents .logo {
   margin-bottom: 4rem;
 }
+header .menu-contents .logo img {
+  width: 100%;
+}
 header .menu-contents .menu-list {
-  background: #0000FF;
   width: 100%;
   height: 100%;
-  border-radius: 40px;
-  border: solid 2px #fff;
   display: grid;
   place-content: center;
-  padding: 18%;
   /* ##### MENU ****/
 }
 header .menu-contents .menu-list .menu {
-  border-bottom: dashed 1px #fff;
+  border-bottom: dashed 1px #000000;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   text-align: center;
@@ -11079,48 +11073,24 @@ header .menu-contents .menu-list .menu a {
 }
 header .menu-contents .menu-list .menu a p {
   font-size: 18px;
-  color: #fff;
+  color: #000000;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 1.5;
 }
-header .menu-contents .menu-list .menu a span {
-  display: block;
-  font-size: 10px;
-  color: #FFFF00;
-}
-header .menu-contents .sns-links {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-header .menu-contents .sns-links::before {
-  content: "\\ FOLLOW ME! /";
-  display: block;
-  color: #fff;
-  font-size: 9px;
-  margin-bottom: 3px;
-  text-align: center;
-}
-header .menu-contents .sns-links i {
-  color: #fff;
-  font-size: 40px;
-}
 @media only screen and (max-width: 767px) {
   header {
-    padding: 0;
-    border-bottom: none;
+    padding: 2rem 1rem;
     /* ### LOGO SIDE
     =====================================*/
   }
   header .logo-side {
-    width: 70px;
+    display: block;
   }
 }
 
 footer {
   width: 100%;
-  padding-bottom: 3rem;
   max-width: 1680px;
   margin: 0 auto;
   /* ### FOOTER LOGO
@@ -11132,7 +11102,7 @@ footer {
 }
 footer .footer-wrapper {
   border-top: solid 1px #000000;
-  padding-top: 10rem;
+  padding: 10rem 3rem 3rem 3rem;
 }
 footer .footer-logo {
   display: block;
@@ -11158,6 +11128,9 @@ footer .footer-nav .menu-link p {
 footer .second-nav-area {
   padding-top: 8rem;
 }
+footer .footer-second-nav .navigation {
+  justify-content: end;
+}
 footer .footer-second-nav li {
   text-align: center;
   display: block;
@@ -11173,43 +11146,54 @@ footer .copyright {
 }
 @media only screen and (max-width: 767px) {
   footer {
-    padding-top: 5rem;
-    background-image: url("/wp-content/themes/tanzo-jp.com/assets/images/footer/footer_bg_sp.svg");
     /* ### FOOTER LOGO
     -------------------------------------*/
     /* ### FOOTER NAV
     -------------------------------------*/
-    /* ### NAVIGATION BOTTOM
+    /* ### SECOND NAV
     -------------------------------------*/
   }
-  footer .footer-logo {
-    margin-bottom: 3rem;
+  footer .footer-wrapper {
+    padding: 5rem 0rem 1.5rem 0rem;
   }
-  footer .footer-logo span {
-    margin-bottom: 1rem;
-    font-size: 10px;
+  footer .footer-logo {
+    width: 100%;
+    margin-bottom: 5rem;
+    text-align: center;
   }
   footer .footer-logo img {
-    width: 70px;
+    width: 50%;
+  }
+  footer .footer-nav li {
+    margin-bottom: 1.5rem;
+  }
+  footer .footer-nav li:nth-child(odd) {
+    border-left: solid 1px #000000;
   }
   footer .footer-nav .menu-link p {
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 1px;
   }
-  footer .navigation-bottom {
-    margin: 0 auto 4rem;
+  footer .second-nav-area {
+    padding-top: 4rem;
   }
-  footer .navigation-bottom li {
-    padding-left: 8px;
+  footer .footer-second-nav {
+    margin-bottom: 4rem;
   }
-  footer .navigation-bottom .menu-link {
+  footer .footer-second-nav .navigation {
+    justify-content: center;
+  }
+  footer .footer-second-nav li {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  footer .footer-second-nav .menu-link p {
     font-size: 12px;
-  }
-  footer .navigation-bottom .border-box {
-    border-right: none;
   }
   footer .copyright {
-    font-size: 12px;
-    padding-bottom: 2rem;
+    display: block;
+    font-size: 11px;
+    text-align: center;
   }
 }
 
@@ -11309,7 +11293,7 @@ footer .copyright {
 .main-title h3 {
   margin-top: 2rem;
   letter-spacing: 5px;
-  font-size: clamp(18px, 1.8vw, 24px);
+  font-size: clamp(16px, 1.8vw, 24px);
   font-weight: 500;
 }
 .main-title.center {
@@ -11332,6 +11316,15 @@ footer .copyright {
   padding-right: 2rem;
   border-right: solid 2px #000000;
 }
+@media only screen and (max-width: 767px) {
+  .main-title {
+    margin-bottom: 2rem;
+  }
+  .main-title span::after {
+    width: 13px;
+  }
+}
+
 /* ## ハイライトタイトル
 ***********************************************/
 .highlight-text span {
@@ -11778,6 +11771,36 @@ footer .copyright {
   width: clamp(120px, 25vw, 340px);
   z-index: 4;
 }
+@media only screen and (max-width: 767px) {
+  #first-view-sec {
+    /* ### SLIDER CONTAINER
+    --------------------------------------*/
+    /* ### CATCH
+    --------------------------------------*/
+  }
+  #first-view-sec .container-fluid, #first-view-sec .container-sm, #first-view-sec .container-md, #first-view-sec .container-lg, #first-view-sec .container-xl, #first-view-sec .container-xxl {
+    padding: 0;
+  }
+  #first-view-sec .slider-container {
+    height: 100vw;
+    /* #### SLIDE --------------------*/
+  }
+  #first-view-sec .slider-container .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+  #first-view-sec .catch {
+    position: absolute;
+    top: 38%;
+    right: 0;
+    left: 0;
+    width: 56%;
+    margin: 0 auto;
+  }
+}
+
 /* ## DAILY LIFE SECTION（TANZOのある暮らし）
 ******************************************************************/
 .daily-life-sec {
@@ -11786,8 +11809,6 @@ footer .copyright {
   /* ### TEXT SIDE
   --------------------------------------*/
   /* ### SECOND PAGE MENU
-  --------------------------------------*/
-  /* ### IMAGE SIDE
   --------------------------------------*/
 }
 .daily-life-sec .text-side {
@@ -11810,6 +11831,25 @@ footer .copyright {
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
 }
+@media only screen and (max-width: 767px) {
+  .daily-life-sec {
+    /* ### TEXT SIDE
+    --------------------------------------*/
+    /* ### IMAGE SIDE
+    --------------------------------------*/
+    /* ### SECOND PAGE MENU
+    --------------------------------------*/
+  }
+  .daily-life-sec .text-side {
+    padding: 0;
+  }
+  .daily-life-sec .image-side {
+    margin-bottom: 3rem;
+  }
+  .daily-life-sec .second-page-menu li {
+    padding-right: 1.5rem;
+  }
+}
 
 /* ## STORY SECTION（開発の物語）
 ******************************************************************/
@@ -11824,6 +11864,20 @@ footer .copyright {
 }
 .story-sec .text-side .description {
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 767px) {
+  .story-sec {
+    /* ### TEXT SIDE
+    --------------------------------------*/
+    /* ### IMAGE SIDE
+    --------------------------------------*/
+  }
+  .story-sec .text-side {
+    padding: 0;
+  }
+  .story-sec .image-side {
+    margin-bottom: 3rem;
+  }
 }
 
 /* ## LINUP SECTION（商品ラインナップ）
@@ -11882,6 +11936,24 @@ footer .copyright {
 .lineup-sec .content .product-info .price span:nth-child(2) {
   font-size: 30px;
 }
+@media only screen and (max-width: 767px) {
+  .lineup-sec {
+    /* ### CONTENT
+    --------------------------------------*/
+  }
+  .lineup-sec .content {
+    padding: 5%;
+    margin-bottom: 2rem;
+    /**** #### PRODUCT INFO ****/
+  }
+  .lineup-sec .content .product-info h3 {
+    font-size: clamp(16px, 1.8vw, 22px);
+    margin-bottom: 1rem;
+  }
+  .lineup-sec .content .product-info .price span:nth-child(2) {
+    font-size: 26px;
+  }
+}
 
 /* ## MAINTENANCE SECTION（メンテナンス・Q&A）
 ******************************************************************/
@@ -11912,7 +11984,9 @@ footer .copyright {
   display: block;
   margin-bottom: 2rem;
 }
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-text, .wpcf7-form .wpcf7-form-control-wrap .wpcf7-email, .wpcf7-form .wpcf7-form-control-wrap .wpcf7-tel {
+.wpcf7-form .wpcf7-form-control-wrap .wpcf7-text,
+.wpcf7-form .wpcf7-form-control-wrap .wpcf7-email,
+.wpcf7-form .wpcf7-form-control-wrap .wpcf7-tel {
   width: 100%;
   padding: 10px;
   border: solid 1px #FFAEAB;

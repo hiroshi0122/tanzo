@@ -3,13 +3,12 @@
 //**************************************************************
 footer {
     width: 100%;
-    padding-bottom: 3rem;
     max-width: 1680px;
     margin: 0 auto;
 
     .footer-wrapper {
         border-top: solid 1px $black;
-        padding-top: 10rem;
+        padding: 10rem 3rem 3rem 3rem;
     }
 
     /* ### FOOTER LOGO
@@ -54,6 +53,11 @@ footer {
     }
 
     .footer-second-nav {
+
+        .navigation {
+            justify-content: end;
+        }
+
         li {
             text-align: center;
             display: block;
@@ -75,55 +79,70 @@ footer {
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-        padding-top: 5rem;
-        background-image: url("#{$image-path}/footer/footer_bg_sp.svg");
+
+        .footer-wrapper {
+            padding: 5rem 0rem 1.5rem 0rem;
+        }
 
         /* ### FOOTER LOGO
         -------------------------------------*/
         .footer-logo {
-            margin-bottom: 3rem;
-
-            span {
-                margin-bottom: 1rem;
-                font-size: 10px;
-            }
-
+            width: 100%;
+            margin-bottom: 5rem;
+            text-align: center;
             img {
-                width: 70px;
+                width: 50%;
             }
         }
 
         /* ### FOOTER NAV
         -------------------------------------*/
         .footer-nav {
+            li {
+                margin-bottom: 1.5rem;
+
+                &:nth-child(odd) {
+                    border-left: solid 1px $black;
+                }
+            }
+
             .menu-link {
                 p {
-                    font-size: 16px;
+                    font-size: 14px;
+                    letter-spacing: 1px;
                 }
             }
         }
 
-        /* ### NAVIGATION BOTTOM
+        /* ### SECOND NAV
         -------------------------------------*/
-        .navigation-bottom {
-            margin: 0 auto 4rem;
+        .second-nav-area {
+            padding-top: 4rem;
+        }
+
+        .footer-second-nav {
+            margin-bottom: 4rem;
+
+            .navigation {
+                justify-content: center;
+            }
 
             li {
-                padding-left: 8px;
+                text-align: left;
+                margin-bottom: .5rem;
             }
 
             .menu-link {
-                font-size: 12px;
-            }
-
-            .border-box {
-                border-right: none;
+                p {
+                    font-size: 12px;
+                }
             }
         }
-
+    
         .copyright {
-            font-size: 12px;
-            padding-bottom: 2rem;
+            display: block;
+            font-size: 11px;
+            text-align: center;
         }
     }
 }
