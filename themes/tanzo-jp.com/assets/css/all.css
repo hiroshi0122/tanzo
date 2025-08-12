@@ -11090,9 +11090,8 @@ header .menu-contents .menu-list .menu a p {
 }
 
 footer {
+  border-top: solid 1px #000000;
   width: 100%;
-  max-width: 1680px;
-  margin: 0 auto;
   /* ### FOOTER LOGO
   -------------------------------------*/
   /* ### FOOTER NAV
@@ -11101,8 +11100,9 @@ footer {
   -------------------------------------*/
 }
 footer .footer-wrapper {
-  border-top: solid 1px #000000;
   padding: 10rem 3rem 3rem 3rem;
+  max-width: 1680px;
+  margin: 0 auto;
 }
 footer .footer-logo {
   display: block;
@@ -11284,6 +11284,27 @@ footer .copyright {
   border-bottom: 1px solid #989898;
   width: 20px;
 }
+.main-title h1 {
+  letter-spacing: 5px;
+  font-size: clamp(2.5rem, 3vw, 4.6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-title h1::before {
+  content: "";
+  display: block;
+  margin-right: 40px;
+  border-bottom: 1px solid #989898;
+  width: 5%;
+}
+.main-title h1::after {
+  content: "";
+  display: block;
+  margin-left: 40px;
+  border-bottom: 1px solid #989898;
+  width: 5%;
+}
 .main-title h2 {
   letter-spacing: 5px;
   font-size: clamp(2rem, 2.5vw, 3.5rem);
@@ -11294,7 +11315,6 @@ footer .copyright {
   margin-top: 2rem;
   letter-spacing: 5px;
   font-size: clamp(16px, 1.8vw, 24px);
-  font-weight: 500;
 }
 .main-title.center {
   text-align: center;
@@ -11323,6 +11343,19 @@ footer .copyright {
   .main-title span::after {
     width: 13px;
   }
+}
+
+/* ## SUB TITLE
+***********************************************/
+.sub-title {
+  margin-bottom: 2.5rem;
+}
+.sub-title h2 {
+  letter-spacing: 5px;
+  font-size: clamp(16px, 1.8vw, 24px);
+}
+.sub-title h4, .sub-title .highlight-text span, .highlight-text .sub-title span {
+  letter-spacing: 3px;
 }
 
 /* ## ハイライトタイトル
@@ -12023,6 +12056,203 @@ footer .copyright {
   .wpcf7-form .wpcf7-submit {
     font-size: 16px;
   }
+}
+
+/* ## コメント中
+***********************************************/
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+/**** #### コメント下の下 ****/
+/* ##### コメント軽 */
+/* ## FIRST SECTION（ファーストセクション）
+********************************************************************/
+.story-first-sec {
+  position: relative;
+  overflow: hidden;
+  /* ### SLIDER CONTAINER
+  --------------------------------------*/
+}
+.story-first-sec .container-fluid, .story-first-sec .container-sm, .story-first-sec .container-md, .story-first-sec .container-lg, .story-first-sec .container-xl, .story-first-sec .container-xxl {
+  padding: 0 2%;
+}
+.story-first-sec .image-area {
+  aspect-ratio: 23/9;
+  overflow: hidden;
+}
+.story-first-sec .image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 78%;
+  opacity: 0.9;
+}
+/* ## STORY MESSAGE SECTION（ストーリーメッセージセクション）
+********************************************************************/
+.story-message-sec {
+  /* ### MOVIE
+  --------------------------------------*/
+  /* ### MESSAGE
+  --------------------------------------*/
+}
+.story-message-sec .movie {
+  max-width: 740px;
+  margin: 0 auto 5rem;
+}
+.story-message-sec .movie iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+.story-message-sec .message {
+  text-align: center;
+}
+.story-message-sec .message h3 {
+  font-size: clamp(16px, 2vw, 28px);
+  letter-spacing: 5px;
+  margin-bottom: 3rem;
+}
+.story-message-sec .message p {
+  margin-bottom: 3rem;
+  line-height: 2.2;
+  letter-spacing: 1px;
+}
+/* ## GOLDEN RATIO SECTION（黄金比率セクション）
+********************************************************************/
+.golden-ratio-sec {
+  /* ### TEXT SIDE
+  --------------------------------------*/
+}
+.golden-ratio-sec .text-side {
+  padding-right: 10%;
+}
+/* ## INTERACT SECTION（TANZOと対話する）
+********************************************************************/
+.interact-sec {
+  /* ### IMAGE SIDE
+  --------------------------------------*/
+  /* ### TEXT SIDE
+  --------------------------------------*/
+}
+.interact-sec .row {
+  position: relative;
+}
+.interact-sec .image-side {
+  height: 100%;
+  position: relative;
+}
+.interact-sec .image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.interact-sec .image-side .caption {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: -28px;
+  writing-mode: sideways-rl;
+  color: #989898;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 5px;
+}
+.interact-sec .text-side {
+  padding-left: 10%;
+}
+.interact-sec .text-side .tategaki {
+  display: flex;
+  justify-content: end;
+}
+.interact-sec .text-side .tategaki h2 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: clamp(16px, 2.4vw, 40px);
+  margin-right: 5%;
+}
+/* ## MOVIE SECTION（空撮動画）
+********************************************************************/
+.movie-sec .movie {
+  height: 20vw;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.movie-sec .movie iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78%; /* 16/9 * 100 = 177.78% → cover相当に拡大 */
+  height: 280%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* クリック無効（背景用途なら便利） */
+}
+
+/* ## COMPANY SECTION（会社概要）
+********************************************************************/
+.company-sec .company-info-table {
+  width: 100%;
+}
+.company-sec .company-info-table tr {
+  border-bottom: solid 1px #D8D8D8;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+.company-sec .company-info-table tr th,
+.company-sec .company-info-table tr td {
+  font-weight: 500;
+  padding: 2rem;
+}
+
+/* ## PHILOSOPHY SECTION（企業理念）
+********************************************************************/
+.philosophy-sec {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* ### TEXT AREA
+  --------------------------------------*/
+}
+.philosophy-sec .text-area {
+  text-align: center;
+}
+.philosophy-sec .text-area .desicription p {
+  margin-bottom: 3rem;
+}
+.philosophy-sec .text-area .desicription p:last-child {
+  margin-bottom: 0;
+}
+
+/* ### RADIUS BOX
+--------------------------------------*/
+.radius-box {
+  background-color: #F5F5F5;
+  border: solid 1px #D8D8D8;
+  border-radius: 15px;
+  padding: 10% 3%;
+}
+
+/* ## CEO MESSAGE SECTION（社長メッセージ）
+********************************************************************/
+.ceo-message-sec {
+  max-width: 940px;
+  margin: 0 auto;
+  /* ### IMAGE SIDE
+  --------------------------------------*/
+  /* ### TEXT SIDE
+  --------------------------------------*/
+}
+.ceo-message-sec .image-side {
+  height: 100%;
+  max-height: 420px;
+}
+.ceo-message-sec .image-side img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 39% 50%;
+}
+.ceo-message-sec .text-side {
+  padding-left: 10%;
+}
+.ceo-message-sec .text-side .desicription p {
+  margin-bottom: 2rem;
 }
 
 /* ## コメント中

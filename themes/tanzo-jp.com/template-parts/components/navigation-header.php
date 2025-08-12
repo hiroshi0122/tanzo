@@ -21,7 +21,7 @@ include 'navigation.php';  // 配列を読み込み
             <ul class="navigation row justify-content-end">
                 <?php foreach($navigation as $key => $menu): ?>
                     <li class="col-auto">
-                        <a class="menu-link js-anchor" href="/<?php echo esc_html($menu['link']); ?>">
+                        <a class="menu-link" href="/<?php echo esc_html($menu['link']); ?>">
                             <p><?php echo esc_html($menu['menu']); ?></p>
                         </a>
                     </li>
@@ -49,14 +49,6 @@ include 'navigation.php';  // 配列を読み込み
                     </li>
                 <?php endforeach; ?>
             </ul>
-            <!-- <div class="sns-links">
-                <a class="insta" href="/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a class="facebook" href="/" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div> -->
         </div>
     </div>
 </div>

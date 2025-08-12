@@ -22,6 +22,30 @@
         }
     }
 
+    h1 {
+        letter-spacing: 5px;
+        font-size: clamp(2.5rem, 3vw, 4.6rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content:"";
+            display: block;
+            margin-right: 40px;
+            border-bottom: 1px solid $font-gray;
+            width: 5%;
+        }
+
+        &::after {
+            content:"";
+            display: block;
+            margin-left: 40px;
+            border-bottom: 1px solid $font-gray;
+            width: 5%;
+        }
+    }
+
     h2 {
         letter-spacing: 5px;
         font-size: clamp(2rem, 2.5vw, 3.5rem);
@@ -33,7 +57,6 @@
         margin-top: 2rem;
         letter-spacing: 5px;
         font-size: clamp(16px, 1.8vw, 24px);
-        font-weight: 500;
     }
 
     /* ### 中央揃えタイトル
@@ -73,6 +96,22 @@
                 width: 13px;
             }
         }
+    }
+}
+
+
+/* ## SUB TITLE
+***********************************************/
+.sub-title {
+    margin-bottom: 2.5rem;
+
+    h2 {
+        letter-spacing: 5px;
+        font-size: clamp(16px, 1.8vw, 24px);
+    }
+
+    h4 {
+        letter-spacing: 3px
     }
 }
 

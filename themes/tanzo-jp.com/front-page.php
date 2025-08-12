@@ -187,7 +187,7 @@ get_header();
             </div>
             <div class="col-md-6">
                 <div class="text-side">
-                     <div class="main-title blur">
+                    <div class="main-title blur">
                         <span>The Making of TANZO</span>
                         <h2 class="daily-title">開発の物語</h2>
                         <h3 class="sub-catch">簡単なキャッチが入ります。<br>簡単なキャッチが入ります。</h3>

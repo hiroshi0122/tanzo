@@ -2,13 +2,13 @@
 // #footer
 //**************************************************************
 footer {
+    border-top: solid 1px $black;
     width: 100%;
-    max-width: 1680px;
-    margin: 0 auto;
 
     .footer-wrapper {
-        border-top: solid 1px $black;
         padding: 10rem 3rem 3rem 3rem;
+        max-width: 1680px;
+        margin: 0 auto;
     }
 
     /* ### FOOTER LOGO
