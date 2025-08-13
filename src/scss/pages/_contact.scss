@@ -1,0 +1,90 @@
+//*******************************************************************
+// # CONTACT
+//*******************************************************************
+/* ## FIRST SECTION（ファーストセクション）
+********************************************************************/
+.contact-form-sec {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* ### CONTACT FORM7
+--------------------------------------------*/
+.wpcf7-form {
+    label {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        display: block;
+        margin-bottom: 5rem;
+
+        input[type="text"],input[type="email"],input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: solid 1px $black;
+        }
+
+        textarea {
+            border: solid 1px $black;
+            width: 100%;
+            padding: 10px;
+            min-height: 280px;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: $font-gray;
+            font-size: 15px;
+        }
+    }
+
+    .submit-area {
+        p {
+            text-align: end;
+        }
+
+        .submit {
+            display: inline-block;
+            border: solid 1px $black;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            width: 260px;
+            padding: .8rem 0;
+            background-color: $white;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+                transition: 0.2s;
+            }
+        }
+    }
+    
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        h4 {
+            font-size: 15px;
+        }
+
+        .wpcf7-submit {
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+// ## MOBILE // *************************************************>
+/* ## コメント中
+***********************************************/
+
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

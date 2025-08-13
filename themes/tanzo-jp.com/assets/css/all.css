@@ -12131,60 +12131,6 @@ footer .copyright {
 
 /* ## NEWS SECTION（お知らせ）
 ******************************************************************/
-/* ### CONTACT FORM7
---------------------------------------------*/
-.wpcf7-form h4, .wpcf7-form .highlight-text span, .highlight-text .wpcf7-form span {
-  font-size: 18px;
-  font-weight: 600;
-  color: #0000FF;
-  padding-left: 10px;
-  margin-bottom: 5px;
-}
-.wpcf7-form .wpcf7-form-control-wrap {
-  display: block;
-  margin-bottom: 2rem;
-}
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-text,
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-email,
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-tel {
-  width: 100%;
-  padding: 10px;
-  border: solid 1px #FFAEAB;
-  border-radius: 40px;
-}
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-tel {
-  width: inherit;
-}
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-radio input {
-  appearance: auto;
-}
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item-label {
-  font-size: 14px;
-}
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-textarea {
-  width: 100%;
-  padding: 10px;
-  border: solid 1px #FFAEAB;
-  border-radius: 20px;
-}
-.wpcf7-form .wpcf7-submit {
-  padding: 1rem 6rem;
-  font-weight: 800;
-  background-color: #FFFF00;
-  font-size: 20px;
-  border: solid 2px #000000;
-  border-radius: 50px;
-  color: #000000;
-}
-@media only screen and (max-width: 767px) {
-  .wpcf7-form h4, .wpcf7-form .highlight-text span, .highlight-text .wpcf7-form span {
-    font-size: 15px;
-  }
-  .wpcf7-form .wpcf7-submit {
-    font-size: 16px;
-  }
-}
-
 /* ## コメント中
 ***********************************************/
 /* ### SLIDER CONTAINER
@@ -12527,6 +12473,92 @@ footer .copyright {
 .qa-sec {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+/* ## コメント中
+***********************************************/
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+/**** #### コメント下の下 ****/
+/* ##### コメント軽 */
+/* ## FIRST SECTION（ファーストセクション）
+********************************************************************/
+.text-page-first-sec {
+  padding-top: 16rem;
+  padding-bottom: 0;
+}
+/* ### SLIDER CONTAINER
+    --------------------------------------*/
+.company-info-table.page-company {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ## コメント中
+***********************************************/
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+/**** #### コメント下の下 ****/
+/* ##### コメント軽 */
+/* ## FIRST SECTION（ファーストセクション）
+********************************************************************/
+.contact-form-sec {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+/* ### CONTACT FORM7
+--------------------------------------------*/
+.wpcf7-form label {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+.wpcf7-form .form-group {
+  display: block;
+  margin-bottom: 5rem;
+}
+.wpcf7-form .form-group input[type=text], .wpcf7-form .form-group input[type=email], .wpcf7-form .form-group input[type=tel] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 1px #000000;
+}
+.wpcf7-form .form-group textarea {
+  border: solid 1px #000000;
+  width: 100%;
+  padding: 10px;
+  min-height: 280px;
+}
+.wpcf7-form .form-group input::placeholder, .wpcf7-form .form-group textarea::placeholder {
+  color: #989898;
+  font-size: 15px;
+}
+.wpcf7-form .submit-area p {
+  text-align: end;
+}
+.wpcf7-form .submit-area .submit {
+  display: inline-block;
+  border: solid 1px #000000;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  width: 260px;
+  padding: 0.8rem 0;
+  background-color: #fff;
+  transition: 0.2s;
+}
+.wpcf7-form .submit-area .submit:hover {
+  background-color: #000000;
+  color: #fff;
+  transition: 0.2s;
+}
+@media only screen and (max-width: 767px) {
+  .wpcf7-form h4, .wpcf7-form .highlight-text span, .highlight-text .wpcf7-form span {
+    font-size: 15px;
+  }
+  .wpcf7-form .wpcf7-submit {
+    font-size: 16px;
+  }
 }
 
 /* ## コメント中
