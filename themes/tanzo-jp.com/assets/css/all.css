@@ -12046,54 +12046,54 @@ footer .copyright {
   /* ### CONTENT
   --------------------------------------*/
 }
-.lineup-sec .content {
+.lineup-sec .product-content {
   padding: 10%;
   /**** #### NUMBER ****/
   /**** #### PRODUCT IMAGE ****/
   /**** #### PRODUCT INFO ****/
 }
-.lineup-sec .content .number {
+.lineup-sec .product-content .number {
   font-size: 18px;
   font-family: "Noto Serif JP", serif;
   color: #989898;
 }
-.lineup-sec .content .product-image {
+.lineup-sec .product-content .product-image {
   aspect-ratio: 5/3;
   overflow: hidden;
   margin-bottom: 2.5rem;
 }
-.lineup-sec .content .product-image a {
+.lineup-sec .product-content .product-image a {
   overflow: hidden;
   transition: 0.2s;
 }
-.lineup-sec .content .product-image a:hover img {
+.lineup-sec .product-content .product-image a:hover img {
   transform: scale(1.1);
   transition: 0.2s;
 }
-.lineup-sec .content .product-image img {
+.lineup-sec .product-content .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.2s;
 }
-.lineup-sec .content .product-info h3 {
+.lineup-sec .product-content .product-info h3 {
   font-size: clamp(18px, 1.8vw, 22px);
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
-.lineup-sec .content .product-info p {
+.lineup-sec .product-content .product-info p {
   margin-bottom: 1rem;
 }
-.lineup-sec .content .product-info .price {
+.lineup-sec .product-content .product-info .price {
   display: flex;
   align-items: baseline;
 }
-.lineup-sec .content .product-info .price span {
+.lineup-sec .product-content .product-info .price span {
   font-family: "Noto Serif JP", serif;
   font-size: 13px;
   font-weight: bold;
 }
-.lineup-sec .content .product-info .price span:nth-child(2) {
+.lineup-sec .product-content .product-info .price span:nth-child(2) {
   font-size: 30px;
 }
 @media only screen and (max-width: 767px) {
@@ -12564,6 +12564,188 @@ footer .copyright {
 /* ## コメント中
 ***********************************************/
 /* ### SLIDER CONTAINER
+--------------------------------------*/
+/**** #### コメント下の下 ****/
+/* ##### コメント軽 */
+/* ## SINGLE SECTION
+***********************************************/
+.single-sec {
+  max-width: 840px;
+  margin: 0 auto;
+  padding-top: 15rem;
+}
+/* ### TITLE AREA
+--------------------------------------*/
+.title-area {
+  margin-bottom: 3rem;
+}
+.title-area .day {
+  display: block;
+  font-size: 13px;
+  font-family: "Noto Serif JP", serif;
+  color: #989898;
+}
+.title-area h1 {
+  font-size: clamp(20px, 2.3vw, 28px);
+  letter-spacing: 3px;
+}
+/* ### THUMBNAIL
+--------------------------------------*/
+.thumbnail {
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 5/3;
+}
+@media only screen and (max-width: 767px) {
+  .thumbnail {
+    margin-bottom: 3rem;
+  }
+}
+
+/* ## Wordpress エディター編集部分
+***********************************************/
+.content {
+  margin-bottom: 10rem;
+  /* ### WP BLOCK IMAGE
+  --------------------------------------*/
+  /* ### WP BLOCK BUTTON
+  --------------------------------------*/
+  /* ### TEXT
+  --------------------------------------*/
+}
+.content .wp-block-image {
+  margin-bottom: 3rem;
+}
+.content .wp-block-image img {
+  border: solid 1px #000000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.content .wp-block-image .wp-element-caption {
+  font-size: 12px;
+  color: #989898;
+}
+.content .wp-block-button .wp-block-button__link {
+  font-weight: bold;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  background-color: #000000;
+}
+.content .wp-block-button .wp-block-button__link:after {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  margin-left: 1rem;
+}
+.content p {
+  margin-bottom: 3rem;
+  line-height: 2.5;
+}
+.content p a {
+  border-bottom: solid 1px #000000;
+  font-weight: 600;
+}
+.content p strong {
+  margin-bottom: 2rem;
+  line-height: 2.5;
+}
+.content h2 {
+  border-bottom: solid 1px #000000;
+  border-left: solid 2px #000000;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-size: 22px;
+  padding: 0 10px 5px;
+}
+.content h3 {
+  position: relative;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  padding: 5px 8px;
+  border-bottom: solid 1px #000000;
+}
+.content h4, .content .highlight-text span, .highlight-text .content span {
+  font-size: 18px;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+.content .wp-block-list {
+  list-style-position: inside;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 2rem;
+  background-color: #F5F5F5;
+}
+.content .wp-block-list li {
+  line-height: 2;
+  margin-bottom: 10px;
+}
+.content .wp-block-list li:last-child {
+  margin-bottom: 0;
+}
+.content .wp-block-list li:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  content: "\f0da";
+  font-size: 13px;
+  margin-right: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .content .wp-block-image .wp-element-caption {
+    font-size: 10px;
+  }
+  .content p {
+    line-height: 2;
+    font-size: 13px;
+  }
+  .content p strong {
+    line-height: 2;
+    font-size: 13px;
+  }
+  .content h2 {
+    border-left: solid 4px #000000;
+    margin-top: 6rem;
+    font-size: 20px;
+    padding: 0 5px 2px;
+  }
+  .content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    padding: 3px 0;
+  }
+  .content .wp-block-list {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+  }
+  .content .wp-block-list li {
+    line-height: 1.7;
+    margin-bottom: 5px;
+  }
+  .content .wp-block-list li:before {
+    font-size: 11px;
+    margin-right: 5px;
+  }
+}
+
+blockquote {
+  background-color: #777;
+  padding: 1rem;
+}
+blockquote cite {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ## コメント中
+***********************************************/
+/* ### コメント下
 --------------------------------------*/
 /**** #### コメント下の下 ****/
 /* ##### コメント軽 */

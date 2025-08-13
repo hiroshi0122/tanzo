@@ -98,7 +98,8 @@ $posts = new WP_Query($args);
 get_header();
 ?>
 
-<?php // FIRST SECTION // *********************************************************** // ?>
+<?php // FIRST SECTION // *********************************************************** // 
+?>
 <section class="first-sec" id="first-view-sec">
     <div class="container-fluid">
         <div class="slider-wrapper">
@@ -118,19 +119,20 @@ get_header();
                     <div class="dot <?php echo ($index === 0) ? 'active' : ''; ?>"></div>
                 <?php endforeach; ?>
             </div>
-             <img class="catch" src="<?php bloginfo('template_url'); ?>/assets/images/home/kc_catch.svg" alt="いつもの料理をもっと美味しく">
+            <img class="catch" src="<?php bloginfo('template_url'); ?>/assets/images/home/kc_catch.svg" alt="いつもの料理をもっと美味しく">
         </div>
     </div>
 </section>
 
 
-<?php // DAILY LIFE SECTION // *********************************************************** // ?>
+<?php // DAILY LIFE SECTION // *********************************************************** // 
+?>
 <section class="daily-life-sec">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="text-side">
-                     <div class="main-title blur">
+                    <div class="main-title blur">
                         <span>Life with TANZO</span>
                         <h2 class="daily-title">TANZOのある暮らし</h2>
                     </div>
@@ -138,7 +140,7 @@ get_header();
                     <div class="image-side blur d-md-none">
                         <img src="<?php bloginfo('template_url'); ?>/assets/images/home/life_image.webp" alt="TANZOのある暮らし">
                     </div>
-                    
+
                     <p class="description">エアースタンプハンマーが生み出す2,000トンの力で、鉄は生まれ変わります。長年培った独自の鍛造技術が、調理する食材一つひとつの隠された旨味を解き放ち、あなたの食卓に感動をお届けします。</p>
 
                     <ul class="second-page-menu row">
@@ -176,7 +178,8 @@ get_header();
 </section>
 
 
-<?php // STORY SECTION // *********************************************************** // ?>
+<?php // STORY SECTION // *********************************************************** // 
+?>
 <section class="story-sec">
     <div class="container-fluid">
         <div class="row align-items-center">
@@ -206,46 +209,91 @@ get_header();
 </section>
 
 
-<?php // LINUP SECTION // *********************************************************** // ?>
-<section class="lineup-sec">
+<?php // LINUP SECTION // *********************************************************** // 
+?>
+<section class="lineup-sec" id="lineup">
     <div class="container">
         <div class="main-title center blur">
             <span>PRODUCT</span>
             <h2 class="daily-title">商品ラインアップ</h2>
         </div>
         <div class="row">
-            <?php $i = 1; // カウンター初期化 ?>
-            <?php foreach ($products as $product): ?>
-                <div class="col-md-6">
-                    <div class="content">
-                        <span class="number"><?php echo str_pad($i, 2, '0', STR_PAD_LEFT); ?>.</span>
-                        <div class="product-image">
-                            <a href="<?php echo esc_html($product['link']); ?>" target="_blank" rel="noopener">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/images/products/<?php echo esc_html($product['img']); ?>.webp" alt="<?php echo esc_html($product['title']); ?>">
-                            </a>
-                        </div>
-                        <div class="product-info">
-                            <h3><?php echo esc_html($product['title']); ?></h3>
-                            <p><?php echo esc_html($product['text']); ?></p>
-                            <div class="d-flex justify-content-between align-items-baseline">
-                                <div class="price">
-                                    <span class="me-1">¥</span>
-                                    <span><?php echo esc_html($product['price']); ?></span>
-                                    <span>（税込）</span>
+            <?php
+            $args = [
+                'post_type'      => 'products',
+                'posts_per_page' => -1,
+                'orderby'        => 'menu_order date',
+                'order'          => 'DESK',
+            ];
+            $q = new WP_Query($args);
+            $i = 1;
+            ?>
+
+            <?php if ($q->have_posts()) : ?>
+                <?php while ($q->have_posts()) : $q->the_post(); ?>
+                    <?php
+                    $num     = str_pad($i, 2, '0', STR_PAD_LEFT);
+                    $price   = get_post_meta(get_the_ID(), 'price', true);
+                    $title   = get_the_title();
+                    $link    = get_permalink();
+                    $excerpt = get_the_excerpt();
+                    ?>
+                    <div class="col-md-6">
+                        <div class="product-content">
+                            <span class="number"><?php echo esc_html($num); ?>.</span>
+
+                            <div class="product-image">
+                                <a href="<?php echo esc_url($link); ?>" rel="noopener noreferrer">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail('large', [
+                                            'alt' => esc_attr($title),
+                                            'loading' => 'lazy',
+                                            'decoding' => 'async'
+                                        ]); ?>
+                                    <?php else: ?>
+                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/noimage.webp'); ?>"
+                                            alt="<?php echo esc_attr($title); ?>" loading="lazy" decoding="async">
+                                    <?php endif; ?>
+                                </a>
+                            </div>
+
+                            <div class="product-info">
+                                <h3><?php echo esc_html($title); ?></h3>
+                                <a class="title-link" href="<?php echo esc_url($link); ?>" rel="noopener noreferrer">
+                                    <?php echo wp_kses_post(wpautop($excerpt)); ?>
+                                </a>
+                                <div class="d-flex justify-content-between align-items-baseline">
+                                    <div class="price">
+                                        <span class="me-1">¥</span>
+                                        <span>
+                                            <?php
+                                            echo is_numeric($price)
+                                                ? esc_html(number_format_i18n((float) $price))
+                                                : esc_html((string) $price);
+                                            ?>
+                                        </span>
+                                        <span>（税込）</span>
+                                    </div>
+                                    <a class="btn-more" href="<?php echo esc_url($link); ?>" rel="noopener noreferrer">
+                                        More &gt;&gt;
+                                    </a>
                                 </div>
-                                <a class="btn-more" href="<?php echo esc_html($product['link']); ?>" target="_blank" rel="noopener">More >>></a>
-                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php $i++; ?>
-            <?php endforeach; ?>
+                    <?php $i++; ?>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p>商品がありません。</p>
+            <?php endif;
+            wp_reset_postdata(); ?>
         </div>
     </div>
 </section>
 
 
-<?php // MAINTENAINCE SECTION // *********************************************************** // ?>
+<?php // MAINTENAINCE SECTION // *********************************************************** // 
+?>
 <section class="maintenance-sec blur">
     <div class="container">
         <div class="maintenance-wrapper">
@@ -264,7 +312,8 @@ get_header();
 </section>
 
 
-<?php // NEWS SECTION // *********************************************************** // ?>
+<?php // NEWS SECTION // *********************************************************** // 
+?>
 <section class="news-sec">
     <div class="container">
         <div class="row">
@@ -278,8 +327,8 @@ get_header();
                 <?php if ($posts->have_posts()) : ?>
                     <?php while ($posts->have_posts()) : $posts->the_post(); ?>
 
-                         <?php get_template_part('template-parts/components/news-list'); ?>
-                         
+                        <?php get_template_part('template-parts/components/news-list'); ?>
+
                     <?php endwhile; ?>
                 <?php endif; ?>
 
@@ -292,14 +341,16 @@ get_header();
 </section>
 
 
-<?php // CONTACT SECTION // *********************************************************** // ?>
+<?php // CONTACT SECTION // *********************************************************** // 
+?>
 <!-- <section class="contact-sec" id="contact">
     <div class="container xs-container">
         <div class="main-title blur">
             <span>お問い合わせ</span>
             <h2 class="yellow">CONTACT</h2>
         </div>
-        <?php // echo do_shortcode('[contact-form-7 id="99f3a0e" title="お問い合わせフォーム"]'); ?>
+        <?php // echo do_shortcode('[contact-form-7 id="99f3a0e" title="お問い合わせフォーム"]'); 
+        ?>
     </div>
 </section> -->
 

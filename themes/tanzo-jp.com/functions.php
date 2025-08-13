@@ -18,7 +18,41 @@ add_filter( 'wp_resource_hints', 'remove_dns_prefetch', 10, 2 );
 // 投稿の管理画面から、アイキャッチ画像を登録する場所を作る
 add_theme_support('post-thumbnails'); // icatch表示
 
+add_action('after_setup_theme', function () {
+  add_theme_support('post-thumbnails');
+});
 
+
+add_action('admin_init', function () {
+  $types = ['post', 'qa', 'products']; // ここに対象のスラッグ並べる
+  foreach ($types as $pt) {
+    add_filter("manage_{$pt}_posts_columns", function ($columns) {
+      $new = [];
+	foreach ($columns as $key => $value) {
+		$new[$key] = $value;
+		if ($key === 'title') { // title列の後に挿入
+		$new['thumbnail'] = 'アイキャッチ';
+		}
+	}
+  return $new;
+    });
+    add_action("manage_{$pt}_posts_custom_column", function ($column, $post_id) {
+      if ($column === 'thumbnail') {
+        echo has_post_thumbnail($post_id)
+          ? get_the_post_thumbnail($post_id, 'thumbnail')
+          : '—';
+      }
+    }, 10, 2);
+  }
+});
+
+// 見た目の幅を調整（任意）
+add_action('admin_head', function () {
+  echo '<style>
+    .column-thumbnail{width:70px}
+    .column-thumbnail img{width:60px;height:auto;border-radius:4px}
+  </style>';
+});
 
 //**************************************************************
 // 管理画面：ユーザーのカスタマイズ
@@ -148,7 +182,7 @@ function custom_excerpt_length($length) {
     if (wp_is_mobile()) {
         return 100; // モバイルの場合の抜粋の文字数
     } else {
-        return 300; // PCの場合の抜粋の文字数
+        return 100; // PCの場合の抜粋の文字数
     }
 }
 
@@ -166,6 +200,7 @@ function custom_trim_excerpt($text, $length) {
 // デフォルトの抜粋長を変更
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 add_filter('excerpt_more', 'custom_excerpt_more');
+
 
 //**************************************************************
 // 投稿　次／前の投稿URL取得

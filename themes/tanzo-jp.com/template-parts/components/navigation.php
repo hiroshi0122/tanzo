@@ -11,7 +11,7 @@ $navigation = [
     ],
     [
         'menu' => '製品ラインアップ',
-        'link' => 'lineup',
+        'link' => '#lineup',
     ],
     [
         'menu' => 'メンテナンス／Q&A',
