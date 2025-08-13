@@ -188,6 +188,8 @@ const lenis = new Lenis({
   lerp: 0.2, // 慣性の強さ
 });
 
+window.lenis = lenis;
+
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);

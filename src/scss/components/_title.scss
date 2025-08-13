@@ -3,6 +3,32 @@
 //**************************************************************
 .main-title {
     margin-bottom: 4rem;
+
+    &.story {
+        h1 {
+            letter-spacing: 5px;
+            font-size: clamp(2.5rem, 3vw, 4.6rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content:"";
+                display: block;
+                margin-right: 40px;
+                border-bottom: 1px solid $font-gray;
+                width: 5%;
+            }
+
+            &::after {
+                content:"";
+                display: block;
+                margin-left: 40px;
+                border-bottom: 1px solid $font-gray;
+                width: 5%;
+            }
+        }
+    }
     
     span {
         display: flex;
@@ -25,25 +51,6 @@
     h1 {
         letter-spacing: 5px;
         font-size: clamp(2.5rem, 3vw, 4.6rem);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &::before {
-            content:"";
-            display: block;
-            margin-right: 40px;
-            border-bottom: 1px solid $font-gray;
-            width: 5%;
-        }
-
-        &::after {
-            content:"";
-            display: block;
-            margin-left: 40px;
-            border-bottom: 1px solid $font-gray;
-            width: 5%;
-        }
     }
 
     h2 {
@@ -111,7 +118,66 @@
     }
 
     h4 {
-        letter-spacing: 3px
+        letter-spacing: 3px;
+    }
+}
+
+
+/* ## NUMBERING TITLE
+***********************************************/
+.numbering-title {
+     margin-bottom: 2.5rem;
+
+     /* ### TITLE
+    --------------------------------------*/
+    .title {
+        display: flex;
+        align-items: baseline;
+
+        h2 {
+            letter-spacing: 5px;
+            font-size: clamp(16px, 1.8vw, 24px);
+        }
+
+        span {
+            font-size: clamp(20px, 2.5vw, 40px);
+            font-family: $en-font;
+            color: $font-gray;
+            margin-right: 10px
+        }
+    }
+
+     /* ### SUB TITLE
+    --------------------------------------*/
+    .sub-title {
+        letter-spacing: 4px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 15px;
+            border-bottom: solid 1px $black;
+            margin-right: 10px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 15px;
+            border-bottom: solid 1px $black;
+            margin-left: 10px;
+        }
+    }
+
+    &.center {
+        .title {
+            justify-content: center;
+        }
+        .sub-title {
+            justify-content: center;
+        }
     }
 }
 

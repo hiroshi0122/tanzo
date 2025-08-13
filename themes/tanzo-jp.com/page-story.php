@@ -69,7 +69,7 @@ get_header();
 <?php // FIRST SECTION // *********************************************************** // ?>
 <section class="first-sec story-first-sec">
     <div class="container-fluid">
-        <div class="main-title blur center">
+        <div class="main-title blur center story">
             <span>The Making of TANZO</span>
             <h1>TANZO開発の<br>ものがたり</h1>
         </div>

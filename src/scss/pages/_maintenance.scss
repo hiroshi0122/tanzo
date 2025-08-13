@@ -1,0 +1,204 @@
+//*******************************************************************
+// # MAINTENANCE
+//*******************************************************************
+/* ## FIRST SECTION（ファーストセクション）
+********************************************************************/
+.inner-page-first-sec {
+    background-blend-mode: multiply;
+    padding-top: 19rem;
+    padding-left: 5%;
+    margin-bottom: 4rem;
+
+    &.maintenance {
+        background: url('#{$image-path}/maintenance/kv_maintenance.webp') center/cover no-repeat,rgba(0,0,0,0.35);
+    }
+
+     /* ### MAIN TITLE
+    --------------------------------------*/
+    .main-title {
+        span,h1,h3 {
+            color: $white;
+        }
+        span {
+            &::after {
+                border-bottom: solid 1px $white;
+            }
+        }
+    }
+    
+    .description {
+        p {
+            color: $white;
+        }
+    }
+   
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+    }
+}
+
+/* ## MAINTENANCE MESSAGE SECTION（メッセージセクション）
+********************************************************************/
+.maintenance-message-sec {
+    max-width: 940px;
+    margin: 0 auto;
+
+    /* ### CATCH SIDE
+    --------------------------------------*/
+    .catch-side {
+
+        h3 {
+            font-size: clamp(16px, 2vw, 28px);
+            letter-spacing: 5px;
+            margin-bottom: 3rem;
+        }
+        p {
+            margin-bottom: 3rem;
+            line-height: 2.2;
+            letter-spacing: 1px;
+        }
+    }
+
+    /* ### TEXT SIDE
+    --------------------------------------*/
+    .text-side {
+
+        h4 {
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+        }
+        p {
+            margin-bottom: 2rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+    }
+}
+
+
+/* ## BEFORE USING SECTION（お使いになる前に）
+********************************************************************/
+.before-using-sec {
+
+    /* ### TEXT SIDE
+    --------------------------------------*/
+    .text-side {
+        padding-right: 10%;
+
+        .description {
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    /* ### IMAGE SIDE
+    --------------------------------------*/
+    .image-side {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+/* ## DAILY BASICS SECTION（毎日の基本）
+********************************************************************/
+.daily-basics-sec {
+
+    /* ### DAILY CONTENT
+    --------------------------------------*/
+    .daily-content {
+        padding: 5%;
+
+        /**** #### TITLE ****/
+        .title {
+            text-align: center;
+            margin-bottom: 2rem;
+
+            h3 {
+                display: inline-block;
+                border-bottom: solid 1px $black;
+                letter-spacing: 4px;
+                margin-bottom: 1rem;
+            }
+            span {
+                display: block;
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: 3px;
+            }
+        }
+
+        /**** #### IMAGE AREA ****/
+        .image-area {
+            margin-bottom: 3rem;
+        }
+
+        /**** #### TEXT ****/
+        .text {
+            p {
+                line-height: 2.4;
+            }
+        }
+    }
+}
+
+
+/* ## MORE DELICIOUS SECTION（もっとおいしく）
+********************************************************************/
+.more-delicious-sec {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    /* ### DELICIOUS CONTENT
+    --------------------------------------*/
+    .delicious-content {
+        margin-bottom: 4rem;
+
+        /**** #### IMAGE SIDE ****/
+        .image-side {
+
+        }
+
+        /**** #### TEXT SIDE ****/
+        .text-side {
+            padding-left: 3%;
+            h3 {
+                letter-spacing: 5px;
+                font-size: clamp(16px, 1.8vw, 24px);
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+/* ## QA SECTION（Q&A）
+********************************************************************/
+.qa-sec {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+// ## MOBILE // *************************************************>
+/* ## コメント中
+***********************************************/
+
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

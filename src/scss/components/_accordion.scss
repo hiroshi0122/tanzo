@@ -1,0 +1,96 @@
+//**************************************************************
+// # ACCORDION
+//**************************************************************
+
+/* ## ACCORDION
+***********************************************/
+.accordion {
+    border-left: solid 2px $black;
+    margin-bottom: 2.5rem;
+    background-color: $bg-gray !important;
+}
+
+/* ## ACC BUTTON
+***********************************************/
+.acc-btn {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 0;
+    padding: 1.5rem 2.5rem;
+    background-color: $bg-gray !important;
+
+    .qa-num {
+        font-size: clamp(14px,2vw,24px);
+        margin-right: 5px;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 35%;
+        right: 1%;
+        width: 20px;
+        // transform: translate(-50%, -50%);
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+    }
+
+    &[aria-expanded="true"] {
+        .arrow {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+/* ## ACCORDION PANEL
+***********************************************/
+.acc-panel {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.35s ease;
+    padding: 0rem 2.5rem 2rem;
+
+    &[hidden] {
+        display: none;
+    }
+    
+    /* ### ACC INNER
+    -------------------------------------*/
+    .acc-inner {
+
+        &.has-thumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .qa-thumb {
+                width: 30%;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .qa-answer {
+                width: 70%;
+                padding-left: 2rem;
+            }
+        }
+    }
+}
+
+
+
+/* ## コメント中
+***********************************************/
+
+/* ### コメント下
+--------------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */
