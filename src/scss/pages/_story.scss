@@ -1,5 +1,5 @@
 //*******************************************************************
-// # HOME
+// # STORY
 //*******************************************************************
 /* ## FIRST SECTION（ファーストセクション）
 ********************************************************************/
@@ -29,6 +29,10 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
+        .image-area {
+            aspect-ratio: 17/10;
+            overflow: hidden;
+        }
     }
 }
 
@@ -66,6 +70,9 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
+        .message {
+            text-align: left;
+        }
     }
 }
 
@@ -80,12 +87,19 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
+        .text-side {
+            padding-right: 0;
+        }
+        .image-side {
+            margin-bottom: 2rem;
+        }
     }
 }
 
 /* ## INTERACT SECTION（TANZOと対話する）
 ********************************************************************/
 .interact-sec {
+
     .row {
         position: relative;
     }
@@ -135,6 +149,30 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
+
+         /* ### IMAGE SIDE
+        --------------------------------------*/
+        .image-side {
+            .caption {
+                left: 0;
+                right: inherit;
+                white-space: nowrap;
+            }
+        }
+
+        /* ### TEXT SIDE
+        --------------------------------------*/
+        .text-side {
+            .tategaki {
+
+                h2 {
+                    position: absolute;
+                    top: -270px;
+                    right: 0;
+                    height: 260px;
+                }
+            }
+        }
     }
 }
 
@@ -157,6 +195,22 @@
             pointer-events: none; /* クリック無効（背景用途なら便利） */
         }
     }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        .container-fluid {
+            padding: 0;
+        }
+
+        .movie {
+            height: 40vw;
+
+            iframe {
+                width: 120%;
+                height: 150%;
+            }
+        }
+    }
 }
 
 /* ## COMPANY SECTION（会社概要）
@@ -174,6 +228,27 @@
             td {
                 font-weight: 500;
                 padding: 2rem;
+            }
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        .btn-area {
+            margin-bottom: 3rem;
+        }
+
+        .company-info-table {
+            tr {
+                th {
+                    width: 25%;
+                }
+
+                th,
+                td {
+                    font-size: 12px;
+                    padding: 1.4rem .5rem;
+                }
             }
         }
     }
@@ -208,6 +283,11 @@
     border: solid 1px $border-gray;
     border-radius: 15px;
     padding: 10% 3%;
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        padding: 10% 5%;
+    }
 }
 
 /* ## CEO MESSAGE SECTION（社長メッセージ）
@@ -237,6 +317,26 @@
         .desicription {
             p {
                 margin-bottom: 2rem;
+            }
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        .col-md-4 {
+            margin-bottom: 3rem;
+        }
+
+        /* ### TEXT SIDE
+        --------------------------------------*/
+        .text-side {
+            padding-left: 0;
+
+            .desicription {
+                p {
+                    margin-bottom: 2rem;
+                }
             }
         }
     }

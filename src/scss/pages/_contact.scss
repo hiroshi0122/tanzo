@@ -13,7 +13,23 @@
 .wpcf7-form {
     label {
         font-size: 18px;
-        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 14px;
+
+            a{
+                border-bottom: solid 1px $black;
+            }
+        }
+    }
+
+    .required {
+        border: solid 1px $black;
+        font-size: 10px;
+        padding: 2px 4px;
+        margin-left: 10px;
     }
 
     .cond-block[aria-hidden="true"] {

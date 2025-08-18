@@ -45,7 +45,9 @@
 </div>
 
 <div class="form-group agree">
-  [acceptance* agree "個人情報の取り扱いに同意します"]
+  [acceptance agree optional]
+    <a href="/privacy" target="_blank">プライバシーポリシー</a>に同意します
+  [/acceptance]
 </div>
 
 <div class="form-group submit-area">

@@ -38,12 +38,12 @@ get_header();
             <iframe src="https://www.youtube.com/embed/dur4ZvJ18ko?si=mhMcsEganv6aQlxW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="message">
-            <h3 class="blur">鍛造工場から生まれた、唯一無二の調理道具。</h3>
+            <h3 class="blur">鍛造工場から生まれた、<br class="d-sm-none">唯一無二の調理道具。</h3>
             <p class="blur">自動車が走るための精密な部品をつくる鍛造工場。 <br>その技術から、あなたのキッチンを変える一枚が生まれました。</p>
-            <p class="blur">心臓部で稼働するのは、世界でも類を見ない「エアスタンプハンマー」。<br>1250度にまで熱せられた鉄の塊に、約2000トンもの圧力を一点に加えて不純物をき出し、<br>鉄の純度を極限まで高めていきます。 <br>この工程で、錆びにくく、強く、そして熱をムラなく伝える、<br>家庭用調理器具の常識を超える性能が宿るのです。</p>
+            <p class="blur">心臓部で稼働するのは、世界でも類を見ない「エアスタンプハンマー」。<br>1250度にまで熱せられた鉄の塊に、約2000トンもの圧力を一点に加えて不純物をき出し、<br class="d-none d-sm-none">鉄の純度を極限まで高めていきます。 <br>この工程で、錆びにくく、強く、そして熱をムラなく伝える、<br class="d-none d-sm-block">家庭用調理器具の常識を超える性能が宿るのです。</p>
             <p class="blur">しかし、力だけでは“美味しい道具”は生まれません。<br> 頼りになるのは、鉄の表情を読み、打撃力を絶妙に調整する職人「ハンマーマン」の経験と勘。<br> 機械の力と人の技が融合することで、鉄はただの素材から、美味しさを引き出す道具へと変化します。</p>
             <p class="blur">「複雑な形の調理器具を鍛造するのは不可能だ」</p>
-            <p class="blur">その常識を覆し、ヤマコーが世界で初めて実現したこの挑戦は、<br>鉄という素材の可能性を最大限に引き出します。 <br>これは、単なるフライパンやボウルではありません。<br>料理に本物の美味しさをもたらす、鍛造技術の結晶です。</p>
+            <p class="blur">その常識を覆し、ヤマコーが世界で初めて実現したこの挑戦は、<br class="d-none d-sm-block">鉄という素材の可能性を最大限に引き出します。 <br>これは、単なるフライパンやボウルではありません。<br class="d-none d-sm-block">料理に本物の美味しさをもたらす、鍛造技術の結晶です。</p>
         </div>
     </div>
 </section>
@@ -53,7 +53,7 @@ get_header();
 <section class="golden-ratio-sec">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-6 order-1 order-md-0">
                 <div class="text-side">
                      <div class="sub-title blur">
                         <h2>美味しさのための「黄金比率」<br>側面3mm、底4mmの理由</h2>
@@ -64,7 +64,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 d-none d-md-block">
+            <div class="col-md-6 order-0 order-md-1">
                 <div class="image-side blur">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/story/tanzo_1.webp" alt="黄金比率">
                 </div>
@@ -134,10 +134,10 @@ get_header();
                     <h3>一生モノを、長く大切に使う。</h3>
                 </div>
                 <div class="desicription">
-                    <p>私たちのものづくりの原点は、自動車をはじめとする、<br>わずかな誤差も許されない世界の鍛造技術にあります。<br>命を守るために培ったその技術で、今度は人々の暮らしに永く寄り添うものをつくりたい。<br>それが、私たちの新たな挑戦のはじまりでした。</p>
+                    <p>私たちのものづくりの原点は、自動車をはじめとする、<br class="d-none d-sm-block">わずかな誤差も許されない世界の鍛造技術にあります。<br>命を守るために培ったその技術で、今度は人々の暮らしに永く寄り添うものをつくりたい。<br>それが、私たちの新たな挑戦のはじまりでした。</p>
                     <p>大量に生産され、消費され、そして捨てられていくモノたち。<br>私たちは、そんな時代に疑問を投げかけます。<br>ひとつの道具を大切に手入れし、自分だけの風合いに育てながら使い続ける。<br>そんな愛着のある暮らしこそが、これからの豊かさだと信じています。</p>
-                    <p>その想いを形にしたのが「TANZO」です。<br>「TANZOのある暮らし」は、単に製品を使うことではありません。<br>ひとつの道具と永く付き合うことで、結果として地球環境への負荷を減らす、<br>最もシンプルで本質的なサステナビリティの実践です。</p>
-                    <p>私たちは、本物を求めるお客様の想いに応え、時代を超えて価値を失わない、<br>誠実なものづくりを続けていくことをお約束します。</p>
+                    <p>その想いを形にしたのが「TANZO」です。<br>「TANZOのある暮らし」は、単に製品を使うことではありません。<br>ひとつの道具と永く付き合うことで、結果として地球環境への負荷を減らす、<br class="d-none d-sm-none">最もシンプルで本質的なサステナビリティの実践です。</p>
+                    <p>私たちは、本物を求めるお客様の想いに応え、時代を超えて価値を失わない、<br class="d-none d-sm-none">誠実なものづくりを続けていくことをお約束します。</p>
                 </div>
             </div>
         </div>
