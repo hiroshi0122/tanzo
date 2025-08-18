@@ -11,7 +11,7 @@ $company_info = [
     ],
     [
         'title' => 'E-mail',
-        'value' => 'yamaco@tanzo5.com',
+        'value' => 'yamaco@tanzo-jp.com',
     ],
     [
         'title' => '資本金',
@@ -31,7 +31,7 @@ $company_info = [
     ],
     [
         'title' => 'URL',
-        'value' => 'https://tanzo.com/',
+        'value' => 'https://www.yamaco-forging.co.jp/',
     ],
     [
         'title' => '住　　所',

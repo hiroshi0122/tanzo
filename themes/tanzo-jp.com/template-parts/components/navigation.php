@@ -14,11 +14,11 @@ $navigation = [
         'link' => '#lineup',
     ],
     [
-        'menu' => 'メンテナンス／Q&A',
+        'menu' => '育てる道具／Q&A',
         'link' => 'maintenance',
     ],
     [
-        'menu' => 'お知らせ',
+        'menu' => 'ヤマコーからのお知らせ',
         'link' => 'news',
     ],
     [

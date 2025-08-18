@@ -16,11 +16,21 @@
         margin-bottom: 2rem;
     }
 
+    .cond-block[aria-hidden="true"] {
+        display: none;
+    }
+
     .form-group {
         display: block;
         margin-bottom: 5rem;
 
+        .wpcf7-form-control-wrap {
+            width: 100%;
+            display: block;
+        }
+
         input[type="text"],input[type="email"],input[type="tel"] {
+            display: block;
             width: 100%;
             padding: 10px;
             border: none;
@@ -38,6 +48,14 @@
             color: $font-gray;
             font-size: 15px;
         }
+
+        input[type="checkbox"] {
+            appearance: checkbox;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+        }
     }
 
     .submit-area {
@@ -45,7 +63,7 @@
             text-align: end;
         }
 
-        .submit {
+        .wpcf7-submit {
             display: inline-block;
             border: solid 1px $black;
             font-size: 15px;
@@ -61,6 +79,10 @@
                 color: $white;
                 transition: 0.2s;
             }
+        }
+
+        .wpcf7-spinner {
+            display: block;
         }
     }
     

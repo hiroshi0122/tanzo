@@ -12123,9 +12123,9 @@ footer .copyright {
 }
 .maintenance-sec .maintenance-wrapper {
   padding: 8% 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/wp-content/themes/tanzo-jp.com/assets/images/home/maintenance_bg.webp");
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/wp-content/themes/tanzo-jp.com/assets/images/maintenance/kv_maintenance.webp");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 50% 55%;
   background-size: cover;
 }
 
@@ -12513,11 +12513,19 @@ footer .copyright {
   font-size: 18px;
   margin-bottom: 2rem;
 }
+.wpcf7-form .cond-block[aria-hidden=true] {
+  display: none;
+}
 .wpcf7-form .form-group {
   display: block;
   margin-bottom: 5rem;
 }
+.wpcf7-form .form-group .wpcf7-form-control-wrap {
+  width: 100%;
+  display: block;
+}
 .wpcf7-form .form-group input[type=text], .wpcf7-form .form-group input[type=email], .wpcf7-form .form-group input[type=tel] {
+  display: block;
   width: 100%;
   padding: 10px;
   border: none;
@@ -12533,10 +12541,17 @@ footer .copyright {
   color: #989898;
   font-size: 15px;
 }
+.wpcf7-form .form-group input[type=checkbox] {
+  appearance: checkbox;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
 .wpcf7-form .submit-area p {
   text-align: end;
 }
-.wpcf7-form .submit-area .submit {
+.wpcf7-form .submit-area .wpcf7-submit {
   display: inline-block;
   border: solid 1px #000000;
   font-size: 15px;
@@ -12547,10 +12562,13 @@ footer .copyright {
   background-color: #fff;
   transition: 0.2s;
 }
-.wpcf7-form .submit-area .submit:hover {
+.wpcf7-form .submit-area .wpcf7-submit:hover {
   background-color: #000000;
   color: #fff;
   transition: 0.2s;
+}
+.wpcf7-form .submit-area .wpcf7-spinner {
+  display: block;
 }
 @media only screen and (max-width: 767px) {
   .wpcf7-form h4, .wpcf7-form .highlight-text span, .highlight-text .wpcf7-form span {

@@ -146,7 +146,7 @@ get_header();
                     <ul class="second-page-menu row">
                         <li class="col-auto">
                             <span>01.</span>
-                            <h5>弱火と予熱で旨みを凝縮</h5>
+                            <h5>手間なし・かんたん</h5>
                             <div class="text-end">
                                 <a href="" class="btn-more">More >>></a>
                             </div>
@@ -160,7 +160,7 @@ get_header();
                         </li>
                         <li class="col-auto">
                             <span>03.</span>
-                            <h5>調理からテーブルへ<br>暮らしを彩るTANZO</h5>
+                            <h5>調理からテーブルへ</h5>
                             <div class="text-end">
                                 <a href="" class="btn-more">More >>></a>
                             </div>
@@ -193,12 +193,12 @@ get_header();
                     <div class="main-title blur">
                         <span>The Making of TANZO</span>
                         <h2 class="daily-title">開発の物語</h2>
-                        <h3 class="sub-catch">簡単なキャッチが入ります。<br>簡単なキャッチが入ります。</h3>
+                        <h3 class="sub-catch">ヤマコーがつくる<br>「美味しい道具」</h3>
                     </div>
                     <div class="image-side blur d-md-none">
                         <img src="<?php bloginfo('template_url'); ?>/assets/images/home/story_image.webp" alt="開発の物語">
                     </div>
-                    <p class="description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <p class="description">1,250度の炎、2,000トンの圧力、そして熟練「ハンマーマン」の勘。鉄はただの素材から、料理を変える道具へと姿を変えます。その誕生の物語へ。</p>
                     <div class="btn-area">
                         <a class="btn-view-more" href="/story">VIEW MORE >>></a>
                     </div>
@@ -299,7 +299,7 @@ get_header();
         <div class="maintenance-wrapper">
             <div class="main-title center blur">
                 <span>Maintenance/Q&A</span>
-                <h2 class="daily-title">メンテナンス・Q&A</h2>
+                <h2 class="daily-title">育てる道具・Q&A</h2>
             </div>
             <div class="text-center mb-5">
                 <p>TANZOはシーズニング済み。<br>簡単・楽しくお使いいただけます。</p>

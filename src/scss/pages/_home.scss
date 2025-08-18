@@ -336,9 +336,9 @@
     .maintenance-wrapper {
         padding: 8% 0;
         background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-            url("#{$image-path}/home/maintenance_bg.webp");
+            url("#{$image-path}/maintenance/kv_maintenance.webp");
         background-repeat: no-repeat;
-        background-position: top;
+        background-position: 50% 55%;
         background-size: cover;
     }
 }

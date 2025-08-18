@@ -17,19 +17,19 @@ $daily_basics = [
     [
         'title' => '洗う',
         'sub-title' => '洗剤で汚れ落とし',
-        'image' => 'more_delicious_1',
+        'image' => 'wash',
         'text' => '一般的な鉄製品と違い、TANZOは洗剤を使ってスポンジで洗うことができます。なぜなら、エアスタンプハンマーによる鍛造で、鉄の密度と純度が極限まで高められているから。タフな素材なので、調理後の汚れを気にせず、気持ちよく洗ってください。',
     ],
     [
         'title' => '乾かす',
         'sub-title' => '火にかけて水分を飛ばす',
-        'image' => 'more_delicious_1',
+        'image' => 'dry',
         'text' => '洗浄後は、さっと火にかけて完全に水分を飛ばします。これが錆を防ぐ、唯一にして最大のコツです。',
     ],
     [
         'title' => '保管',
         'sub-title' => 'そのまま次の出番を待つ',
-        'image' => 'more_delicious_1',
+        'image' => 'put_away',
         'text' => '水分を飛ばしたら、特別な油引き(シーズニング)は不要です。そのまま次の出番まで保管してください。この手軽さが、毎日使い続けられる理由です。',
     ],
 ];
@@ -74,11 +74,11 @@ get_header();
         <div class="main-title blur">
             <span>A Tool That Grows with You</span>
             <h1>育てる道具</h1>
-            <h3>キャッチが入ります<br>キャッチが入ります</h3>
+            <h3>一生使える<br>楽しい調理のパートナー</h3>
         </div>
-        <div class="description">
+        <!-- <div class="description">
             <p>簡単な説明が入ります。簡単な説明が入ります。簡単な説明が入ります。<br>簡単な説明が入ります。簡単な説明が入ります。簡単な説明が入ります。</p>
-        </div>
+        </div> -->
     </div>
 </section>
 
