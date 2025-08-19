@@ -133,6 +133,11 @@ section {
 			background: url('#{$image-path}/simple/kv_simple.webp') center/cover no-repeat,rgba(255,255,255,0.85);
 		}
     }
+	&.table {
+		.container-fluid {
+			background: url('#{$image-path}/to_table/image_to_table.webp') center/cover no-repeat,rgba(255,255,255,0.95);
+		}
+    }
 
      /* ### MAIN TITLE
     --------------------------------------*/

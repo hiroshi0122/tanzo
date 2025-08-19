@@ -161,6 +161,13 @@
 .border-title {
     margin-bottom: 3rem;
 
+    h2 {
+        font-size: clamp(18px, 2.8vw, 36px);
+        display: inline-block;
+        border-bottom: solid 1px $black;
+        letter-spacing: 5px;
+    }
+
     h3 {
         font-size: clamp(16px, 2.4vw, 28px);
         display: inline-block;
@@ -170,6 +177,10 @@
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
         margin-bottom: 1.5rem;
+
+        h2 {
+            letter-spacing: 3px;
+        }
     }
 }
 

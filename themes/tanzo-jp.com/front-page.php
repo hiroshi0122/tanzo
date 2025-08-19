@@ -155,14 +155,14 @@ get_header();
                             <span>02.</span>
                             <h5>TANZOのこだわり</h5>
                             <div class="text-end">
-                                <a href="" class="btn-more">More >>></a>
+                                <a href="/quality" class="btn-more">More >>></a>
                             </div>
                         </li>
                         <li class="col-auto">
                             <span>03.</span>
                             <h5>調理からテーブルへ</h5>
                             <div class="text-end">
-                                <a href="" class="btn-more">More >>></a>
+                                <a href="/to-table" class="btn-more">More >>></a>
                             </div>
                         </li>
                     </ul>

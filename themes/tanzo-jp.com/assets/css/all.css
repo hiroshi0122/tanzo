@@ -10904,6 +10904,9 @@ section {
 .daily-page-first-sec.simple .container-fluid, .daily-page-first-sec.simple .container-sm, .daily-page-first-sec.simple .container-md, .daily-page-first-sec.simple .container-lg, .daily-page-first-sec.simple .container-xl, .daily-page-first-sec.simple .container-xxl {
   background: url("/wp-content/themes/tanzo-jp.com/assets/images/simple/kv_simple.webp") center/cover no-repeat, rgba(255, 255, 255, 0.85);
 }
+.daily-page-first-sec.table .container-fluid, .daily-page-first-sec.table .container-sm, .daily-page-first-sec.table .container-md, .daily-page-first-sec.table .container-lg, .daily-page-first-sec.table .container-xl, .daily-page-first-sec.table .container-xxl {
+  background: url("/wp-content/themes/tanzo-jp.com/assets/images/to_table/image_to_table.webp") center/cover no-repeat, rgba(255, 255, 255, 0.95);
+}
 .daily-page-first-sec .description {
   text-align: center;
 }
@@ -11487,6 +11490,12 @@ footer .copyright {
 .border-title {
   margin-bottom: 3rem;
 }
+.border-title h2 {
+  font-size: clamp(18px, 2.8vw, 36px);
+  display: inline-block;
+  border-bottom: solid 1px #000000;
+  letter-spacing: 5px;
+}
 .border-title h3 {
   font-size: clamp(16px, 2.4vw, 28px);
   display: inline-block;
@@ -11496,6 +11505,9 @@ footer .copyright {
 @media only screen and (max-width: 767px) {
   .border-title {
     margin-bottom: 1.5rem;
+  }
+  .border-title h2 {
+    letter-spacing: 3px;
   }
 }
 
@@ -13136,6 +13148,21 @@ blockquote cite {
   }
 }
 
+/* ## コメント中
+***********************************************/
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+/**** #### コメント下の下 ****/
+/* ##### コメント軽 */
+/* ## TABLE PICTURE SECTION
+********************************************************************/
+.table-picture-sec .picture-contents {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.table-picture-sec .picture-contents h2 {
+  font-weight: 500;
+}
 /* ## コメント中
 ***********************************************/
 /* ### SLIDER CONTAINER
