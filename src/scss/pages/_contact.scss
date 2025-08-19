@@ -19,7 +19,7 @@
         span {
             font-size: 14px;
 
-            a{
+            a {
                 border-bottom: solid 1px $black;
             }
         }
@@ -40,12 +40,18 @@
         display: block;
         margin-bottom: 5rem;
 
+        p {
+            line-height: 1;
+        }
+
         .wpcf7-form-control-wrap {
             width: 100%;
             display: block;
         }
 
-        input[type="text"],input[type="email"],input[type="tel"] {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
             display: block;
             width: 100%;
             padding: 10px;
@@ -60,7 +66,8 @@
             min-height: 280px;
         }
 
-        input::placeholder, textarea::placeholder {
+        input::placeholder,
+        textarea::placeholder {
             color: $font-gray;
             font-size: 15px;
         }
@@ -86,7 +93,7 @@
             font-weight: 600;
             text-align: center;
             width: 260px;
-            padding: .8rem 0;
+            padding: 0.8rem 0;
             background-color: $white;
             transition: 0.2s;
 
@@ -101,20 +108,33 @@
             display: block;
         }
     }
-    
+
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-        h4 {
+        label {
             font-size: 15px;
+
+            span {
+                font-size: 14px;
+
+                a {
+                    border-bottom: solid 1px $black;
+                }
+            }
         }
 
-        .wpcf7-submit {
-            font-size: 16px;
+        .form-group {
+            display: block;
+            margin-bottom: 3rem;
+        }
+
+        .submit-area {
+            p {
+                text-align: center;
+            }
         }
     }
 }
-
-
 
 // ## MOBILE // *************************************************>
 /* ## コメント中

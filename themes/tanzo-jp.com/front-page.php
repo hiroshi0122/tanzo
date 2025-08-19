@@ -148,7 +148,7 @@ get_header();
                             <span>01.</span>
                             <h5>手間なし・かんたん</h5>
                             <div class="text-end">
-                                <a href="" class="btn-more">More >>></a>
+                                <a href="/simple" class="btn-more">More >>></a>
                             </div>
                         </li>
                         <li class="col-auto">

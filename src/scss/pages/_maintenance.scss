@@ -3,50 +3,6 @@
 //*******************************************************************
 /* ## FIRST SECTION（ファーストセクション）
 ********************************************************************/
-.inner-page-first-sec {
-    background-blend-mode: multiply;
-    padding-top: 19rem;
-    padding-left: 5%;
-    margin-bottom: 4rem;
-
-    &.maintenance {
-        background: url('#{$image-path}/maintenance/kv_maintenance.webp') center/cover no-repeat,rgba(0,0,0,0.35);
-    }
-
-     /* ### MAIN TITLE
-    --------------------------------------*/
-    .main-title {
-        span,h1,h3 {
-            color: $white;
-        }
-        span {
-            &::after {
-                border-bottom: solid 1px $white;
-            }
-        }
-    }
-    
-    .description {
-        p {
-            color: $white;
-        }
-    }
-   
-    // ## MOBILE // *************************************************>
-    @media #{$smallScreen} {
-        padding-top: 13rem;
-        padding-left: 1rem;
-        margin-bottom: 0;
-
-         /* ### MAIN TITLE
-        --------------------------------------*/
-        .main-title {
-            span {
-                margin-bottom: .5rem;
-            }
-        }
-    }
-}
 
 /* ## MAINTENANCE MESSAGE SECTION（メッセージセクション）
 ********************************************************************/

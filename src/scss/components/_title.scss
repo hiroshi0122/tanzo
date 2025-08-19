@@ -156,6 +156,24 @@
 }
 
 
+/* ## BORDER TITLE
+***********************************************/
+.border-title {
+    margin-bottom: 3rem;
+
+    h3 {
+        font-size: clamp(16px, 2.4vw, 28px);
+        display: inline-block;
+        border-bottom: solid 1px $black;
+        letter-spacing: 5px;
+    }
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
 /* ## NUMBERING TITLE
 ***********************************************/
 .numbering-title {
@@ -215,23 +233,6 @@
 }
 
 
-/* ## ハイライトタイトル
-***********************************************/
-.highlight-text {
-    span {
-        @extend h4;
-        background-color: $highlight;
-        margin-bottom: .5rem;
-        font-weight: 500;
-    }
-
-    @media #{$smallScreen} {
-        span {
-            font-size: 20px;
-            margin-bottom: .8rem;
-        }
-    }
-}
 
 
 

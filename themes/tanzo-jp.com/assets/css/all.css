@@ -10532,7 +10532,6 @@ h1,
 h2,
 h3,
 h4,
-.highlight-text span,
 h5,
 h6,
 p,
@@ -10715,13 +10714,13 @@ h3 {
   }
 }
 
-h4, .highlight-text span {
+h4 {
   font-size: 24px;
   line-height: 1.5;
   font-weight: bold;
 }
 @media only screen and (max-width: 767px) {
-  h4, .highlight-text span {
+  h4 {
     font-size: 15px;
   }
 }
@@ -10743,7 +10742,7 @@ h6 {
 }
 
 p, li {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2;
 }
 @media only screen and (max-width: 767px) {
@@ -10822,12 +10821,6 @@ section {
   padding: 12rem 0rem;
   /* ### MOBILE =====================================*/
 }
-section.bg-gray {
-  background-color: #F5F5F5;
-}
-section.fixed-page .main-title-template {
-  margin: 0 auto 4rem;
-}
 @media only screen and (max-width: 767px) {
   section {
     padding: 5rem 0rem;
@@ -10843,6 +10836,103 @@ section.fixed-page .main-title-template {
 @media only screen and (max-width: 767px) {
   .first-sec {
     padding-top: 72px;
+  }
+}
+
+/* ## TEXT PAGE FIRST SECTION（テキストページ）
+***********************************************/
+.text-page-first-sec {
+  padding-top: 16rem;
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  .text-page-first-sec {
+    padding-top: 10rem;
+  }
+}
+
+/* ## INNER PAGE FIRST SECTION（下層ページ）
+***********************************************/
+.inner-page-first-sec {
+  background-blend-mode: multiply;
+  padding-top: 19rem;
+  padding-left: 5%;
+  margin-bottom: 4rem;
+  /* ### MAIN TITLE
+  --------------------------------------*/
+}
+.inner-page-first-sec.maintenance {
+  background: url("/wp-content/themes/tanzo-jp.com/assets/images/maintenance/kv_maintenance.webp") center/cover no-repeat, rgba(0, 0, 0, 0.35);
+}
+.inner-page-first-sec .main-title span, .inner-page-first-sec .main-title h1, .inner-page-first-sec .main-title h3 {
+  color: #fff;
+}
+.inner-page-first-sec .main-title span::after {
+  border-bottom: solid 1px #fff;
+}
+.inner-page-first-sec .description p {
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .inner-page-first-sec {
+    padding-top: 13rem;
+    padding-left: 1rem;
+    margin-bottom: 0;
+    /* ### MAIN TITLE
+    --------------------------------------*/
+  }
+  .inner-page-first-sec .main-title span {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ## DAILY PAGE FIRST SECTION（下層ページ）
+***********************************************/
+.daily-page-first-sec {
+  padding-left: 2%;
+  padding-right: 2%;
+  /* ### MAIN TITLE
+  --------------------------------------*/
+  /* ### DISCRIPTION
+     --------------------------------------*/
+}
+.daily-page-first-sec .container-fluid, .daily-page-first-sec .container-sm, .daily-page-first-sec .container-md, .daily-page-first-sec .container-lg, .daily-page-first-sec .container-xl, .daily-page-first-sec .container-xxl {
+  padding-top: 10rem;
+  padding-bottom: 9rem;
+  background-blend-mode: hue;
+}
+.daily-page-first-sec.simple .container-fluid, .daily-page-first-sec.simple .container-sm, .daily-page-first-sec.simple .container-md, .daily-page-first-sec.simple .container-lg, .daily-page-first-sec.simple .container-xl, .daily-page-first-sec.simple .container-xxl {
+  background: url("/wp-content/themes/tanzo-jp.com/assets/images/simple/kv_simple.webp") center/cover no-repeat, rgba(255, 255, 255, 0.85);
+}
+.daily-page-first-sec .description {
+  text-align: center;
+}
+.daily-page-first-sec .description p {
+  margin-bottom: 1.5rem;
+}
+.daily-page-first-sec .description p:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  .daily-page-first-sec .container-fluid, .daily-page-first-sec .container-sm, .daily-page-first-sec .container-md, .daily-page-first-sec .container-lg, .daily-page-first-sec .container-xl, .daily-page-first-sec .container-xxl {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* ## BTN SECTION（ボタン用セクション）
+***********************************************/
+.btn-sec .btn-area {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 767px) {
+  .btn-sec .btn-area a {
+    margin-bottom: 1rem;
+  }
+  .btn-sec .btn-area a:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -11383,11 +11473,28 @@ footer .copyright {
   letter-spacing: 5px;
   font-size: clamp(16px, 1.8vw, 24px);
 }
-.sub-title h4, .sub-title .highlight-text span, .highlight-text .sub-title span {
+.sub-title h4 {
   letter-spacing: 3px;
 }
 @media only screen and (max-width: 767px) {
   .sub-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ## BORDER TITLE
+***********************************************/
+.border-title {
+  margin-bottom: 3rem;
+}
+.border-title h3 {
+  font-size: clamp(16px, 2.4vw, 28px);
+  display: inline-block;
+  border-bottom: solid 1px #000000;
+  letter-spacing: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .border-title {
     margin-bottom: 1.5rem;
   }
 }
@@ -11439,20 +11546,6 @@ footer .copyright {
 }
 .numbering-title.center .sub-title {
   justify-content: center;
-}
-
-/* ## ハイライトタイトル
-***********************************************/
-.highlight-text span {
-  background-color: rgba(230, 221, 209, 0.4);
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-@media only screen and (max-width: 767px) {
-  .highlight-text span {
-    font-size: 20px;
-    margin-bottom: 0.8rem;
-  }
 }
 
 /* ## コメント中
@@ -11785,7 +11878,7 @@ footer .copyright {
   font-weight: 200;
   color: #989898;
 }
-.news-contents .text-area h4, .news-contents .text-area .highlight-text span, .highlight-text .news-contents .text-area span {
+.news-contents .text-area h4 {
   font-size: clamp(14px, 1.4vw, 20px);
   font-weight: 500;
 }
@@ -11799,7 +11892,7 @@ footer .copyright {
   .news-contents {
     /**** #### TEXT AREA ****/
   }
-  .news-contents .text-area h4, .news-contents .text-area .highlight-text span, .highlight-text .news-contents .text-area span {
+  .news-contents .text-area h4 {
     margin-bottom: 1rem;
   }
 }
@@ -12487,39 +12580,6 @@ footer .copyright {
 /* ##### コメント軽 */
 /* ## FIRST SECTION（ファーストセクション）
 ********************************************************************/
-.inner-page-first-sec {
-  background-blend-mode: multiply;
-  padding-top: 19rem;
-  padding-left: 5%;
-  margin-bottom: 4rem;
-  /* ### MAIN TITLE
-  --------------------------------------*/
-}
-.inner-page-first-sec.maintenance {
-  background: url("/wp-content/themes/tanzo-jp.com/assets/images/maintenance/kv_maintenance.webp") center/cover no-repeat, rgba(0, 0, 0, 0.35);
-}
-.inner-page-first-sec .main-title span, .inner-page-first-sec .main-title h1, .inner-page-first-sec .main-title h3 {
-  color: #fff;
-}
-.inner-page-first-sec .main-title span::after {
-  border-bottom: solid 1px #fff;
-}
-.inner-page-first-sec .description p {
-  color: #fff;
-}
-@media only screen and (max-width: 767px) {
-  .inner-page-first-sec {
-    padding-top: 13rem;
-    padding-left: 1rem;
-    margin-bottom: 0;
-    /* ### MAIN TITLE
-    --------------------------------------*/
-  }
-  .inner-page-first-sec .main-title span {
-    margin-bottom: 0.5rem;
-  }
-}
-
 /* ## MAINTENANCE MESSAGE SECTION（メッセージセクション）
 ********************************************************************/
 .maintenance-message-sec {
@@ -12540,7 +12600,7 @@ footer .copyright {
   line-height: 2.2;
   letter-spacing: 1px;
 }
-.maintenance-message-sec .text-side h4, .maintenance-message-sec .text-side .highlight-text span, .highlight-text .maintenance-message-sec .text-side span {
+.maintenance-message-sec .text-side h4 {
   letter-spacing: 3px;
   margin-bottom: 2rem;
 }
@@ -12563,7 +12623,7 @@ footer .copyright {
   .maintenance-message-sec .catch-side h3 {
     margin-bottom: 4rem;
   }
-  .maintenance-message-sec .text-side h4, .maintenance-message-sec .text-side .highlight-text span, .highlight-text .maintenance-message-sec .text-side span {
+  .maintenance-message-sec .text-side h4 {
     margin-bottom: 1.5rem;
   }
 }
@@ -12727,16 +12787,6 @@ footer .copyright {
 /* ##### コメント軽 */
 /* ## FIRST SECTION（ファーストセクション）
 ********************************************************************/
-.text-page-first-sec {
-  padding-top: 16rem;
-  padding-bottom: 0;
-}
-@media only screen and (max-width: 767px) {
-  .text-page-first-sec {
-    padding-top: 12rem;
-  }
-}
-
 /* ### SLIDER CONTAINER
     --------------------------------------*/
 .company-info-table.page-company {
@@ -12783,11 +12833,16 @@ footer .copyright {
   display: block;
   margin-bottom: 5rem;
 }
+.wpcf7-form .form-group p {
+  line-height: 1;
+}
 .wpcf7-form .form-group .wpcf7-form-control-wrap {
   width: 100%;
   display: block;
 }
-.wpcf7-form .form-group input[type=text], .wpcf7-form .form-group input[type=email], .wpcf7-form .form-group input[type=tel] {
+.wpcf7-form .form-group input[type=text],
+.wpcf7-form .form-group input[type=email],
+.wpcf7-form .form-group input[type=tel] {
   display: block;
   width: 100%;
   padding: 10px;
@@ -12800,7 +12855,8 @@ footer .copyright {
   padding: 10px;
   min-height: 280px;
 }
-.wpcf7-form .form-group input::placeholder, .wpcf7-form .form-group textarea::placeholder {
+.wpcf7-form .form-group input::placeholder,
+.wpcf7-form .form-group textarea::placeholder {
   color: #989898;
   font-size: 15px;
 }
@@ -12834,11 +12890,21 @@ footer .copyright {
   display: block;
 }
 @media only screen and (max-width: 767px) {
-  .wpcf7-form h4, .wpcf7-form .highlight-text span, .highlight-text .wpcf7-form span {
+  .wpcf7-form label {
     font-size: 15px;
   }
-  .wpcf7-form .wpcf7-submit {
-    font-size: 16px;
+  .wpcf7-form label span {
+    font-size: 14px;
+  }
+  .wpcf7-form label span a {
+    border-bottom: solid 1px #000000;
+  }
+  .wpcf7-form .form-group {
+    display: block;
+    margin-bottom: 3rem;
+  }
+  .wpcf7-form .submit-area p {
+    text-align: center;
   }
 }
 
@@ -12950,7 +13016,7 @@ footer .copyright {
   padding: 5px 8px;
   border-bottom: solid 1px #000000;
 }
-.content h4, .content .highlight-text span, .highlight-text .content span {
+.content h4 {
   font-size: 18px;
   margin-top: 6rem;
   margin-bottom: 1rem;
@@ -13027,6 +13093,52 @@ blockquote cite {
 /* ## コメント中
 ***********************************************/
 /* ### コメント下
+--------------------------------------*/
+/**** #### コメント下の下 ****/
+/* ##### コメント軽 */
+/* ## COOKING METHOD SECTION（ファーストセクション）
+********************************************************************/
+.cooking-method-sec .cooking-contents {
+  padding: 8%;
+  text-align: center;
+}
+.cooking-method-sec .cooking-contents .image {
+  margin-bottom: 2.5rem;
+}
+.cooking-method-sec .cooking-contents .image img {
+  width: 100%;
+  height: auto;
+}
+.cooking-method-sec .cooking-contents .description dt {
+  font-size: clamp(18px, 2.4vw, 24px);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.cooking-method-sec .cooking-contents .description dd {
+  text-align: left;
+}
+@media only screen and (max-width: 767px) {
+  .cooking-method-sec .cooking-contents {
+    padding: 4%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .cooking-method-sec .cooking-contents .image {
+    margin-bottom: 1.5rem;
+  }
+  .cooking-method-sec .cooking-contents .description dt {
+    font-size: clamp(18px, 2.4vw, 24px);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .cooking-method-sec .cooking-contents .description dd {
+    text-align: left;
+  }
+}
+
+/* ## コメント中
+***********************************************/
+/* ### SLIDER CONTAINER
 --------------------------------------*/
 /**** #### コメント下の下 ****/
 /* ##### コメント軽 */

@@ -34,23 +34,12 @@ section {
 	position: relative;
 	padding: 12rem 0rem;
 
-	&.bg-gray {
-		background-color: $bg-gray;
-	}
-
-	&.fixed-page {
-		.main-title-template {
-			margin: 0 auto 4rem;
-		}
-	}
 
 	/* ### MOBILE =====================================*/
 	@media #{$smallScreen} {
 		padding: 5rem 0rem;
 	}
 }
-
-
 
 /* ## FIRST SECTION
 ***********************************************/
@@ -60,6 +49,139 @@ section {
 	/* ### MOBILE =====================================*/
 	@media #{$smallScreen} {
 		padding-top: 72px;
+	}
+}
+
+/* ## TEXT PAGE FIRST SECTION（テキストページ）
+***********************************************/
+.text-page-first-sec{
+    padding-top: 16rem;
+    padding-bottom: 0;
+
+    // .description {
+    //     padding-left: 5%;
+    // }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        padding-top: 10rem;
+    }
+}
+
+
+/* ## INNER PAGE FIRST SECTION（下層ページ）
+***********************************************/
+.inner-page-first-sec {
+    background-blend-mode: multiply;
+    padding-top: 19rem;
+    padding-left: 5%;
+    margin-bottom: 4rem;
+
+    &.maintenance {
+        background: url('#{$image-path}/maintenance/kv_maintenance.webp') center/cover no-repeat,rgba(0,0,0,0.35);
+    }
+
+     /* ### MAIN TITLE
+    --------------------------------------*/
+    .main-title {
+        span,h1,h3 {
+            color: $white;
+        }
+        span {
+            &::after {
+                border-bottom: solid 1px $white;
+            }
+        }
+    }
+    
+    .description {
+        p {
+            color: $white;
+        }
+    }
+   
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        padding-top: 13rem;
+        padding-left: 1rem;
+        margin-bottom: 0;
+
+         /* ### MAIN TITLE
+        --------------------------------------*/
+        .main-title {
+            span {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}
+
+/* ## DAILY PAGE FIRST SECTION（下層ページ）
+***********************************************/
+.daily-page-first-sec {
+	padding-left: 2%;
+	padding-right: 2%;
+
+	.container-fluid {
+		padding-top: 10rem;
+		padding-bottom: 9rem;
+		background-blend-mode: hue;
+	}
+
+    &.simple {
+		.container-fluid {
+			background: url('#{$image-path}/simple/kv_simple.webp') center/cover no-repeat,rgba(255,255,255,0.85);
+		}
+    }
+
+     /* ### MAIN TITLE
+    --------------------------------------*/
+    .main-title {
+    }
+	
+	/* ### DISCRIPTION
+    --------------------------------------*/
+    .description {
+		text-align: center;
+
+        p {
+			margin-bottom: 1.5rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+        }
+    }
+   
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+		.container-fluid {
+			padding-top: 4rem;
+			padding-bottom: 3rem;
+		}
+    }
+}
+
+/* ## BTN SECTION（ボタン用セクション）
+***********************************************/
+.btn-sec {
+	.btn-area {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+		
+	}
+
+	// ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+		.btn-area {
+			a {
+				margin-bottom: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
 	}
 }
 
