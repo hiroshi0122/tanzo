@@ -189,6 +189,10 @@ header {
     @media #{$smallScreen} {   
         padding: 2rem 1rem; 
 
+        .container-fluid {
+            padding: 0 1rem;
+        }
+
         /* ### LOGO SIDE
         =====================================*/
         .logo-side {

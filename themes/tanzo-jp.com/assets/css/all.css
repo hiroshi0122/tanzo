@@ -11084,6 +11084,9 @@ header .menu-contents .menu-list .menu a p {
     /* ### LOGO SIDE
     =====================================*/
   }
+  header .container-fluid, header .container-sm, header .container-md, header .container-lg, header .container-xl, header .container-xxl {
+    padding: 0 1rem;
+  }
   header .logo-side {
     display: block;
   }
@@ -11360,6 +11363,7 @@ footer .copyright {
     margin-top: 1.5rem;
   }
   .main-title span {
+    font-size: 10px;
     margin-bottom: 1.5rem;
   }
   .main-title span::after {
@@ -11815,6 +11819,11 @@ footer .copyright {
   margin-bottom: 2.5rem;
   background-color: #F5F5F5 !important;
 }
+@media only screen and (max-width: 767px) {
+  .accordion {
+    margin-bottom: 1rem;
+  }
+}
 
 /* ## ACC BUTTON
 ***********************************************/
@@ -11843,6 +11852,18 @@ footer .copyright {
 }
 .acc-btn[aria-expanded=true] .arrow {
   transform: rotate(90deg);
+}
+@media only screen and (max-width: 767px) {
+  .acc-btn {
+    padding: 1.5rem 2.5rem;
+  }
+  .acc-btn .qa-num {
+    font-size: clamp(18px, 2vw, 24px);
+    white-space: nowrap;
+  }
+  .acc-btn .arrow {
+    right: 3%;
+  }
 }
 
 /* ## ACCORDION PANEL
@@ -11873,6 +11894,15 @@ footer .copyright {
 .acc-panel .acc-inner.has-thumb .qa-answer {
   width: 70%;
   padding-left: 2rem;
+}
+@media only screen and (max-width: 767px) {
+  .acc-panel {
+    /* ### ACC INNER
+    -------------------------------------*/
+  }
+  .acc-panel .acc-inner.has-thumb .qa-answer {
+    padding-left: 1rem;
+  }
 }
 
 /* ## コメント中
@@ -12135,16 +12165,16 @@ footer .copyright {
     /* ### CONTENT
     --------------------------------------*/
   }
-  .lineup-sec .content {
+  .lineup-sec .product-content {
     padding: 5%;
     margin-bottom: 2rem;
     /**** #### PRODUCT INFO ****/
   }
-  .lineup-sec .content .product-info h3 {
+  .lineup-sec .product-content .product-info h3 {
     font-size: clamp(16px, 1.8vw, 22px);
     margin-bottom: 1rem;
   }
-  .lineup-sec .content .product-info .price span:nth-child(2) {
+  .lineup-sec .product-content .product-info .price span:nth-child(2) {
     font-size: 26px;
   }
 }
@@ -12477,6 +12507,19 @@ footer .copyright {
 .inner-page-first-sec .description p {
   color: #fff;
 }
+@media only screen and (max-width: 767px) {
+  .inner-page-first-sec {
+    padding-top: 13rem;
+    padding-left: 1rem;
+    margin-bottom: 0;
+    /* ### MAIN TITLE
+    --------------------------------------*/
+  }
+  .inner-page-first-sec .main-title span {
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* ## MAINTENANCE MESSAGE SECTION（メッセージセクション）
 ********************************************************************/
 .maintenance-message-sec {
@@ -12507,6 +12550,24 @@ footer .copyright {
 .maintenance-message-sec .text-side p:last-child {
   margin-bottom: 0;
 }
+@media only screen and (max-width: 767px) {
+  .maintenance-message-sec {
+    /* ### CATCH SIDE
+    --------------------------------------*/
+    /* ### TEXT SIDE
+    --------------------------------------*/
+  }
+  .maintenance-message-sec .catch-side {
+    text-align: center;
+  }
+  .maintenance-message-sec .catch-side h3 {
+    margin-bottom: 4rem;
+  }
+  .maintenance-message-sec .text-side h4, .maintenance-message-sec .text-side .highlight-text span, .highlight-text .maintenance-message-sec .text-side span {
+    margin-bottom: 1.5rem;
+  }
+}
+
 /* ## BEFORE USING SECTION（お使いになる前に）
 ********************************************************************/
 .before-using-sec {
@@ -12530,6 +12591,23 @@ footer .copyright {
   height: 100%;
   object-fit: cover;
   transform: scale(1.2);
+}
+@media only screen and (max-width: 767px) {
+  .before-using-sec {
+    /* ### TEXT SIDE
+    --------------------------------------*/
+    /* ### IMAGE SIDE
+    --------------------------------------*/
+  }
+  .before-using-sec .text-side {
+    padding-right: 0;
+  }
+  .before-using-sec .text-side .description p {
+    margin-bottom: 2rem;
+  }
+  .before-using-sec .image-side {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* ## DAILY BASICS SECTION（毎日の基本）
@@ -12566,6 +12644,31 @@ footer .copyright {
 .daily-basics-sec .daily-content .text p {
   line-height: 2.4;
 }
+@media only screen and (max-width: 767px) {
+  .daily-basics-sec {
+    /* ### DAILY CONTENT
+    --------------------------------------*/
+  }
+  .daily-basics-sec .daily-content {
+    padding: 0;
+    margin-bottom: 4rem;
+    /**** #### TITLE ****/
+    /**** #### IMAGE AREA ****/
+    /**** #### TEXT ****/
+  }
+  .daily-basics-sec .daily-content .title {
+    margin-bottom: 1.5rem;
+  }
+  .daily-basics-sec .daily-content .title span {
+    font-size: 12px;
+  }
+  .daily-basics-sec .daily-content .image-area {
+    margin-bottom: 1.5rem;
+  }
+  .daily-basics-sec .daily-content .text p {
+    line-height: 2;
+  }
+}
 
 /* ## MORE DELICIOUS SECTION（もっとおいしく）
 ********************************************************************/
@@ -12588,6 +12691,26 @@ footer .copyright {
   font-size: clamp(16px, 1.8vw, 24px);
   margin-bottom: 2rem;
 }
+@media only screen and (max-width: 767px) {
+  .more-delicious-sec {
+    /* ### DELICIOUS CONTENT
+    --------------------------------------*/
+  }
+  .more-delicious-sec .delicious-content {
+    margin-bottom: 4rem;
+    /**** #### IMAGE SIDE ****/
+    /**** #### TEXT SIDE ****/
+  }
+  .more-delicious-sec .delicious-content .image-side {
+    margin-bottom: 1.5rem;
+  }
+  .more-delicious-sec .delicious-content .text-side {
+    padding-left: 0;
+  }
+  .more-delicious-sec .delicious-content .text-side h3 {
+    margin-bottom: 1.5rem;
+  }
+}
 
 /* ## QA SECTION（Q&A）
 ********************************************************************/
@@ -12608,6 +12731,12 @@ footer .copyright {
   padding-top: 16rem;
   padding-bottom: 0;
 }
+@media only screen and (max-width: 767px) {
+  .text-page-first-sec {
+    padding-top: 12rem;
+  }
+}
+
 /* ### SLIDER CONTAINER
     --------------------------------------*/
 .company-info-table.page-company {

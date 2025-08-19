@@ -67,8 +67,7 @@ $i = 1; // 番号カウンター
 get_header();
 ?>
 
-<?php // INNER PAGE FIRST SECTION // *********************************************************** // 
-?>
+<?php // INNER PAGE FIRST SECTION // *********************************************************** // ?>
 <section class="first-sec inner-page-first-sec maintenance">
     <div class="container">
         <div class="main-title blur">
@@ -83,11 +82,9 @@ get_header();
 </section>
 
 
-<?php // MAINTENANCE MESSAGE SECTION // *********************************************************** // 
-?>
+<?php // MAINTENANCE MESSAGE SECTION // *********************************************************** // ?>
 <section class="maintenance-message-sec">
     <div class="container">
-
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="catch-side">
@@ -102,13 +99,11 @@ get_header();
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
 
-<?php // BEFORE USING SECTION // *********************************************************** // 
-?>
+<?php // BEFORE USING SECTION // *********************************************************** // ?>
 <section class="before-using-sec">
     <div class="container">
         <div class="row align-items-center">
@@ -119,6 +114,9 @@ get_header();
                             <span>01.</span>
                             <h2>はじめてお使いになる前に</h2>
                         </div>
+                    </div>
+                    <div class="image-side blur d-md-none">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/maintenance/before_using.webp" alt="初めてお使いになる前に">
                     </div>
                     <div class="description">
                         <p>TANZOの調理道具は、職人の手で「油ならし」を済ませた状態でお手元に届きます。そのため、鉄製品に必要と言われる初のシーズニングは不要です。</p>

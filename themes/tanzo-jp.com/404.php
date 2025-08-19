@@ -21,10 +21,10 @@ get_header();
     <div class="container text-center">
         <div class="main-title blur center">
             <span>404 not found</span>
-            <h1>お探しのページは見つかりません</h1>
+            <h1>お探しのページは<br class="d-sm-none">見つかりません</h1>
         </div>
         <div class="description mb-5">
-            <p>ご覧になっていたページのリンクが無効になっているか、<br>ページが削除された可能性があります。</p>
+            <p>ご覧になっていたページのリンクが無効になっているか、<br class="d-none d-md-block">ページが削除された可能性があります。</p>
         </div>
         <div class="btn-area justify-content-center">
             <a class="btn-view-more" href="/">TOPに戻る >>></a>

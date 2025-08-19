@@ -34,6 +34,17 @@
    
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
+        padding-top: 13rem;
+        padding-left: 1rem;
+        margin-bottom: 0;
+
+         /* ### MAIN TITLE
+        --------------------------------------*/
+        .main-title {
+            span {
+                margin-bottom: .5rem;
+            }
+        }
     }
 }
 
@@ -77,6 +88,24 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
+        /* ### CATCH SIDE
+        --------------------------------------*/
+        .catch-side {
+            text-align: center;
+
+            h3 {
+                margin-bottom: 4rem;
+            }
+        }
+
+        /* ### TEXT SIDE
+        --------------------------------------*/
+        .text-side {
+
+            h4 {
+                margin-bottom: 1.5rem;
+            }
+        }
     }
 }
 
@@ -108,6 +137,28 @@
             height: 100%;
             object-fit: cover;
             transform: scale(1.2);
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### TEXT SIDE
+        --------------------------------------*/
+        .text-side {
+            padding-right: 0;
+
+            .description {
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        /* ### IMAGE SIDE
+        --------------------------------------*/
+        .image-side {
+            margin-bottom: 1.5rem;
         }
     }
 }
@@ -153,6 +204,37 @@
             }
         }
     }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+         /* ### DAILY CONTENT
+        --------------------------------------*/
+        .daily-content {
+            padding: 0;
+            margin-bottom: 4rem;
+
+            /**** #### TITLE ****/
+            .title {
+                margin-bottom: 1.5rem;
+                span {
+                    font-size: 12px;
+                }
+            }
+
+            /**** #### IMAGE AREA ****/
+            .image-area {
+                margin-bottom: 1.5rem;
+            }
+
+            /**** #### TEXT ****/
+            .text {
+                p {
+                    line-height: 2;
+                }
+            }
+        }
+    }
 }
 
 
@@ -179,6 +261,29 @@
                 letter-spacing: 5px;
                 font-size: clamp(16px, 1.8vw, 24px);
                 margin-bottom: 2rem;
+            }
+        }
+    }
+
+     // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### DELICIOUS CONTENT
+        --------------------------------------*/
+        .delicious-content {
+            margin-bottom: 4rem;
+
+            /**** #### IMAGE SIDE ****/
+            .image-side {
+                margin-bottom: 1.5rem;
+            }
+
+            /**** #### TEXT SIDE ****/
+            .text-side {
+                padding-left: 0;
+                h3 {
+                    margin-bottom: 1.5rem;
+                }
             }
         }
     }

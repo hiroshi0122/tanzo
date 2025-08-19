@@ -8,6 +8,11 @@
     border-left: solid 2px $black;
     margin-bottom: 2.5rem;
     background-color: $bg-gray !important;
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        margin-bottom: 1rem;
+    }
 }
 
 /* ## ACC BUTTON
@@ -42,6 +47,20 @@
         .arrow {
             transform: rotate(90deg);
         }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+        padding: 1.5rem 2.5rem;
+
+        .qa-num {
+            font-size: clamp(18px,2vw,24px);
+            white-space: nowrap;
+        }
+
+        .arrow {
+            right: 3%;
+        }   
     }
 }
 
@@ -78,6 +97,20 @@
             .qa-answer {
                 width: 70%;
                 padding-left: 2rem;
+            }
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {        
+        /* ### ACC INNER
+        -------------------------------------*/
+        .acc-inner {
+            
+            &.has-thumb {
+                .qa-answer {
+                    padding-left: 1rem;
+                }
             }
         }
     }
