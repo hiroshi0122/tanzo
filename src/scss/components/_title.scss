@@ -241,6 +241,35 @@
             justify-content: center;
         }
     }
+
+     /* ### & BORDER
+    --------------------------------------*/
+    &.border-bt {
+        display: flex;
+        align-items: center;
+        border-bottom: solid 1px $black;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+ 
+        h2 {
+            letter-spacing: 5px;
+            font-size: clamp(20px, 2.4vw, 28px);
+        }
+
+        span {
+            font-size: clamp(20px, 2.5vw, 40px);
+            font-family: $en-font;
+            color: $font-gray;
+            margin-right: 10px
+        }
+
+        &.center {
+            display: inline-flex;
+            justify-content: center;
+            border-bottom: solid 1px $black;
+        }
+
+    }
 }
 
 

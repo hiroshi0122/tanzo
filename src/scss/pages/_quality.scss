@@ -1,0 +1,339 @@
+//*******************************************************************
+// # QUALITY（TANZOのこだわり）
+//*******************************************************************
+/* ## MATERIAL SECTION
+********************************************************************/
+.material-sec {
+    /* ### UPPER PART
+    --------------------------------------*/
+    .upper-part {
+        margin-bottom: 4rem;
+
+        .text-side {
+            padding-right: 4%;
+        }
+
+        .image-side {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    /* ### BOTTOM PART
+    --------------------------------------*/
+    .bottom-part {
+
+        .image-part {
+            padding-right: 5%;
+
+            .detail-image {
+                aspect-ratio: 5/7;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .text-part {
+            .radius-box {
+                padding: 3%;
+                border-radius: 1%;
+            }
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### UPPER PART
+        --------------------------------------*/
+        .upper-part {
+            margin-bottom: 4rem;
+
+            .text-side {
+                padding-right: 0;
+            }
+
+            .image-side {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* ### BOTTOM PART
+        --------------------------------------*/
+        .bottom-part {
+
+            .image-part {
+                padding-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+
+/* ## THICKNESS SECTION
+********************************************************************/
+.thickness-sec {
+
+    /* ### TEXT PART
+    --------------------------------------*/
+    .text-part {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        .numbering-title  {
+            margin-bottom: 4rem;
+        }
+    }
+
+    /* ### IMAGE PART
+    --------------------------------------*/
+    .image-part {
+        img {
+            padding: 2%;
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### TEXT PART
+        --------------------------------------*/
+        .text-part {
+            text-align: start;
+
+            .numbering-title  {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+/* ## HEAT SECTION
+********************************************************************/
+.heat-sec {
+
+    /* ### IMAGE SIDE
+    --------------------------------------*/
+    .image-side {
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    /* ### TEXT SIDE
+    --------------------------------------*/
+    .text-side {
+        padding-left: 7%;
+
+        .description {
+            margin-bottom: 2rem;
+        }
+        .detail-image {
+            text-align: end;
+            img {
+                aspect-ratio: 5/3;
+                max-width: 340px;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+            small {
+                display: block;
+                color: $font-gray;
+            }
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### IMAGE SIDE
+        --------------------------------------*/
+        .image-side {
+            aspect-ratio: 5/3;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ### TEXT SIDE
+        --------------------------------------*/
+        .text-side {
+            padding-left: 0;
+
+            .detail-image {
+                text-align: center;
+                img {
+                    max-width: 240px;
+                }
+            }
+        }
+    }
+}
+
+
+/* ## HEAT SOURCE SECTION
+********************************************************************/
+.heat-source-sec {
+
+    /* ### TEXT PART
+    --------------------------------------*/
+    .text-part {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        .numbering-title  {
+            margin-bottom: 4rem;
+        }
+    }
+
+    /* ### IMAGE PART
+    --------------------------------------*/
+    .image-part {
+        margin-bottom: 6rem;
+        img {
+            padding: 2%;
+            aspect-ratio: 5/3;
+            object-fit: cover;
+        }
+    }
+
+    .list-part {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto;
+        h4 {
+            margin-bottom: 2rem;
+        }
+        img {
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: start;
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        /* ### TEXT PART
+        --------------------------------------*/
+        .text-part {
+            text-align: start;
+            margin-bottom: 2rem;
+
+            .numbering-title  {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* ### IMAGE PART
+        --------------------------------------*/
+        .image-part {
+            margin-bottom: 6rem;
+            img {
+                padding: 2%;
+                aspect-ratio: 5/3;
+                object-fit: cover;
+            }
+        }
+
+        .list-part {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+            h4 {
+                margin-bottom: 2rem;
+            }
+            img {
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 13px;
+                line-height: 1.5;
+                text-align: start;
+            }
+        }
+    }
+}
+
+
+/* ## KV MESSAGE SECTION
+********************************************************************/
+.kv-message-sec {
+
+    /* ### KV AREA
+    --------------------------------------*/
+    .kv-area {
+        position: relative;
+        text-align: center;
+        padding: 8% 0;
+
+        /**** #### PHOTO ****/
+        .photo {
+            position: absolute;
+            z-index: -1;
+
+            &.image-1 {
+                top: 20%;
+                left: 0;
+                width: 18%;
+            }
+            &.image-2 {
+                top: 0%;
+                right: 20%;
+                width: 18%;
+            }
+            &.image-3 {
+                bottom: -10%;
+                left: 15%;
+                width: 22%;
+            }
+            &.image-4 {
+                top: 60%;
+                right: 2%;
+                width: 24%;
+            }
+        }
+
+        /**** #### CATCH ****/
+        .catch {
+            width: clamp(50px,6%,80px);
+            margin: 0 auto;
+        }
+    }
+
+    // ## MOBILE // *************************************************>
+    @media #{$smallScreen} {
+
+        .container-fluid {
+            padding: 0;
+        }
+    }
+}
+
+
+// ## MOBILE // *************************************************>
+/* ## コメント中
+***********************************************/
+
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+
+/**** #### コメント下の下 ****/
+
+/* ##### コメント軽 */

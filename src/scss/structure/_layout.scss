@@ -138,6 +138,11 @@ section {
 			background: url('#{$image-path}/to_table/image_to_table.webp') center/cover no-repeat,rgba(255,255,255,0.95);
 		}
     }
+	&.quality {
+		.container-fluid {
+			background: url('#{$image-path}/quality/kv_quality.webp') center/cover no-repeat,rgba(255,255,255,0.90);
+		}
+    }
 
      /* ### MAIN TITLE
     --------------------------------------*/

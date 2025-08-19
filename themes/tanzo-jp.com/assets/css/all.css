@@ -10907,6 +10907,9 @@ section {
 .daily-page-first-sec.table .container-fluid, .daily-page-first-sec.table .container-sm, .daily-page-first-sec.table .container-md, .daily-page-first-sec.table .container-lg, .daily-page-first-sec.table .container-xl, .daily-page-first-sec.table .container-xxl {
   background: url("/wp-content/themes/tanzo-jp.com/assets/images/to_table/image_to_table.webp") center/cover no-repeat, rgba(255, 255, 255, 0.95);
 }
+.daily-page-first-sec.quality .container-fluid, .daily-page-first-sec.quality .container-sm, .daily-page-first-sec.quality .container-md, .daily-page-first-sec.quality .container-lg, .daily-page-first-sec.quality .container-xl, .daily-page-first-sec.quality .container-xxl {
+  background: url("/wp-content/themes/tanzo-jp.com/assets/images/quality/kv_quality.webp") center/cover no-repeat, rgba(255, 255, 255, 0.9);
+}
 .daily-page-first-sec .description {
   text-align: center;
 }
@@ -11519,6 +11522,8 @@ footer .copyright {
   --------------------------------------*/
   /* ### SUB TITLE
   --------------------------------------*/
+  /* ### & BORDER
+  --------------------------------------*/
 }
 .numbering-title .title {
   display: flex;
@@ -11558,6 +11563,28 @@ footer .copyright {
 }
 .numbering-title.center .sub-title {
   justify-content: center;
+}
+.numbering-title.border-bt {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #000000;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+.numbering-title.border-bt h2 {
+  letter-spacing: 5px;
+  font-size: clamp(20px, 2.4vw, 28px);
+}
+.numbering-title.border-bt span {
+  font-size: clamp(20px, 2.5vw, 40px);
+  font-family: "Noto Serif JP", serif;
+  color: #989898;
+  margin-right: 10px;
+}
+.numbering-title.border-bt.center {
+  display: inline-flex;
+  justify-content: center;
+  border-bottom: solid 1px #000000;
 }
 
 /* ## コメント中
@@ -13163,6 +13190,287 @@ blockquote cite {
 .table-picture-sec .picture-contents h2 {
   font-weight: 500;
 }
+/* ## コメント中
+***********************************************/
+/* ### SLIDER CONTAINER
+--------------------------------------*/
+/**** #### コメント下の下 ****/
+/* ##### コメント軽 */
+/* ## MATERIAL SECTION
+********************************************************************/
+.material-sec {
+  /* ### UPPER PART
+  --------------------------------------*/
+  /* ### BOTTOM PART
+  --------------------------------------*/
+}
+.material-sec .upper-part {
+  margin-bottom: 4rem;
+}
+.material-sec .upper-part .text-side {
+  padding-right: 4%;
+}
+.material-sec .upper-part .image-side {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.material-sec .upper-part .image-side img {
+  height: 100%;
+  object-fit: cover;
+}
+.material-sec .bottom-part .image-part {
+  padding-right: 5%;
+}
+.material-sec .bottom-part .image-part .detail-image {
+  aspect-ratio: 5/7;
+  overflow: hidden;
+}
+.material-sec .bottom-part .image-part .detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.material-sec .bottom-part .text-part .radius-box {
+  padding: 3%;
+  border-radius: 1%;
+}
+@media only screen and (max-width: 767px) {
+  .material-sec {
+    /* ### UPPER PART
+    --------------------------------------*/
+    /* ### BOTTOM PART
+    --------------------------------------*/
+  }
+  .material-sec .upper-part {
+    margin-bottom: 4rem;
+  }
+  .material-sec .upper-part .text-side {
+    padding-right: 0;
+  }
+  .material-sec .upper-part .image-side {
+    margin-bottom: 2rem;
+  }
+  .material-sec .bottom-part .image-part {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ## THICKNESS SECTION
+********************************************************************/
+.thickness-sec {
+  /* ### TEXT PART
+  --------------------------------------*/
+  /* ### IMAGE PART
+  --------------------------------------*/
+}
+.thickness-sec .text-part {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.thickness-sec .text-part .numbering-title {
+  margin-bottom: 4rem;
+}
+.thickness-sec .image-part img {
+  padding: 2%;
+}
+@media only screen and (max-width: 767px) {
+  .thickness-sec {
+    /* ### TEXT PART
+    --------------------------------------*/
+  }
+  .thickness-sec .text-part {
+    text-align: start;
+  }
+  .thickness-sec .text-part .numbering-title {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ## HEAT SECTION
+********************************************************************/
+.heat-sec {
+  /* ### IMAGE SIDE
+  --------------------------------------*/
+  /* ### TEXT SIDE
+  --------------------------------------*/
+}
+.heat-sec .image-side {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.heat-sec .image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heat-sec .text-side {
+  padding-left: 7%;
+}
+.heat-sec .text-side .description {
+  margin-bottom: 2rem;
+}
+.heat-sec .text-side .detail-image {
+  text-align: end;
+}
+.heat-sec .text-side .detail-image img {
+  aspect-ratio: 5/3;
+  max-width: 340px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.heat-sec .text-side .detail-image small {
+  display: block;
+  color: #989898;
+}
+@media only screen and (max-width: 767px) {
+  .heat-sec {
+    /* ### IMAGE SIDE
+    --------------------------------------*/
+    /* ### TEXT SIDE
+    --------------------------------------*/
+  }
+  .heat-sec .image-side {
+    aspect-ratio: 5/3;
+    margin-bottom: 1.5rem;
+  }
+  .heat-sec .text-side {
+    padding-left: 0;
+  }
+  .heat-sec .text-side .detail-image {
+    text-align: center;
+  }
+  .heat-sec .text-side .detail-image img {
+    max-width: 240px;
+  }
+}
+
+/* ## HEAT SOURCE SECTION
+********************************************************************/
+.heat-source-sec {
+  /* ### TEXT PART
+  --------------------------------------*/
+  /* ### IMAGE PART
+  --------------------------------------*/
+}
+.heat-source-sec .text-part {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.heat-source-sec .text-part .numbering-title {
+  margin-bottom: 4rem;
+}
+.heat-source-sec .image-part {
+  margin-bottom: 6rem;
+}
+.heat-source-sec .image-part img {
+  padding: 2%;
+  aspect-ratio: 5/3;
+  object-fit: cover;
+}
+.heat-source-sec .list-part {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.heat-source-sec .list-part h4 {
+  margin-bottom: 2rem;
+}
+.heat-source-sec .list-part img {
+  margin-bottom: 1rem;
+}
+.heat-source-sec .list-part p {
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: start;
+}
+@media only screen and (max-width: 767px) {
+  .heat-source-sec {
+    /* ### TEXT PART
+    --------------------------------------*/
+    /* ### IMAGE PART
+    --------------------------------------*/
+  }
+  .heat-source-sec .text-part {
+    text-align: start;
+    margin-bottom: 2rem;
+  }
+  .heat-source-sec .text-part .numbering-title {
+    margin-bottom: 2rem;
+  }
+  .heat-source-sec .image-part {
+    margin-bottom: 6rem;
+  }
+  .heat-source-sec .image-part img {
+    padding: 2%;
+    aspect-ratio: 5/3;
+    object-fit: cover;
+  }
+  .heat-source-sec .list-part {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .heat-source-sec .list-part h4 {
+    margin-bottom: 2rem;
+  }
+  .heat-source-sec .list-part img {
+    margin-bottom: 1rem;
+  }
+  .heat-source-sec .list-part p {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: start;
+  }
+}
+
+/* ## KV MESSAGE SECTION
+********************************************************************/
+.kv-message-sec {
+  /* ### KV AREA
+  --------------------------------------*/
+}
+.kv-message-sec .kv-area {
+  position: relative;
+  text-align: center;
+  padding: 8% 0;
+  /**** #### PHOTO ****/
+  /**** #### CATCH ****/
+}
+.kv-message-sec .kv-area .photo {
+  position: absolute;
+  z-index: -1;
+}
+.kv-message-sec .kv-area .photo.image-1 {
+  top: 20%;
+  left: 0;
+  width: 18%;
+}
+.kv-message-sec .kv-area .photo.image-2 {
+  top: 0%;
+  right: 20%;
+  width: 18%;
+}
+.kv-message-sec .kv-area .photo.image-3 {
+  bottom: -10%;
+  left: 15%;
+  width: 22%;
+}
+.kv-message-sec .kv-area .photo.image-4 {
+  top: 60%;
+  right: 2%;
+  width: 24%;
+}
+.kv-message-sec .kv-area .catch {
+  width: clamp(50px, 6%, 80px);
+  margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  .kv-message-sec .container-fluid, .kv-message-sec .container-sm, .kv-message-sec .container-md, .kv-message-sec .container-lg, .kv-message-sec .container-xl, .kv-message-sec .container-xxl {
+    padding: 0;
+  }
+}
+
 /* ## コメント中
 ***********************************************/
 /* ### SLIDER CONTAINER

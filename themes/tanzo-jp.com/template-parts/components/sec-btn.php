@@ -1,4 +1,4 @@
-<section class="btn-sec">
+<section class="btn-sec blur">
     <div class="container xs-container">
         <div class="btn-area">
             <?php if ( is_page('simple') ) : ?>
