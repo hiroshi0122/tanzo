@@ -167,16 +167,16 @@ gsap.utils.toArray(".fadeInUp-stagger").forEach((target) => {
 });
 
 // 無限スクロール ------------------------------//
-document.addEventListener("DOMContentLoaded", function () {
-  let marqueeInner = document.querySelector(".scrolling-msg-inner");
+// document.addEventListener("DOMContentLoaded", function () {
+//   let marqueeInner = document.querySelector(".scrolling-msg-inner");
 
-  gsap.to(marqueeInner, {
-    x: "-50%", // 50%ずらす
-    duration: 40,
-    ease: "linear",
-    repeat: -1
-  });
-});
+//   gsap.to(marqueeInner, {
+//     x: "-50%", // 50%ずらす
+//     duration: 40,
+//     ease: "linear",
+//     repeat: -1
+//   });
+// });
 
 
 // LENISを使った慣性スクロール ------------------------------//
@@ -216,3 +216,25 @@ anchors.forEach(anchor => {
   });
 });
 
+//**********************************************************************
+// 8. MENU OPEN
+//**********************************************************************
+document.addEventListener('DOMContentLoaded', () => {
+  const parents = document.querySelectorAll('.nav-item.has-children');
+
+  parents.forEach(li => {
+    const link = li.querySelector('.menu-link');
+
+    // マウスが乗ったら open クラスを付与
+    li.addEventListener('mouseenter', () => {
+      li.classList.add('open');
+      if (link) link.setAttribute('aria-expanded', 'true');
+    });
+
+    // マウスが外れたら open クラスを削除
+    li.addEventListener('mouseleave', () => {
+      li.classList.remove('open');
+      if (link) link.setAttribute('aria-expanded', 'false');
+    });
+  });
+});

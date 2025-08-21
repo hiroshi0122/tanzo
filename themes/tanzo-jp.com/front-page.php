@@ -127,7 +127,7 @@ get_header();
 
 <?php // DAILY LIFE SECTION // *********************************************************** // 
 ?>
-<section class="daily-life-sec">
+<section class="daily-life-sec" id="daily-life">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-6">
@@ -235,7 +235,7 @@ get_header();
                     $num     = str_pad($i, 2, '0', STR_PAD_LEFT);
                     $price   = get_post_meta(get_the_ID(), 'price', true);
                     $title   = get_the_title();
-                    $link    = get_permalink();
+                    $link    = get_field('ec_url');
                     $excerpt = get_the_excerpt();
                     ?>
                     <div class="col-md-6">
@@ -243,7 +243,7 @@ get_header();
                             <span class="number"><?php echo esc_html($num); ?>.</span>
 
                             <div class="product-image">
-                                <a href="<?php echo esc_url($link); ?>" rel="noopener noreferrer">
+                                <a href="<?php echo esc_url($link); ?>" rel="noopener noreferrer" target="_blank">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('large', [
                                             'alt' => esc_attr($title),
@@ -259,7 +259,7 @@ get_header();
 
                             <div class="product-info">
                                 <h3><?php echo esc_html($title); ?></h3>
-                                <a class="title-link" href="<?php echo esc_url($link); ?>" rel="noopener noreferrer">
+                                <a class="title-link" href="<?php echo esc_url($link); ?>" rel="noopener noreferrer" target="_blank">
                                     <?php echo wp_kses_post(wpautop($excerpt)); ?>
                                 </a>
                                 <div class="d-flex justify-content-between align-items-baseline">
@@ -274,7 +274,7 @@ get_header();
                                         </span>
                                         <span>（税込）</span>
                                     </div>
-                                    <a class="btn-more" href="<?php echo esc_url($link); ?>" rel="noopener noreferrer">
+                                    <a class="btn-more" href="<?php echo esc_url($link); ?>" rel="noopener noreferrer" target="_blank">
                                         More &gt;&gt;
                                     </a>
                                 </div>

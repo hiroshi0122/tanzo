@@ -30,7 +30,37 @@ header {
     .navigation {
         transition: 0.2s;
 
+        .nav-item {
+            position: relative;
+
+            .submenu {
+                position: absolute;
+                top: 20px;
+                left: 0;
+                display: none;
+                background: #fff;
+                box-shadow: 0 8px 24px rgba(0,0,0,.12);
+                padding: 2rem;
+                z-index: 1000;
+                border: solid 1px $border-gray;
+                border-radius: 5px;
+
+                li {
+                    white-space: nowrap;
+                }
+            }
+
+            &.has-children {
+                &:hover {
+                    .submenu{
+                        display: block;
+                    }
+                }
+            }
+        }
+
         .menu-link {
+            display: block;
             p {
                 font-weight: bold;
                 font-size: 14px;
@@ -134,8 +164,8 @@ header {
         transition: 0.2s;
         opacity: 0;
         visibility: hidden;
-        padding: 6%;
-        background: rgb(255 255 255 / 90%);
+        padding: 72px 9% 6%;
+        background: rgb(255 255 255 / 95%);
 
         /* #### ACTIVE
         --------------------------------*/
@@ -148,10 +178,13 @@ header {
         /* #### LOGO
         --------------------------------*/
         .logo {
+            display: block;
+            text-align: center;
             margin-bottom: 4rem;
 
             img {
-                width: 100%;
+                width: 160px;
+                margin: 0 auto;
             }
         }
 
@@ -159,28 +192,54 @@ header {
         --------------------------------*/
         .menu-list {
             width: 100%;
-            height: 100%;
-            display: grid;
-            place-content: center;
 
             /* ##### MENU ****/
             .menu {
-                border-bottom: dashed 1px $black;
                 margin-bottom: 2rem;
-                padding-bottom: 2rem;
-                text-align: center;
 
                 a {
                     display: block;
-
-                    p {
-                        font-size: 18px;
-                        color: $black;
-                        font-weight: bold;
-                        letter-spacing: 1px;
-                        line-height: 1.5;
-                    }
+                    font-weight: bold;
+                    font-size: 17px;
+                    letter-spacing: 3px;
+                    line-height: 1.5;
+                    padding-bottom: .5rem;
                 }
+            }
+
+            .submenu {
+                padding: .7rem 0 0 1.5rem;
+                margin-top: .5rem;
+                margin-left: 1rem;
+                border-left: solid 1px $black;
+
+                li {
+                    margin-bottom: .5rem;
+                }
+
+                a {
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        /* #### HEADER SECOND NAV
+        --------------------------------*/
+        .header-second-nav {
+            position: absolute;
+            left: 5%;
+            bottom: 2%;
+
+            li {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                display: block;
+                font-size: 13px;
+                line-height: 1.5;
+                color: $font-gray;
             }
         }
     }

@@ -22,7 +22,7 @@ include 'navigation.php';  // 配列を読み込み
             <ul class="navigation row justify-content-end">
                 <?php foreach ($navigation as $key => $menu): ?>
                     <li class="col-6 col-md-auto g-0">
-                        <a class="menu-link" href="/<?php echo esc_html($menu['link']); ?>">
+                        <a class="menu-link" href="<?php echo esc_html($menu['link']); ?>">
                             <p><?php echo esc_html($menu['menu']); ?></p>
                         </a>
                     </li>
@@ -40,8 +40,14 @@ include 'navigation.php';  // 配列を読み込み
             <nav class="footer-second-nav">
                 <ul class="navigation row">
                     <?php foreach ($second_navigation as $key => $menu): ?>
+                        <?php
+                            // リンク生成（#はそのまま／それ以外はサイトURL基準）
+                            $raw  = $menu['link'] ?? '';
+                            $href = (strpos($raw, '#') === 0) ? $raw : ltrim($raw, '');
+                            $is_external = preg_match('/^https?:\/\//', $raw);
+                        ?>
                         <li class="col-auto g-0">
-                            <a class="menu-link" href="/<?php echo esc_html($menu['link']); ?>">
+                            <a class="menu-link" href="<?php echo esc_url($href); ?>" <?php if ($is_external): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
                                 <p><?php echo esc_html($menu['menu']); ?></p>
                             </a>
                         </li>
