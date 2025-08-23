@@ -35,7 +35,7 @@ get_header();
 <section class="story-message-sec pt-0">
     <div class="container">
         <div class="movie">
-            <iframe src="https://www.youtube.com/embed/dur4ZvJ18ko?si=mhMcsEganv6aQlxW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/ASdDeJXd0iw?si=OqYBmHlfJQi-uNLV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="message">
             <h3 class="blur">鍛造工場から生まれた、<br class="d-sm-none">唯一無二の調理道具。</h3>
@@ -105,10 +105,10 @@ get_header();
     <div class="container-fluid g-0">
         <div class="movie">
             <iframe
-            src="https://www.youtube.com/embed/pN7OTGdMwAk?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=pN7OTGdMwAk"
+            src="https://www.youtube.com/embed/Ds3K-gN8-bA?autoplay=1&mute=1&loop=1&playlist=Ds3K-gN8-bA&controls=0"
             title="YouTube video player"
             frameborder="0"
-            allow="autoplay; encrypted-media"
+            allow="autoplay; clipboard-write; encrypted-media"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
             </iframe>

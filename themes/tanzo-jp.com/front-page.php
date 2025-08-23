@@ -13,72 +13,32 @@
  **/
 
 // スライダーの配列処理
-$slides = [
-    [
-        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_1.webp',
-        'alt' => 'スライダー1',
-    ],
-    [
-        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_2.webp',
-        'alt' => 'スライダー2',
-    ],
-    [
-        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_3.webp',
-        'alt' => 'スライダー3',
-    ],
-    [
-        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_4.webp',
-        'alt' => 'スライダー4',
-    ],
-    [
-        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_5.webp',
-        'alt' => 'スライダー5',
-    ],
-    [
-        'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_6.webp',
-        'alt' => 'スライダー6',
-    ],
-];
-
-// ラインナップの製品情報
-$products = [
-    [
-        'img' => 'flying_pan_1',
-        'title' => 'TANZO フライパン',
-        'text' => '使いやすいを目指し、デザインや細部までこだわり抜いた、世界的にも珍しい鍛造（たんぞう）フライパン。取手を外してそのまま食卓へ。',
-        'price' => '25,300',
-        'link' => '/products/tanzo-frying-pan',
-    ],
-    [
-        'img' => 'bowl_2',
-        'title' => 'TANZO ボウル',
-        'text' => '使いやすいを目指し、デザインや細部までこだわり抜いた、世界的にも珍しい鍛造（たんぞう）ボウル。浅型鍋として、無水調理や煮込み料理、揚げ物料理にも使いやすい万能ボウル。お鍋としても使えます。',
-        'price' => '29,700',
-        'link' => '/products/tanzo-bowl',
-    ],
-    [
-        'img' => 'glass_lid_hole_2',
-        'title' => 'TANZOフライパン 専用ガラス蓋 蒸気穴付き',
-        'text' => 'フライパン調理をより快適にサポートするガラス蓋。蒸気穴を通じて蒸気が逃げることで、鍋の中の温度や湿度が適切に保たれ、食材が均一に加熱されます。煮物や蒸し料理などで、適切な水分量を保ちながら調理することが可能です。',
-        'price' => '0,000',
-        'link' => '/products/tanzo-frying-pan',
-    ],
-    [
-        'img' => 'glass_lid_2',
-        'title' => 'TANZO TANZOボウル専用 ガラス蓋',
-        'text' => '調理をより快適にサポートするガラス蓋。蒸気穴を通じて蒸気が逃げることで、鍋の中の温度や湿度が適切に保たれ、食材が均一に加熱されます。煮物や蒸し料理などで、適切な水分量を保ちながら調理することが可能です。',
-        'price' => '0,000',
-        'link' => '/products/tanzo-frying-pan',
-    ],
-    [
-        'img' => 'glass_lid_2',
-        'title' => 'TANZO×SKYWOOD 吉野杉ウッドプレート大・中・小',
-        'text' => '熱いTANZOをそのまま食卓に！側面に持ちやすいカットを施していただきました。鍋敷きにつかっても、木製プレートとして使っても、カッティングボードとして使ってもOK。',
-        'price' => '0,000',
-        'link' => '/products/tanzo-frying-pan',
-    ],
-];
-
+// $slides = [
+//     [
+//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_1.webp',
+//         'alt' => 'スライダー1',
+//     ],
+//     [
+//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_2.webp',
+//         'alt' => 'スライダー2',
+//     ],
+//     [
+//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_3.webp',
+//         'alt' => 'スライダー3',
+//     ],
+//     [
+//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_4.webp',
+//         'alt' => 'スライダー4',
+//     ],
+//     [
+//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_5.webp',
+//         'alt' => 'スライダー5',
+//     ],
+//     [
+//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_6.webp',
+//         'alt' => 'スライダー6',
+//     ],
+// ];
 
 
 /* NEWSの投稿取得 */
@@ -92,9 +52,6 @@ $args = array(
 $posts = new WP_Query($args);
 
 
-
-
-
 get_header();
 ?>
 
@@ -102,23 +59,15 @@ get_header();
 ?>
 <section class="first-sec" id="first-view-sec">
     <div class="container-fluid">
-        <div class="slider-wrapper">
-            <div class="slider-container blur">
-                <?php foreach ($slides as $index => $slide) : ?>
-                    <div class="slide <?php echo ($index === 0) ? 'active' : ''; ?>">
-                        <img src="<?php echo esc_url($slide['img']); ?>" alt="<?php echo esc_attr($slide['alt']); ?>">
-                    </div>
-                <?php endforeach; ?>
-
-                <div class="progress-bar">
-                    <div class="progress" id="progress"></div>
-                </div>
-            </div>
-            <div class="dots">
-                <?php foreach ($slides as $index => $slide) : ?>
-                    <div class="dot <?php echo ($index === 0) ? 'active' : ''; ?>"></div>
-                <?php endforeach; ?>
-            </div>
+        <div class="movie-area">
+            <iframe
+            src="https://www.youtube.com/embed/k-G9pMa3FIM?autoplay=1&mute=1&loop=1&playlist=k-G9pMa3FIM&controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+            </iframe>
             <img class="catch" src="<?php bloginfo('template_url'); ?>/assets/images/home/kc_catch.svg" alt="いつもの料理をもっと美味しく">
         </div>
     </div>

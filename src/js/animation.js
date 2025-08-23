@@ -75,6 +75,14 @@ gsap.utils.toArray(".blur").forEach((target) => {
     })
 });
 
+
+window.addEventListener("load", function() {
+    gsap.fromTo(".movie-area .catch",
+      { opacity: 0, filter: "blur(20px)", },                 // 初期状態
+      { opacity: 1, duration: 2,  filter: "blur(0px)", delay: 3.5, ease: "power2.out" } 
+    );
+  });
+
 // TOPのロゴのアニメーション ------------------------------//
 // gsap.utils.toArray(".to-and-logo").forEach((target) => {
 //   let tl = gsap.timeline({

@@ -55,7 +55,7 @@ get_header();
                             <span>01.</span>
                             <h2>妥協のない素材</h2>
                         </div>
-                        <div class="image-side">
+                        <div class="image-side d-md-none">
                             <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_4.webp" alt="素材のイメージ">
                         </div>
                         <p>TANZOは、国内最高品質の炭素鋼を使用し、鉄を1200℃まで熱して何度も叩く「鍛造」によって生まれたフライパンです。2,000トンの圧力で鍛えられることで、酸化被膜や不純物を飛ばして、金属内部の結晶構造が変化し、高い強度と耐久性を実現。人工的なコーティングは一切施していないため、安心して毎日の料理にご使用いただけます。</p>

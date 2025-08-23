@@ -12096,77 +12096,26 @@ footer .copyright {
 #first-view-sec {
   position: relative;
   overflow: hidden;
-  /* ### SLIDER CONTAINER
-  --------------------------------------*/
-  /* #### DOTS --------------------*/
   /* ### CATCH
   --------------------------------------*/
 }
 #first-view-sec .container-fluid, #first-view-sec .container-sm, #first-view-sec .container-md, #first-view-sec .container-lg, #first-view-sec .container-xl, #first-view-sec .container-xxl {
   padding: 0 2%;
 }
-#first-view-sec .slider-wrapper {
-  position: relative;
-}
-#first-view-sec .slider-container {
-  position: relative;
+#first-view-sec .movie-area {
   height: clamp(640px, 40vw, 840px);
+  width: 100%;
   overflow: hidden;
-  /* #### SLIDE --------------------*/
-  /* #### PROGRESS BAR --------------------*/
+  position: relative;
 }
-#first-view-sec .slider-container .slide {
+#first-view-sec .movie-area iframe {
   position: absolute;
+  top: 48%;
+  left: 50%;
   width: 100%;
-  height: 100%;
-  opacity: 0;
-  transform: scale(1);
-  transition: transform 5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
-}
-#first-view-sec .slider-container .slide img {
-  width: 100%;
-}
-#first-view-sec .slider-container .slide.active {
-  z-index: 1;
-}
-#first-view-sec .slider-container .progress-bar {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  z-index: 2;
-}
-#first-view-sec .slider-container .progress-bar .progress {
-  height: 100%;
-  width: 0;
-  background: #fff;
-}
-#first-view-sec .dots {
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-  right: 0;
-  justify-content: center;
-  display: flex;
-  gap: 5px;
-  z-index: 3;
-}
-#first-view-sec .dots .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: solid 1px #000000;
-}
-#first-view-sec .dots .dot.active {
-  background: #000000;
+  height: 130%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* クリック無効（背景用途なら便利） */
 }
 #first-view-sec .catch {
   position: absolute;
@@ -12174,6 +12123,7 @@ footer .copyright {
   right: 7%;
   width: clamp(120px, 25vw, 340px);
   z-index: 4;
+  opacity: 0;
 }
 @media only screen and (max-width: 767px) {
   #first-view-sec {
@@ -12530,7 +12480,7 @@ footer .copyright {
 /* ## MOVIE SECTION（空撮動画）
 ********************************************************************/
 .movie-sec .movie {
-  height: 20vw;
+  height: 25vw;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -12764,7 +12714,7 @@ footer .copyright {
   --------------------------------------*/
 }
 .daily-basics-sec .daily-content {
-  padding: 5%;
+  padding: 10%;
   /**** #### TITLE ****/
   /**** #### IMAGE AREA ****/
   /**** #### TEXT ****/

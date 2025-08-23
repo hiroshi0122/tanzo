@@ -15,6 +15,12 @@
 // 毎日の基本
 $daily_basics = [
     [
+        'title' => '焦げつきをとる',
+        'sub-title' => '束子などで汚れ、焦げ付きを取る',
+        'image' => 'scrape',
+        'text' => '調理したあと、器具の表面に焦げ付きが残った場合は、束子などを使って焦げ付きを落としてください。調理後は長時間水に浸したりせず、ある程度温度が下がった状態（やや温かいくらい）で作業をしてください。',
+    ],
+    [
         'title' => '洗う',
         'sub-title' => '洗剤で汚れ落とし',
         'image' => 'wash',
@@ -147,7 +153,7 @@ get_header();
         </div>
         <div class="row">
             <?php foreach ($daily_basics as $content): ?>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="daily-content">
                         <div class="title">
                             <h3><?php echo esc_html($content['title']); ?></h3>
