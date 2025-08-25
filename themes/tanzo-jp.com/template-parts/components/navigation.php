@@ -49,9 +49,9 @@ $second_navigation = [
         'menu' => 'プライバシーポリシー',
         'link' => 'https://tanzo.stores.jp/privacy_policy/',
     ],
-    [
-        'menu' => '配送・送料について',
-        'link' => 'shipping',
-    ],
+    // [
+    //     'menu' => '配送・送料について',
+    //     'link' => 'shipping',
+    // ],
 ];
 ?>

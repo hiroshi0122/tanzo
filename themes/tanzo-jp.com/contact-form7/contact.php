@@ -5,17 +5,17 @@
 
 <div class="form-group">
   <label for="your-name">氏名 <span class="required">※必須</span></label>
-  [text* your-name id:your-name placeholder "山田 太郎"]
+  [text* your-name id:your-name placeholder "佐藤 大輔"]
 </div>
 
 <div class="form-group">
   <label for="your-name-kana">氏名（フリガナ） <span class="required">※必須</span></label>
-  [text* your-name-kana id:your-name-kana class:kana placeholder "ヤマダ タロウ"]
+  [text* your-name-kana id:your-name-kana class:kana placeholder "サトウ ダイスケ"]
 </div>
 
 <div class="form-group">
   <label for="your-email">メールアドレス <span class="required">※必須</span></label>
-  [email* your-email id:your-email placeholder "taro@example.com"]
+  [email* your-email id:your-email placeholder "daisuke_sato@example.com"]
 </div>
 
 <div class="form-group">
@@ -25,6 +25,7 @@
 
 <!-- 条件表示：リペアのお申込みのときに見せるブロック -->
 <div class="cond-block" data-show-when="リペアのお申込み" aria-hidden="true">
+  <p class="attention">※添付の画像はJPEG、PNG等の一般的なフォーマットでお願いいたします。</p>
   <div class="form-group">
     <label for="your-image1">不具合箇所の画像1（任意 / 3MBまで）</label>
     [file your-image1 id:your-image1 filetypes:jpg|jpeg|png|gif limit:3mb]
@@ -46,7 +47,7 @@
 
 <div class="form-group agree">
   [acceptance agree optional]
-    <a href="/privacy" target="_blank">プライバシーポリシー</a>に同意します
+    <a href="https://tanzo.stores.jp/privacy_policy/" target="_blank">プライバシーポリシー</a>に同意します
   [/acceptance]
 </div>
 

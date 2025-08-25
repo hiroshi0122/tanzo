@@ -38,7 +38,7 @@ get_header();
         <div class="main-title blur center">
             <span>TANZO’s Commitment to Quality</span>
             <h1>TANZOのこだわり</h1>
-            <h3>キャッチが入ります<br>キャッチが入ります</h3>
+            <h3>本物の鉄である証<br>純度100%の安心品質</h3>
         </div>
     </div>
 </section>
