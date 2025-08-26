@@ -16,6 +16,6 @@
 
 <body id="<?php echo esc_attr($page_id); ?>">
 
-  <header>
+  <header class="site-header">
     <?php get_template_part('template-parts/components/navigation-header'); ?>
   </header>

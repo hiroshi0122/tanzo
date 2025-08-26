@@ -1,28 +1,28 @@
 //**************************************************************
 // 2. Scroll ※topを離れたらclass付与
 //**************************************************************
-function init() {
-  // スクロールして何ピクセルでクラスを付与させるか
-  var px_change = 300;
+// function init() {
+//   // スクロールして何ピクセルでクラスを付与させるか
+//   var px_change = 300;
 
-  // スクロールのイベントハンドラを登録　ヘッダーにクラス名 smaller を付与
-  window.addEventListener('scroll', function (e) {
-    // 変化するポイントまでスクロールしたらクラスを追加
-    if (window.scrollY > px_change) {
-      document.querySelector('header').classList.add('smaller');
+//   // スクロールのイベントハンドラを登録　ヘッダーにクラス名 smaller を付与
+//   window.addEventListener('scroll', function (e) {
+//     // 変化するポイントまでスクロールしたらクラスを追加
+//     if (window.scrollY > px_change) {
+//       document.querySelector('header').classList.add('smaller');
 
-      // 変化するポイント以前であればクラスを削除
-    } else {
-      document.querySelector('header').classList.remove('smaller');
-      const headerNav = document.getElementById('header-nav');
-      if (headerNav) {
-        headerNav.checked = false;
-        headerNav.dispatchEvent(new Event('change'));
-      }
-    }
-  });
-}
-window.onload = init();
+//       // 変化するポイント以前であればクラスを削除
+//     } else {
+//       document.querySelector('header').classList.remove('smaller');
+//       const headerNav = document.getElementById('header-nav');
+//       if (headerNav) {
+//         headerNav.checked = false;
+//         headerNav.dispatchEvent(new Event('change'));
+//       }
+//     }
+//   });
+// }
+// window.onload = init();
 
 
 

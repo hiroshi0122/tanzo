@@ -11035,7 +11035,7 @@ header {
   =====================================*/
   /* ### MOBILE =====================================*/
 }
-header.smaller {
+header.hide {
   top: -200px;
   transition: 0.2s;
 }
@@ -12437,9 +12437,6 @@ footer .copyright {
   /* ### TEXT SIDE
   --------------------------------------*/
 }
-.interact-sec .row {
-  position: relative;
-}
 .interact-sec .image-side {
   height: 100%;
   position: relative;
@@ -12461,6 +12458,7 @@ footer .copyright {
   letter-spacing: 5px;
 }
 .interact-sec .text-side {
+  position: relative;
   padding-left: 10%;
 }
 .interact-sec .text-side .tategaki {
@@ -12485,10 +12483,12 @@ footer .copyright {
     right: inherit;
     white-space: nowrap;
   }
-  .interact-sec .text-side .tategaki h2 {
+  .interact-sec .text-side .tategaki {
     position: absolute;
     top: -270px;
     right: 0;
+  }
+  .interact-sec .text-side .tategaki h2 {
     height: 260px;
   }
 }
@@ -12908,12 +12908,18 @@ footer .copyright {
   padding: 10px;
   border: none;
   border-bottom: solid 1px #000000;
+  border-radius: 0;
+}
+.wpcf7-form .form-group select {
+  padding: 0.5rem 1rem;
+  border-radius: 0;
 }
 .wpcf7-form .form-group textarea {
   border: solid 1px #000000;
   width: 100%;
   padding: 10px;
   min-height: 280px;
+  border-radius: 0;
 }
 .wpcf7-form .form-group input::placeholder,
 .wpcf7-form .form-group textarea::placeholder {
@@ -12930,9 +12936,13 @@ footer .copyright {
 .wpcf7-form .submit-area p {
   text-align: end;
 }
+.wpcf7-form .submit-area p input {
+  color: #000000;
+}
 .wpcf7-form .submit-area .wpcf7-submit {
   display: inline-block;
   border: solid 1px #000000;
+  border-radius: 0;
   font-size: 15px;
   font-weight: 600;
   text-align: center;

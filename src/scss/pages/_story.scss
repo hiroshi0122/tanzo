@@ -101,10 +101,6 @@
 ********************************************************************/
 .interact-sec {
 
-    .row {
-        position: relative;
-    }
-
     /* ### IMAGE SIDE
     --------------------------------------*/
     .image-side {
@@ -133,6 +129,7 @@
     /* ### TEXT SIDE
     --------------------------------------*/
     .text-side {
+        position: relative;
         padding-left: 10%;
 
         .tategaki {
@@ -165,11 +162,10 @@
         --------------------------------------*/
         .text-side {
             .tategaki {
-
+                position: absolute;
+                top: -270px;
+                right: 0;
                 h2 {
-                    position: absolute;
-                    top: -270px;
-                    right: 0;
                     height: 260px;
                 }
             }

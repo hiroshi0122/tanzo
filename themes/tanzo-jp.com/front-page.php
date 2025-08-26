@@ -68,7 +68,7 @@ get_header();
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
             </iframe>
-            <img class="catch" src="<?php bloginfo('template_url'); ?>/assets/images/home/kc_catch.svg" alt="いつもの料理をもっと美味しく">
+            <img class="catch" src="<?php bloginfo('template_url'); ?>/assets/images/home/kc_catch.webp" alt="いつもの料理をもっと美味しく">
         </div>
     </div>
 </section>

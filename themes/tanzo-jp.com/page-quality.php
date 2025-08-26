@@ -237,6 +237,9 @@ get_header();
                         </div>
                     <?php endforeach; ?>
                 </div>
+                <div class="text-start text-md-end">
+                    <small>［株式会社 食環境衛生研究所］2024年7月3日 検査結果報告書より抜粋</small>
+                </div>
             </div>
         </div>
     </div>

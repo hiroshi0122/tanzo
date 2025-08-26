@@ -63,6 +63,12 @@
             padding: 10px;
             border: none;
             border-bottom: solid 1px $black;
+            border-radius: 0;
+        }
+
+        select {
+            padding: .5rem 1rem;
+            border-radius: 0;
         }
 
         textarea {
@@ -70,6 +76,7 @@
             width: 100%;
             padding: 10px;
             min-height: 280px;
+            border-radius: 0;
         }
 
         input::placeholder,
@@ -90,11 +97,15 @@
     .submit-area {
         p {
             text-align: end;
+            input {
+                color: $black;
+            }
         }
 
         .wpcf7-submit {
             display: inline-block;
             border: solid 1px $black;
+            border-radius: 0;
             font-size: 15px;
             font-weight: 600;
             text-align: center;

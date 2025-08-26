@@ -78,7 +78,7 @@ include 'navigation.php';  // 配列を読み込み
                             ? $raw
                             : home_url('/' . ltrim($raw, '/'));
                     ?>
-                    <li class="menu modal-close">
+                    <li class="menu modal-close hum-close">
                         <a href="<?php echo esc_html($menu['link']); ?>">
                             <?php echo esc_html($menu['menu']); ?>
                         </a>
@@ -91,7 +91,7 @@ include 'navigation.php';  // 配列を読み込み
                                         : home_url('/' . ltrim($child['link'], '/'));
                                 ?>
                                     <li role="none">
-                                        <a role="menuitem modal-close" href="<?php echo esc_url($childHref); ?>">
+                                        <a role="menuitem modal-close hum-close" href="<?php echo esc_url($childHref); ?>">
                                             <?php echo esc_html($child['menu']); ?>
                                         </a>
                                     </li>
@@ -110,7 +110,7 @@ include 'navigation.php';  // 配列を読み込み
                             $href = (strpos($raw, '#') === 0) ? $raw : ltrim($raw, '');
                             $is_external = preg_match('/^https?:\/\//', $raw);
                         ?>
-                        <li class="col-auto">
+                        <li class="col-auto modal-close">
                             <a class="menu-link"
                             href="<?php echo esc_url($href); ?>"
                             <?php if ($is_external): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
