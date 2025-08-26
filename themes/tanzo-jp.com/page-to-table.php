@@ -51,7 +51,7 @@ get_header();
 <section class="table-picture-sec p-0">
     <div class="container s-container">
         <?php foreach($picture as $content): ?>
-            <div class="picture-contents">
+            <div class="picture-contents blur">
                 <div class="border-title">
                     <h2><?php echo esc_html($content['title']); ?></h2>
                 </div>

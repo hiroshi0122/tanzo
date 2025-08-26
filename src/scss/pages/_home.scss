@@ -11,6 +11,8 @@
         padding: 0 2%;
     }
 
+     /* ### MOVIE AREA
+    --------------------------------------*/
     .movie-area {
         height: clamp(640px, 40vw, 840px);
         width: 100%;
@@ -46,27 +48,24 @@
             padding: 0;
         }
 
-        /* ### SLIDER CONTAINER
+        /* ### MOVIE AREA
         --------------------------------------*/
-        .slider-container {
-            height: 100vw;
+        .movie-area {
+            height: clamp(300px, 74vw, 480px);
 
-            /* #### SLIDE --------------------*/
-            .slide {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    filter: brightness(0.8);
-                }
+            iframe {
+                position: absolute;
+                width: 150%;
+                height: 130%;
             }
         }
+        
 
         /* ### CATCH
         --------------------------------------*/
         .catch {
             position: absolute;
-            top: 38%;
+            top: 34%;
             right: 0;
             left: 0;
             width: 56%;
@@ -175,6 +174,10 @@
 ******************************************************************/
 .lineup-sec {
 
+    .border-title {
+        margin-top: 10rem;
+    }
+
     /* ### CONTENT
     --------------------------------------*/
     .product-content {
@@ -244,6 +247,10 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
+
+        .border-title {
+            margin-top: 7rem;
+        }
 
         /* ### CONTENT
         --------------------------------------*/

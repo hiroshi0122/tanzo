@@ -5,23 +5,23 @@ $company_info = [
         'title' => '社　　名',
         'value' => 'ヤマコー株式会社',
     ],
+        [
+        'title' => '住　　所',
+        'value' => '〒578-0901 大阪府東大阪市加納4丁目3番26号',
+    ],
     [
         'title' => '設　　立',
         'value' => '1952年5月1日',
     ],
-    [
-        'title' => 'E-mail',
-        'value' => 'yamaco@tanzo-jp.com',
-    ],
-    [
+        [
         'title' => '資本金',
         'value' => '45,000,000円',
     ],
-    [
+        [
         'title' => '代表取締役',
         'value' => '山本恵津子',
     ],
-    [
+        [
         'title' => '従業員数',
         'value' => '37名（2025年4月現在）',
     ],
@@ -29,13 +29,21 @@ $company_info = [
         'title' => '事業内容',
         "value" => "鍛造部品（熱間・冷間・複合鍛造・機械加工）\nCFRP熱可塑成厚物成形（YTC工法）",
     ],
+        [
+        'title' => '主要取引先',
+        "value" => "(株)エクセディ、(株)椿本チエイン、ＴＨＫ(株)、(株)電業、(株)山下工業研究所、(株)テクノアソシエ、(株)ファルテック",
+    ],
     [
         'title' => 'URL',
         'value' => 'https://www.yamaco-forging.co.jp/',
     ],
+        [
+        'title' => 'TANZO',
+        'value' => ' https://tanzo-jp.com/',
+    ],
     [
-        'title' => '住　　所',
-        'value' => '〒578-0901 大阪府東大阪市加納4丁目3番26号',
+        'title' => 'E-mail',
+        'value' => 'yamaco@tanzo-jp.com',
     ],
     [
         'title' => 'TEL',

@@ -63,9 +63,9 @@ get_header();
 <?php // COOOKING METHOD SECTION // *********************************************************** // ?>
 <section class="cooking-method-sec pt-0">
     <div class="container">
-        <div class="row align-items-stretch">
+        <div class="row align-items-stretch fadeInUp-stagger">
             <?php foreach($method as $content): ?>
-            <div class="col-md-6">
+            <div class="col-md-6 stagger">
                 <div class="cooking-contents">
                     <div class="border-title">
                         <h3><?php echo esc_html($content['title']); ?></h3>

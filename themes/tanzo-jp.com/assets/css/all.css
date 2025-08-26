@@ -11553,6 +11553,12 @@ footer .copyright {
   border-bottom: solid 1px #000000;
   letter-spacing: 5px;
 }
+.border-title h4 {
+  font-size: clamp(16px, 2vw, 22px);
+  display: inline-block;
+  border-bottom: solid 1px #000000;
+  letter-spacing: 5px;
+}
 @media only screen and (max-width: 767px) {
   .border-title {
     margin-bottom: 1.5rem;
@@ -11560,6 +11566,9 @@ footer .copyright {
   .border-title h2 {
     letter-spacing: 3px;
   }
+}
+.border-title.center {
+  text-align: center;
 }
 
 /* ## NUMBERING TITLE
@@ -12096,6 +12105,8 @@ footer .copyright {
 #first-view-sec {
   position: relative;
   overflow: hidden;
+  /* ### MOVIE AREA
+  --------------------------------------*/
   /* ### CATCH
   --------------------------------------*/
 }
@@ -12127,7 +12138,7 @@ footer .copyright {
 }
 @media only screen and (max-width: 767px) {
   #first-view-sec {
-    /* ### SLIDER CONTAINER
+    /* ### MOVIE AREA
     --------------------------------------*/
     /* ### CATCH
     --------------------------------------*/
@@ -12135,19 +12146,17 @@ footer .copyright {
   #first-view-sec .container-fluid, #first-view-sec .container-sm, #first-view-sec .container-md, #first-view-sec .container-lg, #first-view-sec .container-xl, #first-view-sec .container-xxl {
     padding: 0;
   }
-  #first-view-sec .slider-container {
-    height: 100vw;
-    /* #### SLIDE --------------------*/
+  #first-view-sec .movie-area {
+    height: clamp(300px, 74vw, 480px);
   }
-  #first-view-sec .slider-container .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.8);
+  #first-view-sec .movie-area iframe {
+    position: absolute;
+    width: 150%;
+    height: 130%;
   }
   #first-view-sec .catch {
     position: absolute;
-    top: 38%;
+    top: 34%;
     right: 0;
     left: 0;
     width: 56%;
@@ -12240,6 +12249,9 @@ footer .copyright {
   /* ### CONTENT
   --------------------------------------*/
 }
+.lineup-sec .border-title {
+  margin-top: 10rem;
+}
 .lineup-sec .product-content {
   padding: 10%;
   /**** #### NUMBER ****/
@@ -12294,6 +12306,9 @@ footer .copyright {
   .lineup-sec {
     /* ### CONTENT
     --------------------------------------*/
+  }
+  .lineup-sec .border-title {
+    margin-top: 7rem;
   }
   .lineup-sec .product-content {
     padding: 5%;
@@ -12369,7 +12384,7 @@ footer .copyright {
   --------------------------------------*/
 }
 .story-message-sec .movie {
-  max-width: 740px;
+  max-width: 960px;
   margin: 0 auto 5rem;
 }
 .story-message-sec .movie iframe {
@@ -12378,6 +12393,7 @@ footer .copyright {
 }
 .story-message-sec .message {
   text-align: center;
+  margin-bottom: 5rem;
 }
 .story-message-sec .message h3 {
   font-size: clamp(16px, 2vw, 28px);
@@ -12480,7 +12496,7 @@ footer .copyright {
 /* ## MOVIE SECTION（空撮動画）
 ********************************************************************/
 .movie-sec .movie {
-  height: 25vw;
+  height: clamp(450px, 30vw, 600px);
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -12490,7 +12506,7 @@ footer .copyright {
   top: 50%;
   left: 50%;
   width: 177.78%; /* 16/9 * 100 = 177.78% → cover相当に拡大 */
-  height: 280%;
+  height: 210%;
   transform: translate(-50%, -50%);
   pointer-events: none; /* クリック無効（背景用途なら便利） */
 }
@@ -12517,10 +12533,12 @@ footer .copyright {
   padding: 2rem 1rem;
   text-align: left;
 }
-.company-sec .company-info-table tr th,
-.company-sec .company-info-table tr td {
+.company-sec .company-info-table tr th, .company-sec .company-info-table tr td {
   font-weight: 500;
-  padding: 2rem;
+  padding: 2rem 1rem;
+}
+.company-sec .company-info-table tr th {
+  white-space: nowrap;
 }
 @media only screen and (max-width: 767px) {
   .company-sec .btn-area {
@@ -13297,10 +13315,12 @@ blockquote cite {
   --------------------------------------*/
   /* ### TEXT SIDE
   --------------------------------------*/
+  /* ### DETAIL
+  --------------------------------------*/
 }
 .heat-sec .image-side {
-  aspect-ratio: 1/1;
   overflow: hidden;
+  height: 100%;
 }
 .heat-sec .image-side img {
   width: 100%;
@@ -13313,18 +13333,74 @@ blockquote cite {
 .heat-sec .text-side .description {
   margin-bottom: 2rem;
 }
-.heat-sec .text-side .detail-image {
-  text-align: end;
+.heat-sec .detail {
+  margin-top: 8rem;
+  background-color: #F5F5F5;
+  padding: 5%;
+  border-radius: 5px;
+  text-align: center;
 }
-.heat-sec .text-side .detail-image img {
-  aspect-ratio: 5/3;
-  max-width: 340px;
-  object-fit: cover;
-  margin-bottom: 1rem;
+.heat-sec .detail .border-title {
+  margin-bottom: 2rem;
 }
-.heat-sec .text-side .detail-image small {
+.heat-sec .detail .border-title span {
+  padding-top: 1rem;
   display: block;
-  color: #989898;
+}
+.heat-sec .detail .detail-item {
+  padding: 3%;
+}
+.heat-sec .detail .detail-title {
+  font-size: clamp(16px, 2vw, 20px);
+  margin-bottom: 1rem;
+  position: relative;
+}
+.heat-sec .detail .detail-title .good-icon {
+  position: absolute;
+  top: -41px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100px;
+}
+.heat-sec .detail .detail-catch {
+  font-size: clamp(13px, 1.5vw, 15px);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+.heat-sec .detail .detail-times {
+  text-align: start;
+  padding: 1rem;
+}
+.heat-sec .detail .detail-times li {
+  display: flex;
+  align-items: center;
+}
+.heat-sec .detail .detail-times li span {
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.8s;
+}
+.heat-sec .detail .detail-times li span.time {
+  display: block;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: dashed 1px #000000;
+  white-space: nowrap;
+}
+.heat-sec .detail .detail-times li span.text {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 1199px) {
+  .heat-sec .detail {
+    padding: 3%;
+  }
+  .heat-sec .detail .border-title {
+    margin-bottom: 4rem;
+  }
+  .heat-sec .detail .detail-item {
+    padding: 6%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .heat-sec {
@@ -13339,12 +13415,6 @@ blockquote cite {
   }
   .heat-sec .text-side {
     padding-left: 0;
-  }
-  .heat-sec .text-side .detail-image {
-    text-align: center;
-  }
-  .heat-sec .text-side .detail-image img {
-    max-width: 240px;
   }
 }
 

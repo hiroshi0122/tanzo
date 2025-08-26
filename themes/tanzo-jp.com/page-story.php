@@ -45,6 +45,9 @@ get_header();
             <p class="blur">「複雑な形の調理器具を鍛造するのは不可能だ」</p>
             <p class="blur">その常識を覆し、ヤマコーが世界で初めて実現したこの挑戦は、<br class="d-none d-sm-block">鉄という素材の可能性を最大限に引き出します。 <br>これは、単なるフライパンやボウルではありません。<br class="d-none d-sm-block">料理に本物の美味しさをもたらす、鍛造技術の結晶です。</p>
         </div>
+        <div class="btn-area center">
+            <a class="btn-view-more" href="https://www.yamaco-forging.co.jp/" target="_blank" rel="noopener">ヤマコー株式会社って？ >>></a>
+        </div>
     </div>
 </section>
 
@@ -105,12 +108,12 @@ get_header();
     <div class="container-fluid g-0">
         <div class="movie">
             <iframe
-            src="https://www.youtube.com/embed/Ds3K-gN8-bA?autoplay=1&mute=1&loop=1&playlist=Ds3K-gN8-bA&controls=0"
-            title="YouTube video player"
-            frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
+                src="https://www.youtube.com/embed/9yN1C8ONji0?autoplay=1&mute=1&loop=1&playlist=9yN1C8ONji0&controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
             </iframe>
         </div>
     </div>

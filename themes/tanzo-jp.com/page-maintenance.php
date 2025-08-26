@@ -151,9 +151,9 @@ get_header();
             </div>
             <p class="sub-title">シンプルなお手入れ</p>
         </div>
-        <div class="row">
+        <div class="row fadeInUp-stagger">
             <?php foreach ($daily_basics as $content): ?>
-                <div class="col-md-6">
+                <div class="col-md-6 stagger">
                     <div class="daily-content">
                         <div class="title">
                             <h3><?php echo esc_html($content['title']); ?></h3>
@@ -220,7 +220,7 @@ get_header();
         </div>
         <div class="qa-contents">
             <?php if ($qa_query->have_posts()): ?>
-                <div class="qa-list">
+                <div class="qa-list blur">
                     <?php while ($qa_query->have_posts()): $qa_query->the_post(); ?>
                         <?php
                         $num   = $i;

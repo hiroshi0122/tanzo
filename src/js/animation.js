@@ -76,76 +76,19 @@ gsap.utils.toArray(".blur").forEach((target) => {
 });
 
 
+// FVキャッチコピー ------------------------------//
 window.addEventListener("load", function() {
-    gsap.fromTo(".movie-area .catch",
-      { opacity: 0, filter: "blur(20px)", },                 // 初期状態
-      { opacity: 1, duration: 2,  filter: "blur(0px)", delay: 3.5, ease: "power2.out" } 
-    );
-  });
-
-// TOPのロゴのアニメーション ------------------------------//
-// gsap.utils.toArray(".to-and-logo").forEach((target) => {
-//   let tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: target,
-//       start: "top 20%", // ロゴが20%の位置に来たらスタート
-//       end: "top -200px", // 上までスクロールしたらアニメ完了
-//       scrub: true, // スクロールに完全同期
-//       onLeave: () => target.classList.add("fixed-logo"), // 固定モードON
-//       onEnterBack: () => target.classList.remove("fixed-logo") // 戻ったら解除
-//     }
-//   })
-//     .fromTo(target, 
-//       { scale: 1 },  // 初期状態
-//       { scale: 0.2, ease: "expo.inOut" } // スクロールで縮小
-//     );
-// });
-
-
-// FADE IN LEFT ------------------------------//
-// var target = gsap.utils.toArray(".fadeInLeft");
-// gsap.utils.toArray(".fadeInLeft").forEach((target) => {
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: target,
-//       start: "top 80%",
-//       end: "bottom 80%",
-//       toggleActions: "play none none none"
-//     }
-//   })
-//     .from(target, {
-//       x: -60, autoAlpha: 0, stagger: 0.5,
-//     })
-//     .to(target, {
-//       x: 0, autoAlpha: 1, ease: "expo.inOut", duration: 1,
-//     })
-// });
-
-// FADE IN RIGHT ------------------------------//
-// var target = gsap.utils.toArray(".fadeInRight");
-// gsap.utils.toArray(".fadeInRight").forEach((target) => {
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: target,
-//       start: "top 80%",
-//       end: "bottom 80%",
-//       toggleActions: "play none none none"
-//     }
-//   })
-//     .from(target, {
-//       x: 60, autoAlpha: 0, stagger: 0.5,
-//     })
-//     .to(target, {
-//       x: 0, autoAlpha: 1, ease: "expo.inOut", duration: 1,
-//     })
-// });
+  gsap.fromTo(".movie-area .catch",
+    { opacity: 0, filter: "blur(20px)", },                 // 初期状態
+    { opacity: 1, duration: 2,  filter: "blur(0px)", delay: 3.5, ease: "power2.out" } 
+  );
+});
 
 
 // FADE IN UP STAGGER（順番に表示させる） ------------------------------//
 //トリガーはfadeInUp-stagger
 gsap.utils.toArray(".fadeInUp-stagger").forEach((target) => {
-  const radiusBoxes = target.querySelectorAll('.works-content,.blog-contents');
-  //まずはボックス自体を非表示にする
+  const radiusBoxes = target.querySelectorAll('.stagger');
   gsap.set(radiusBoxes, { y: 50, autoAlpha: 0, scale: 0.9 });
 
   gsap.fromTo(

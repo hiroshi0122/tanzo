@@ -61,12 +61,12 @@ get_header();
     <div class="container-fluid">
         <div class="movie-area">
             <iframe
-            src="https://www.youtube.com/embed/k-G9pMa3FIM?autoplay=1&mute=1&loop=1&playlist=k-G9pMa3FIM&controls=0"
-            title="YouTube video player"
-            frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
+                src="https://www.youtube.com/embed/k-G9pMa3FIM?autoplay=1&mute=1&loop=1&playlist=k-G9pMa3FIM&controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
             </iframe>
             <img class="catch" src="<?php bloginfo('template_url'); ?>/assets/images/home/kc_catch.svg" alt="いつもの料理をもっと美味しく">
         </div>
@@ -166,7 +166,7 @@ get_header();
             <span>PRODUCT</span>
             <h2 class="daily-title">商品ラインアップ</h2>
         </div>
-        <div class="row">
+        <div class="row fadeInUp-stagger">
             <?php
             $args = [
                 'post_type'      => 'products',
@@ -187,8 +187,17 @@ get_header();
                     $link    = get_field('ec_url');
                     $excerpt = get_the_excerpt();
                     ?>
+
+                    <?php if ($i === 5): // ★ 5番目の前で見出しを挿入 
+                    ?>
+                        <div class="border-title center blur">
+                            <h3 class="products-heading">TANZO×SKYWOOD<br>吉野杉ラウンドプレート</h3>
+                        </div>
+                        <p class="text-center">TANZO製品専用の木製プレートを<br class="d-sm-none">ご用意いたしました。<br>サイズはS・M・Lと、使用するシーンにあわせて３種類からお選びいただけます</p>
+                    <?php endif; ?>
+
                     <div class="col-md-6">
-                        <div class="product-content">
+                        <div class="product-content stagger">
                             <span class="number"><?php echo esc_html($num); ?>.</span>
 
                             <div class="product-image">
@@ -230,12 +239,12 @@ get_header();
                             </div>
                         </div>
                     </div>
+
                     <?php $i++; ?>
                 <?php endwhile; ?>
             <?php else: ?>
                 <p>商品がありません。</p>
-            <?php endif;
-            wp_reset_postdata(); ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>

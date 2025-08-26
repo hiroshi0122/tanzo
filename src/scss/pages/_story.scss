@@ -42,7 +42,7 @@
     /* ### MOVIE
     --------------------------------------*/
     .movie {
-        max-width: 740px;
+        max-width: 960px;
         margin: 0 auto 5rem;
 
         iframe {
@@ -55,6 +55,7 @@
     --------------------------------------*/
     .message {
         text-align: center;
+        margin-bottom: 5rem;
 
         h3 {
             font-size: clamp(16px, 2vw, 28px);
@@ -180,7 +181,7 @@
 ********************************************************************/
 .movie-sec {
     .movie {
-        height: 25vw;
+        height: clamp(450px,30vw,600px);
         width: 100%;
         overflow: hidden;
         position: relative;
@@ -190,7 +191,7 @@
             top: 50%;
             left: 50%;
             width: 177.78%; /* 16/9 * 100 = 177.78% → cover相当に拡大 */
-            height: 280%;
+            height: 210%;
             transform: translate(-50%, -50%);
             pointer-events: none; /* クリック無効（背景用途なら便利） */
         }
@@ -224,10 +225,13 @@
             padding: 2rem 1rem;
             text-align: left;
 
-            th,
-            td {
+            th,td {
                 font-weight: 500;
-                padding: 2rem;
+                padding: 2rem 1rem;
+            }
+
+            th {
+                white-space: nowrap;
             }
         }
     }

@@ -13,6 +13,40 @@
  **/
 
 
+$details = [
+  [
+    'title' => '｜TANZO｜',
+    'catch' => "すぐに全体均等に\n熱が伝わっている",
+    'image' => 'detail_1',
+    'times' => [
+      ['time' => '0:10', 'text' => '点火'],
+      ['time' => '2:00', 'text' => '170℃に達する（約1分52秒）'],
+      ['time' => '6:03', 'text' => '100℃を下回る（間：4分1秒）'],
+    ]
+  ],
+  [
+    'title' => '｜鋳造フライパン｜',
+    'catch' => "熱が入りにくく\nフライパンまわりに熱が伝わっている",
+    'image' => 'detail_2',
+    'times' => [
+      ['time' => '0:10', 'text' => '点火'],
+      ['time' => '1:25', 'text' => '170℃に達する（約1分15秒）'],
+      ['time' => '3:37', 'text' => '100℃を下回る（間：1分12秒）'],
+    ]
+  ],
+  [
+    'title' => '｜板金フライパン｜',
+    'catch' => "取っ手の部分から\n熱が伝わっている",
+    'image' => 'detail_3',
+    'times' => [
+      ['time' => '0:10', 'text' => '点火'],
+      ['time' => '0:36', 'text' => '170℃に達する（約27秒）'],
+      ['time' => '1:11', 'text' => '100℃を下回る（間：35秒）'],
+    ]
+  ],
+];
+
+
 $picture = [
     [
         'title' => '調理からテーブルへ',
@@ -72,23 +106,23 @@ get_header();
             <div class="row align-items-end">
                 <div class="col-md-7">
                     <div class="image-part">
-                        <div class="row g-2 g-md-4">
-                            <div class="col-3 col-md-3">
+                        <div class="row g-2 g-md-4 fadeInUp-stagger">
+                            <div class="col-3 col-md-3 stagger">
                                 <div class="detail-image">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_5.webp" alt="素材のイメージ">
                                 </div>
                             </div>
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 stagger">
                                 <div class="detail-image">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_1.webp" alt="素材のイメージ">
                                 </div>
                             </div>
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 stagger">
                                 <div class="detail-image">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_2.webp" alt="素材のイメージ">
                                 </div>
                             </div>
-                            <div class="col-3 col-md-3">
+                            <div class="col-3 col-md-3 stagger">
                                 <div class="detail-image">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_3.webp" alt="素材のイメージ">
                                 </div>
@@ -120,11 +154,11 @@ get_header();
             <p>6年にわたる試行錯誤の末にたどり着いたのは、熱効率と使い勝手を両立する“理想の厚み”でした。<br>直径20cmの個食に適したフライパンのサイズに、側面3mm・底面4mmというこだわりの厚み設計。<br>熱がムラなく均等に伝わり、食材を芯までじっくり加熱します。<br>どんな熱源でもしっかり熱を蓄え、調理の質を一段上げてくれる一枚です。</p>
         </div>
         <div class="image-part">
-            <div class="row">
-                <div class="col-6">
+            <div class="row fadeInUp-stagger">
+                <div class="col-6 stagger">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_thickness_1.webp" alt="厚みのイメージ">
                 </div>
-                <div class="col-6">
+                <div class="col-6 stagger">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_thickness_2.webp" alt="厚みのイメージ">
                 </div>
             </div>
@@ -136,7 +170,7 @@ get_header();
 <?php // HEAT SECTION // *********************************************************** // ?>
 <section class="heat-sec">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-stratch">
             <div class="col-md-5 d-none d-md-block">
                 <div class="image-side">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_heat_1.webp" alt="蓄熱性のイメージ">
@@ -152,10 +186,56 @@ get_header();
                         <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_heat_1.webp" alt="蓄熱性のイメージ">
                     </div>
                     <p class="description">高い熱伝導率と蓄熱性を備えたTANZOは、通常のフライパンよりも少ない火力で短時間調理が可能。予熱を活かせば火を止めた後もじんわり熱が伝わり、素材の旨味をやさしくとじこめます。高温調理にも適しているため手早く仕上がり、調理時間の短縮にも効果的。料理はさいごのひと口まで温かく、美味しさが長続きします。</p>
-                    <div class="detail-image">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_heat_2.webp" alt="蓄熱性のイメージ">
-                        <small>（加熱何秒後の表面温度（約何度 等）</small>
-                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="border-title blur border-bt center">
+                <h4>各種鉄フライパンの温度変化</h4>
+                <span>（サーモグラフィー）</span>
+            </div>
+            <div class="detail-contents">
+                <div class="row fadeInUp-stagger align-items-stretch justify-content-center">
+                    <?php foreach ($details as $key => $detail): ?>
+                        <div class="col-md-6 col-xl-4 detail-item stagger">
+                            <h4 class="detail-title">
+                                <?php // ▼ Good! アイコン：アクセシビリティ重視なら <img> を置く
+                                    if ($key === 0): ?>
+                                    <img class="good-icon" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/maintenance/icon_good.svg' ); ?>" alt="Good!">
+                                <?php endif; ?>
+                                <?php echo esc_html($detail['title']); ?>
+                            </h4>
+                            <p class="detail-catch"><?php echo nl2br(esc_html($detail['catch'])); ?></p>
+
+                            <div class="detail-image">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/maintenance/<?php echo esc_html($detail['image']); ?>.webp" alt="<?php echo esc_html($detail['title']); ?>">
+                            </div>
+
+                            <ul class="detail-times">
+                                <?php foreach ($detail['times'] as $tKey => $time): ?>
+                                    <?php
+                                        $txt = $time['text'] ?? '';
+                                        $main = $txt; $dur = '';
+
+                                        // 全角括弧で「（間：…）」を抽出して太字にする
+                                        if (preg_match('/（間：[^）]+）/u', $txt, $m)) {
+                                        $dur  = $m[0];                      // 例）"（間：4分1秒）"
+                                        $main = trim(str_replace($dur, '', $txt)); // 前半テキスト
+                                        }
+                                    ?>
+                                    <li>
+                                        <span class="time"><?php echo esc_html($time['time']); ?></span>
+                                        <span class="text">
+                                        <?php echo esc_html($main); ?>
+                                        <?php if ($dur !== ''): ?>
+                                            <span class="duration"><strong><?php echo esc_html($dur); ?></strong></span>
+                                        <?php endif; ?>
+                                        </span>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -173,12 +253,12 @@ get_header();
             </div>
             <p>TANZOは、IHやガスコンロはもちろん、<br>魚焼きグリルやオーブン、さらには直火でも使える万能調理器です。<br class="d-none d-sm-block">ガス火で焼き色を付けた後、そのままオーブンで仕上げるなど、幅広い調理が可能です。<br>すべての熱源に対応し、加熱による劣化や変形の心配もありません。<br>自宅でもアウトドアでも頼れる一枚です。</p>
         </div>
-        <div class="image-part">
+        <div class="image-part fadeInUp-stagger">
             <div class="row g-2 g-md-4">
-                <div class="col-6">
+                <div class="col-6 stagger">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_heat_source_2.webp" alt="熱源に対応イメージ１">
                 </div>
-                <div class="col-6">
+                <div class="col-6 stagger">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_heat_source_1.webp" alt="熱源に対応イメージ２">
                 </div>
             </div>
@@ -195,11 +275,11 @@ get_header();
 <?php // KV MESSAGE SECTION // *********************************************************** // ?>
 <section class="kv-message-sec">
     <div class="container-fluid g-0">
-        <div class="kv-area">
-            <img class="image-1 photo" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_1.webp" alt="kvイメージ">
-            <img class="image-2 photo" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_2.webp" alt="kvイメージ">
-            <img class="image-3 photo" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_3.webp" alt="kvイメージ">
-            <img class="image-4 photo" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_4.webp" alt="kvイメージ">
+        <div class="kv-area fadeInUp-stagger">
+            <img class="image-1 photo stagger" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_1.webp" alt="kvイメージ">
+            <img class="image-2 photo stagger" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_2.webp" alt="kvイメージ">
+            <img class="image-3 photo stagger" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_3.webp" alt="kvイメージ">
+            <img class="image-4 photo stagger" src="<?php bloginfo('template_url'); ?>/assets/images/quality/lv_image_4.webp" alt="kvイメージ">
             <img class="catch blur" src="<?php bloginfo('template_url'); ?>/assets/images/quality/catch.svg" alt="だからTANZOはおいしい">
         </div>
     </div>

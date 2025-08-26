@@ -53,7 +53,7 @@ $text-link-color-hover: invert($text-link-color);
 $smallScreen: "only screen and (max-width: 767px)"; // 768 SmartPhone
 $smallScreen-above: "only screen and (min-width: 768px)"; // 768 PC(スマホ以外)
 $middleScreen: "only screen and (max-width: 991px)"; // Tablet
-$largeScreen: "only screen and (min-width: 977px)"; // PC
+$largeScreen: "only screen and (max-width: 1199px)"; // PC
 $xlargeScreen: "only screen and (min-width: 1385px)"; // PC（ bootstrap container の最大値）
 $landscapeScreen: "screen and (orientation: landscape)";
 $portraitScreen: "screen and (orientation: portrait)";

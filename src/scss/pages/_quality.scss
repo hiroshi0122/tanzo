@@ -27,7 +27,6 @@
     /* ### BOTTOM PART
     --------------------------------------*/
     .bottom-part {
-
         .image-part {
             padding-right: 5%;
 
@@ -52,7 +51,6 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-
         /* ### UPPER PART
         --------------------------------------*/
         .upper-part {
@@ -70,7 +68,6 @@
         /* ### BOTTOM PART
         --------------------------------------*/
         .bottom-part {
-
             .image-part {
                 padding-right: 0;
                 margin-bottom: 1rem;
@@ -79,18 +76,16 @@
     }
 }
 
-
 /* ## THICKNESS SECTION
 ********************************************************************/
 .thickness-sec {
-
     /* ### TEXT PART
     --------------------------------------*/
     .text-part {
         text-align: center;
         margin-bottom: 4rem;
 
-        .numbering-title  {
+        .numbering-title {
             margin-bottom: 4rem;
         }
     }
@@ -105,29 +100,26 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-
         /* ### TEXT PART
         --------------------------------------*/
         .text-part {
             text-align: start;
 
-            .numbering-title  {
+            .numbering-title {
                 margin-bottom: 2rem;
             }
         }
     }
 }
 
-
 /* ## HEAT SECTION
 ********************************************************************/
 .heat-sec {
-
     /* ### IMAGE SIDE
     --------------------------------------*/
     .image-side {
-        aspect-ratio: 1/1;
         overflow: hidden;
+        height: 100%;
         img {
             width: 100%;
             height: 100%;
@@ -143,24 +135,93 @@
         .description {
             margin-bottom: 2rem;
         }
-        .detail-image {
-            text-align: end;
-            img {
-                aspect-ratio: 5/3;
-                max-width: 340px;
-                object-fit: cover;
-                margin-bottom: 1rem;
-            }
-            small {
+    }
+
+    /* ### DETAIL
+    --------------------------------------*/
+    .detail {
+        margin-top: 8rem;
+        background-color: $bg-gray;
+        padding: 5%;
+        border-radius: 5px;
+        text-align: center;
+
+        .border-title {
+            span {
+                padding-top: 1rem;
                 display: block;
-                color: $font-gray;
+            }
+            margin-bottom: 2rem;
+        }
+
+        .detail-item {
+            padding: 3%;
+        }
+
+        .detail-title {
+            font-size: clamp(16px, 2vw, 20px);
+            margin-bottom: 1rem;
+            position: relative;
+
+            .good-icon {
+                position: absolute;
+                top: -41px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 100px;
+            }
+        }
+
+        .detail-catch {
+            font-size: clamp(13px, 1.5vw, 15px);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .detail-times {
+            text-align: start;
+            padding: 1rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                span {
+                    font-size: clamp(14px, 1.5vw, 16px);
+                    line-height: 1.8s;
+
+                    &.time {
+                        display: block;
+                        padding-right: 1rem;
+                        margin-right: 1rem;
+                        border-right: dashed 1px $black;
+                        white-space: nowrap;
+                    }
+                    &.text {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$largeScreen} {
+        .detail {
+            padding: 3%;
+            
+            .border-title {
+                margin-bottom: 4rem;
+            }
+
+            .detail-item {
+                padding: 6%;
             }
         }
     }
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-
         /* ### IMAGE SIDE
         --------------------------------------*/
         .image-side {
@@ -172,29 +233,20 @@
         --------------------------------------*/
         .text-side {
             padding-left: 0;
-
-            .detail-image {
-                text-align: center;
-                img {
-                    max-width: 240px;
-                }
-            }
         }
     }
 }
 
-
 /* ## HEAT SOURCE SECTION
 ********************************************************************/
 .heat-source-sec {
-
     /* ### TEXT PART
     --------------------------------------*/
     .text-part {
         text-align: center;
         margin-bottom: 4rem;
 
-        .numbering-title  {
+        .numbering-title {
             margin-bottom: 4rem;
         }
     }
@@ -229,14 +281,13 @@
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-
         /* ### TEXT PART
         --------------------------------------*/
         .text-part {
             text-align: start;
             margin-bottom: 2rem;
 
-            .numbering-title  {
+            .numbering-title {
                 margin-bottom: 2rem;
             }
         }
@@ -271,11 +322,9 @@
     }
 }
 
-
 /* ## KV MESSAGE SECTION
 ********************************************************************/
 .kv-message-sec {
-
     /* ### KV AREA
     --------------------------------------*/
     .kv-area {
@@ -312,20 +361,18 @@
 
         /**** #### CATCH ****/
         .catch {
-            width: clamp(50px,6%,80px);
+            width: clamp(50px, 6%, 80px);
             margin: 0 auto;
         }
     }
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-
         .container-fluid {
             padding: 0;
         }
     }
 }
-
 
 // ## MOBILE // *************************************************>
 /* ## コメント中
