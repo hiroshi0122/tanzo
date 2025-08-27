@@ -147,7 +147,7 @@ get_header();
                     <div class="image-side blur d-md-none">
                         <img src="<?php bloginfo('template_url'); ?>/assets/images/home/story_image.webp" alt="開発の物語">
                     </div>
-                    <p class="description">1,250度の炎、2,000トンの圧力、そして熟練「ハンマーマン」の勘。鉄はただの素材から、料理を変える道具へと姿を変えます。その誕生の物語へ。</p>
+                    <p class="description">1,250℃の炎、2,000トンの圧力、そして熟練「ハンマーマン」の勘。鉄はただの素材から、料理を変える道具へと姿を変えます。その誕生の物語へ。</p>
                     <div class="btn-area">
                         <a class="btn-view-more" href="/story">VIEW MORE >>></a>
                     </div>

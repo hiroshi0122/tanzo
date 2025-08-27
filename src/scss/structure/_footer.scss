@@ -16,22 +16,49 @@ footer {
     -------------------------------------*/
     .footer-logo {
         display: block;
-        width: 50%;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 3rem;
 
         img {
             width: 100%;
         }
     }
 
+    /* ### SNS AREA
+    -------------------------------------*/
+    .sns-area {
+        text-align: center;
+
+        .sns-icons {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                border-bottom: solid 1px $black;
+                margin-right: 10px;
+            }
+
+            .facebook {
+                width: 45px;
+            }
+            .instagram {
+                width: 50px;
+            }
+        }
+    }
+
     /* ### FOOTER NAV
     -------------------------------------*/
     .footer-nav {
-
         li {
             text-align: center;
             display: block;
             border-right: solid 1px $black;
             padding: 0 1rem;
+            margin-bottom: 1rem;
 
             &:first-child {
                 border-left: solid 1px $black;
@@ -54,7 +81,6 @@ footer {
     }
 
     .footer-second-nav {
-
         .navigation {
             justify-content: end;
         }
@@ -72,7 +98,7 @@ footer {
             }
         }
     }
-   
+
     .copyright {
         display: block;
         font-size: 12px;
@@ -80,7 +106,6 @@ footer {
 
     // ## MOBILE // *************************************************>
     @media #{$smallScreen} {
-
         .footer-wrapper {
             padding: 5rem 0rem 1.5rem 0rem;
         }
@@ -89,11 +114,14 @@ footer {
         -------------------------------------*/
         .footer-logo {
             width: 100%;
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
             text-align: center;
-            img {
-                width: 50%;
-            }
+        }
+
+        /* ### SNS AREA
+        -------------------------------------*/
+        .sns-area {
+            margin-bottom: 4rem;
         }
 
         /* ### FOOTER NAV
@@ -130,7 +158,7 @@ footer {
 
             li {
                 text-align: left;
-                margin-bottom: .5rem;
+                margin-bottom: 0.5rem;
             }
 
             .menu-link {
@@ -139,7 +167,7 @@ footer {
                 }
             }
         }
-    
+
         .copyright {
             display: block;
             font-size: 11px;
@@ -147,7 +175,6 @@ footer {
         }
     }
 }
-
 
 // ## MOBILE // *************************************************>
 

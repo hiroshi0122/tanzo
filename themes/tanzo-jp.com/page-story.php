@@ -34,13 +34,20 @@ get_header();
 <?php // STORY MESSAGE SECTION // *********************************************************** // ?>
 <section class="story-message-sec pt-0">
     <div class="container">
-        <div class="movie">
-            <iframe src="https://www.youtube.com/embed/ASdDeJXd0iw?si=OqYBmHlfJQi-uNLV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+        <!-- <div class="movie">
+            <iframe 
+                src="https://www.youtube.com/embed/ASdDeJXd0iw?rel=0&modestbranding=1"
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div> -->
         <div class="message">
             <h3 class="blur">鍛造工場から生まれた、<br class="d-sm-none">唯一無二の調理道具。</h3>
             <p class="blur">自動車が走るための精密な部品をつくる鍛造工場。 <br>その技術から、あなたのキッチンを変える一枚が生まれました。</p>
-            <p class="blur">心臓部で稼働するのは、世界でも類を見ない「エアスタンプハンマー」。<br>1250度にまで熱せられた鉄の塊に、約2000トンもの圧力を一点に加えて不純物をき出し、<br class="d-none d-sm-none">鉄の純度を極限まで高めていきます。 <br>この工程で、錆びにくく、強く、そして熱をムラなく伝える、<br class="d-none d-sm-block">家庭用調理器具の常識を超える性能が宿るのです。</p>
+            <p class="blur">心臓部で稼働するのは、世界でも類を見ない「エアスタンプハンマー」。<br>1,250℃にまで熱せられた鉄の塊に、約2,000トンもの圧力を一点に加えて不純物をはき出し、<br class="d-none d-sm-none">鉄の純度を極限まで高めていきます。 <br>この工程で、錆びにくく、強く、そして熱をムラなく伝える、<br class="d-none d-sm-block">家庭用調理器具の常識を超える性能が宿るのです。</p>
             <p class="blur">しかし、力だけでは“美味しい道具”は生まれません。<br> 頼りになるのは、鉄の表情を読み、打撃力を絶妙に調整する職人「ハンマーマン」の経験と勘。<br> 機械の力と人の技が融合することで、鉄はただの素材から、美味しさを引き出す道具へと変化します。</p>
             <p class="blur">「複雑な形の調理器具を鍛造するのは不可能だ」</p>
             <p class="blur">その常識を覆し、ヤマコーが世界で初めて実現したこの挑戦は、<br class="d-none d-sm-block">鉄という素材の可能性を最大限に引き出します。 <br>これは、単なるフライパンやボウルではありません。<br class="d-none d-sm-block">料理に本物の美味しさをもたらす、鍛造技術の結晶です。</p>

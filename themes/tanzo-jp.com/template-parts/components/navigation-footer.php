@@ -14,8 +14,19 @@ include 'navigation.php';  // 配列を読み込み
 <div class="row align-items-center">
     <div class="col-md-3">
         <a class="footer-logo" href="/">
-            <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo.svg" alt="tanzoロゴ">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo_2.svg" alt="tanzoロゴ">
         </a>
+        <div class="sns-area">
+            <div class="sns-icons">
+                <span>FOLLOW ME! ▶︎</span>
+                <a class="facebook" href="https://www.facebook.com/profile.php?id=61579090658514&locale=ja_JP" target="_blank" rel="noopener">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/common/facebook.svg" alt="facebookアイコン">
+                </a>
+                <a class="instagram" href="https://www.instagram.com/tanzo__yamaco/" target="_blank" rel="noopener">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/common/instagram.svg" alt="instagramアイコン">
+                </a>
+            </div>
+        </div>
     </div>
     <div class="col-md-9">
         <nav class="footer-nav">

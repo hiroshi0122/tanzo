@@ -44,11 +44,11 @@ section {
 /* ## FIRST SECTION
 ***********************************************/
 .first-sec {
-	padding-top: 92px;
+	padding-top: 120px;
 
 	/* ### MOBILE =====================================*/
 	@media #{$smallScreen} {
-		padding-top: 72px;
+		padding-top: 92px;
 	}
 }
 

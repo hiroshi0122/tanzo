@@ -10830,12 +10830,12 @@ section {
 /* ## FIRST SECTION
 ***********************************************/
 .first-sec {
-  padding-top: 92px;
+  padding-top: 120px;
   /* ### MOBILE =====================================*/
 }
 @media only screen and (max-width: 767px) {
   .first-sec {
-    padding-top: 72px;
+    padding-top: 92px;
   }
 }
 
@@ -11081,8 +11081,8 @@ header .hamburger {
   display: block;
   position: absolute;
   z-index: 200;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
   width: 60px;
   height: 72px;
   cursor: pointer;
@@ -11185,7 +11185,7 @@ header .menu-contents .menu-list {
   /* ##### MENU ****/
 }
 header .menu-contents .menu-list .menu {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 header .menu-contents .menu-list .menu a {
   display: block;
@@ -11199,6 +11199,7 @@ header .menu-contents .menu-list .submenu {
   padding: 0.7rem 0 0 1.5rem;
   margin-top: 0.5rem;
   margin-left: 1rem;
+  margin-bottom: 3rem;
   border-left: solid 1px #000000;
 }
 header .menu-contents .menu-list .submenu li {
@@ -11234,6 +11235,9 @@ header .menu-contents .header-second-nav a {
   header .logo-side {
     display: block;
   }
+  header .logo-side img {
+    width: 130px;
+  }
 }
 
 footer {
@@ -11241,6 +11245,8 @@ footer {
   width: 100%;
   margin-top: 8rem;
   /* ### FOOTER LOGO
+  -------------------------------------*/
+  /* ### SNS AREA
   -------------------------------------*/
   /* ### FOOTER NAV
   -------------------------------------*/
@@ -11254,16 +11260,38 @@ footer .footer-wrapper {
 }
 footer .footer-logo {
   display: block;
-  width: 50%;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 3rem;
 }
 footer .footer-logo img {
   width: 100%;
+}
+footer .sns-area {
+  text-align: center;
+}
+footer .sns-area .sns-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+footer .sns-area .sns-icons span {
+  border-bottom: solid 1px #000000;
+  margin-right: 10px;
+}
+footer .sns-area .sns-icons .facebook {
+  width: 45px;
+}
+footer .sns-area .sns-icons .instagram {
+  width: 50px;
 }
 footer .footer-nav li {
   text-align: center;
   display: block;
   border-right: solid 1px #000000;
   padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 footer .footer-nav li:first-child {
   border-left: solid 1px #000000;
@@ -11296,6 +11324,8 @@ footer .copyright {
   footer {
     /* ### FOOTER LOGO
     -------------------------------------*/
+    /* ### SNS AREA
+    -------------------------------------*/
     /* ### FOOTER NAV
     -------------------------------------*/
     /* ### SECOND NAV
@@ -11306,11 +11336,11 @@ footer .copyright {
   }
   footer .footer-logo {
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
   }
-  footer .footer-logo img {
-    width: 50%;
+  footer .sns-area {
+    margin-bottom: 4rem;
   }
   footer .footer-nav li {
     margin-bottom: 1.5rem;
@@ -12390,6 +12420,9 @@ footer .copyright {
 .story-message-sec .movie iframe {
   aspect-ratio: 16/9;
   width: 100%;
+}
+.story-message-sec .movie .ytp-show-cards-title {
+  display: none !important;
 }
 .story-message-sec .message {
   text-align: center;

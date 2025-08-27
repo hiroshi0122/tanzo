@@ -15,7 +15,7 @@ include 'navigation.php';  // 配列を読み込み
     <div class="row align-items-center">
         <div class="col-auto">
             <a class="logo-side" href="/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo.svg" alt="tanzoロゴ">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo_2.svg" alt="tanzoロゴ">
             </a>
         </div>
         <nav class="col d-none d-lg-block">
@@ -67,7 +67,7 @@ include 'navigation.php';  // 配列を読み込み
         <div class="menu-contents d-lg-none">
             <ul class="menu-list">
                 <a class="logo" href="/">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo.svg" alt="TANZOロゴ">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo_2.svg" alt="TANZOロゴ">
                 </a>
                 <?php foreach ($navigation as $key => $menu): ?>
                     <?php
