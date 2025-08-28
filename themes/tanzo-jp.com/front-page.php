@@ -12,34 +12,6 @@
  * Template Name: HOME
  **/
 
-// スライダーの配列処理
-// $slides = [
-//     [
-//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_1.webp',
-//         'alt' => 'スライダー1',
-//     ],
-//     [
-//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_2.webp',
-//         'alt' => 'スライダー2',
-//     ],
-//     [
-//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_3.webp',
-//         'alt' => 'スライダー3',
-//     ],
-//     [
-//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_4.webp',
-//         'alt' => 'スライダー4',
-//     ],
-//     [
-//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_5.webp',
-//         'alt' => 'スライダー5',
-//     ],
-//     [
-//         'img' => get_template_directory_uri() . '/assets/images/home/kv_visual_6.webp',
-//         'alt' => 'スライダー6',
-//     ],
-// ];
-
 
 /* NEWSの投稿取得 */
 $args = array(
@@ -61,10 +33,10 @@ get_header();
     <div class="container-fluid">
         <div class="movie-area">
             <iframe
-                src="https://www.youtube.com/embed/k-G9pMa3FIM?autoplay=1&mute=1&loop=1&playlist=k-G9pMa3FIM&controls=0"
+                src="https://www.youtube.com/embed/pzHDbVPkHv0?autoplay=1&mute=1&loop=1&playlist=pzHDbVPkHv0&controls=0&modestbranding=1&rel=0"
                 title="YouTube video player"
                 frameborder="0"
-                allow="autoplay; clipboard-write; encrypted-media"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
             </iframe>
@@ -291,7 +263,7 @@ get_header();
                 <?php endif; ?>
 
                 <div class="btn-area justify-content-end pt-5">
-                    <a class="btn-more" href="/all-news">More >>></a>
+                    <a class="btn-more" href="/news">More >>></a>
                 </div>
             </div>
         </div>

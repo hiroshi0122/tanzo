@@ -34,16 +34,9 @@ get_header();
 <?php // STORY MESSAGE SECTION // *********************************************************** // ?>
 <section class="story-message-sec pt-0">
     <div class="container">
-        <!-- <div class="movie">
-            <iframe 
-                src="https://www.youtube.com/embed/ASdDeJXd0iw?rel=0&modestbranding=1"
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-        </div> -->
+        <div class="movie">
+            <iframe src="https://www.youtube.com/embed/0f6LFLOx5qY?si=1BLsfMShWjire28l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <div class="message">
             <h3 class="blur">鍛造工場から生まれた、<br class="d-sm-none">唯一無二の調理道具。</h3>
             <p class="blur">自動車が走るための精密な部品をつくる鍛造工場。 <br>その技術から、あなたのキッチンを変える一枚が生まれました。</p>
@@ -115,7 +108,7 @@ get_header();
     <div class="container-fluid g-0">
         <div class="movie">
             <iframe
-                src="https://www.youtube.com/embed/9yN1C8ONji0?autoplay=1&mute=1&loop=1&playlist=9yN1C8ONji0&controls=0"
+                src="https://www.youtube.com/embed/SWSBfNJT0Ao?autoplay=1&mute=1&loop=1&playlist=SWSBfNJT0Ao&controls=0&modestbranding=1&rel=0"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

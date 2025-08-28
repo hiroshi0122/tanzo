@@ -24,7 +24,7 @@ add_action('after_setup_theme', function () {
 
 
 add_action('admin_init', function () {
-  $types = ['post', 'qa', 'products']; // ここに対象のスラッグ並べる
+  $types = ['products']; // ここに対象のスラッグ並べる
   foreach ($types as $pt) {
     add_filter("manage_{$pt}_posts_columns", function ($columns) {
       $new = [];

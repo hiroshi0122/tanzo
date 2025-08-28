@@ -13072,8 +13072,6 @@ footer .copyright {
   margin-bottom: 3rem;
 }
 .content .wp-block-image img {
-  border: solid 1px #000000;
-  border-radius: 5px;
   overflow: hidden;
 }
 .content .wp-block-image .wp-element-caption {
