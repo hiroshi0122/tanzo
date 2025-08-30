@@ -14,7 +14,7 @@ include 'navigation.php';  // 配列を読み込み
 <div class="row align-items-center">
     <div class="col-md-3">
         <a class="footer-logo" href="/">
-            <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo_2.svg" alt="tanzoロゴ">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_japan.svg" alt="tanzoロゴ">
         </a>
         <div class="sns-area">
             <div class="sns-icons">

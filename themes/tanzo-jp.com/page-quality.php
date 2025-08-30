@@ -90,14 +90,14 @@ get_header();
                             <h2>妥協のない素材</h2>
                         </div>
                         <div class="image-side d-md-none">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_4.webp" alt="素材のイメージ">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_1.webp" alt="素材のイメージ">
                         </div>
-                        <p>TANZOは、国内最高品質の炭素鋼を使用し、鉄を1250℃まで熱して何度も叩く「鍛造」によって生まれたフライパンです。2,000トンの圧力で鍛えられることで、酸化被膜や不純物を飛ばして、金属内部の結晶構造が変化し、高い強度と耐久性を実現。人工的なコーティングは一切施していないため、安心して毎日の料理にご使用いただけます。</p>
+                        <p>TANZOは、国内最高品質の炭素鋼を使用し、鉄を1,250℃まで熱して何度も叩く「鍛造」によって生まれたフライパンです。2,000トンの圧力で鍛えられることで、不純物が飛び、金属内部の結晶構造が変化し、高い強度と耐久性を実現。人工VA的なコーティングは一切施していないため、安心して毎日の料理にご使用いただけます。</p>
                     </div>
                 </div>
                 <div class="col-md-5 d-none d-md-block">
                     <div class="image-side">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_4.webp" alt="素材のイメージ">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_1.webp" alt="素材のイメージ">
                     </div>
                 </div>
             </div>
@@ -107,22 +107,22 @@ get_header();
                 <div class="col-md-7">
                     <div class="image-part">
                         <div class="row g-2 g-md-4 fadeInUp-stagger">
-                            <div class="col-3 col-md-3 stagger">
+                            <div class="col-3 stagger">
                                 <div class="detail-image">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_5.webp" alt="素材のイメージ">
                                 </div>
                             </div>
-                            <div class="col-3 col-md-3 stagger">
+                            <div class="col-3 stagger">
                                 <div class="detail-image">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_1.webp" alt="素材のイメージ">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_6.webp" alt="素材のイメージ">
                                 </div>
                             </div>
-                            <div class="col-3 col-md-3 stagger">
+                            <div class="col-3 stagger">
                                 <div class="detail-image">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_2.webp" alt="素材のイメージ">
                                 </div>
                             </div>
-                            <div class="col-3 col-md-3 stagger">
+                            <div class="col-3 stagger">
                                 <div class="detail-image">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/images/quality/image_material_3.webp" alt="素材のイメージ">
                                 </div>
@@ -151,7 +151,7 @@ get_header();
                 <span>02.</span>
                 <h2>こだわりの厚み</h2>
             </div>
-            <p>6年にわたる試行錯誤の末にたどり着いたのは、熱効率と使い勝手を両立する“理想の厚み”でした。<br>直径20cmの個食に適したフライパンのサイズに、側面3mm・底面4mmというこだわりの厚み設計。<br>熱がムラなく均等に伝わり、食材を芯までじっくり加熱します。<br>どんな熱源でもしっかり熱を蓄え、調理の質を一段上げてくれる一枚です。</p>
+            <p>6年にわたる試行錯誤の末にたどり着いたのは、熱効率と使い勝手を両立する“理想の厚み”でした。<br>直径20cmの個食に適したフライパンのサイズに、側面3mm・底面4mmというこだわりの厚み設計。<br>熱がムラなく均等に伝わり、食材を芯までじっくり加熱します。<br class="d-none d-sm-block">どんな熱源でもしっかり熱を蓄え、調理の質を一段上げてくれる一枚です。</p>
         </div>
         <div class="image-part">
             <div class="row fadeInUp-stagger">
@@ -192,7 +192,7 @@ get_header();
         <div class="detail">
             <div class="border-title blur border-bt center">
                 <h4>各種鉄フライパンの温度変化</h4>
-                <span>（サーモグラフィー）</span>
+                <span>点火後、3〜4秒後のサーモグラフィー画像</span>
             </div>
             <div class="detail-contents">
                 <div class="row fadeInUp-stagger align-items-stretch justify-content-center">
@@ -254,7 +254,7 @@ get_header();
                 <span>04.</span>
                 <h2>すべての熱源に対応</h2>
             </div>
-            <p>TANZOは、IHやガスコンロはもちろん、<br>魚焼きグリルやオーブン、さらには直火でも使える万能調理器です。<br class="d-none d-sm-block">ガス火で焼き色を付けた後、そのままオーブンで仕上げるなど、幅広い調理が可能です。<br>すべての熱源に対応し、加熱による劣化や変形の心配もありません。<br>自宅でもアウトドアでも頼れる一枚です。</p>
+            <p>TANZOは、IHやガスコンロはもちろん、<br>魚焼きグリルやオーブン、さらには焚き火でも使える万能調理器です。<br class="d-none d-sm-block">ガス火で焼き色を付けた後、そのままオーブンで仕上げるなど、幅広い調理が可能です。<br>すべての熱源に対応し、加熱による劣化や変形の心配もありません。<br>自宅でもアウトドアでも頼れる一枚です。</p>
         </div>
         <div class="image-part fadeInUp-stagger">
             <div class="row g-2 g-md-4">

@@ -15,7 +15,7 @@ include 'navigation.php';  // 配列を読み込み
     <div class="row align-items-center">
         <div class="col-auto">
             <a class="logo-side" href="/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_logo_2.svg" alt="tanzoロゴ">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/logo/tanzo_japan.svg" alt="tanzoロゴ">
             </a>
         </div>
         <nav class="col d-none d-lg-block">

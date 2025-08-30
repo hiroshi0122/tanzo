@@ -10830,7 +10830,7 @@ section {
 /* ## FIRST SECTION
 ***********************************************/
 .first-sec {
-  padding-top: 120px;
+  padding-top: 106px;
   /* ### MOBILE =====================================*/
 }
 @media only screen and (max-width: 767px) {
@@ -12788,6 +12788,10 @@ footer .copyright {
 }
 .daily-basics-sec .daily-content .image-area {
   margin-bottom: 3rem;
+}
+.daily-basics-sec .daily-content .image-area img {
+  aspect-ratio: 5/3;
+  object-fit: cover;
 }
 .daily-basics-sec .daily-content .text p {
   line-height: 2.4;
